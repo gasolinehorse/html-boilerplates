@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>HTMLのテンプレート</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Web制作プロジェクトに適したHTMLのテンプレートを生成します。最初にテンプレートに含めるものを選択してください" />
+  <meta property="og:title" content="HTMLのテンプレート" />
+  <meta property="og:description" content="Web制作プロジェクトに適したHTMLのテンプレートを生成します。最初にテンプレートに含めるものを選択してください" />
+  <meta property="og:image" content="https://htmlboilerplates.com/html-boilerplates.png" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@gasolinehorse">
+  <meta name="twitter:title" content="HTMLのテンプレート">
+  <meta name="twitter:description" content="Web制作プロジェクトに適したHTMLのテンプレートを生成します。最初にテンプレートに含めるものを選択してください">
+  <meta name="twitter:image" content="https://htmlboilerplates.com/html-boilerplates.png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+  <link href="../style.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/png" href="../favicon_html-boilerpates.png">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GM8JZWLKKW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-GM8JZWLKKW');
+  </script>
+  <!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-M8QXB3P');</script>
+	<!-- End Google Tag Manager -->
+</head>
+<body id="jp">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M8QXB3P"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="loader"></div>
+<div class="switching"></div>
+<main class="container position-relative">
+	<div id="lang" class="position-absolute"><p class="small text-grey text-right opacity-50"><a class="px-2 px-md-1" href="../">EN</a> | <a class="px-2 px-md-1" href="#"><i>JP</i></a> | <a class="px-2 px-md-1" href="../modele-html">FR</a> | <a class="px-2 px-md-1" href="../html網站樣板">TW</a> | <a class="px-2 px-md-1" href="../html网站模板">CN</a> | <a class="px-2 px-md-1" href="../alien-html">ALIEN</a> | <a class="px-2 px-md-1 d-none d-md-inline-block" href="mailto:allen@gasolinehorses.com" target="_blank">Request Features</a></p></div>
+  <div class="row">
+    <div class="col ml-sm-auto px-4">
+      <div class="py-5">
+        <header>
+          <h1 class="mb-1 mb-sm-0 position-relative d-inline-block"><span class="outlined">HTMLの</span>テンプレート<div class="html-bar-wrapper"><div class="html-bar"></div></div></h1>
+          <h2>Web制作プロジェクトに適したHTMLのテンプレートを生成します。最初にテンプレートに含めるものを選択してください。</h2>
+        </header>
+        <section class="pt-1">
+          <hr>
+          <div class="row">
+            <div class="col-md-4 col-sm-6">
+              <p class="small text-grey">1. 含めるものを選択:</p>
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitchFavicon">
+                <label class="custom-control-label" for="customSwitchFavicon"><b>ファビコン</b></label>
+              </div>
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitchCSS">
+                <label class="custom-control-label" for="customSwitchCSS"><b>外部CSSファイル</b></label>
+              </div>
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitchJQuery">
+                <label class="custom-control-label" for="customSwitchJQuery"><b>jQuery</b> (v<span class="jv"></span>)</label>
+              </div>
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitchBootstrapCSS">
+                <label class="custom-control-label" for="customSwitchBootstrapCSS"><b>Bootstrap CSS</b> (v<span class="bv"></span>)</label>
+              </div>
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitchBootstrapJS">
+                <label class="custom-control-label" for="customSwitchBootstrapJS"><b>Bootstrap JS</b> (v<span class="bv"></span>)</label>
+              </div>
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitchIE">
+                <label class="custom-control-label" for="customSwitchIE"><b>IE条件付きクラス</b></label>
+              </div>
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitchSocial">
+                <label class="custom-control-label" for="customSwitchSocial"><b>ソーシャルメディア用metaタグ</b></label>
+              </div>
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitchTheme">
+                <label class="custom-control-label" for="customSwitchTheme"><b>テーマカラー</b></label>
+              </div>
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitchCol">
+                <label class="custom-control-label" for="customSwitchCol"><b>
+                  <select name="cols" id="cols">
+                    <option class="noCol" value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>列のカラムを生成</b> （要Bootstrap）</label>
+              </div>
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitchCookie">
+                <label class="custom-control-label" for="customSwitchCookie"><b>Cookie（クッキー）の通知<span class="toggle-cookie-star">*</span></b> （要jQueryとBootstrap）</label>
+              </div>
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitchBrowser">
+                <label class="custom-control-label" for="customSwitchBrowser"><b>古いブラウザのアップデートを促すメッセージ</b> （要Bootstrap）</label>
+              </div>
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitchFadein">
+                <label class="custom-control-label" for="customSwitchFadein"><b>ページ読み込み時のローダー</b></label>
+              </div>
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitchForm">
+                <label class="custom-control-label" for="customSwitchForm"><b>フォームを</b></label>
+              </div>
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitchLoader">
+                <label class="custom-control-label" for="customSwitchLoader"><b>ナウローディング </b> (要jQuery)</label>
+              </div>
+              <span class="toggle-cookie mt-2"><small>法務担当者に相談して、Cookie（クッキー）の通知を実装してください。</small></span>
+            </div>
+            <div class="col-md-8 col-sm-6">
+              <p class="small text-grey">2. 下記のコードをエディタにコピー＆ペーストしてご利用ください:</p>
+              <pre id="output" class="border">
+                <span><xmp><!DOCTYPE html></xmp></span>
+                <span class="toggle-ie"><xmp><!--[if lte 8]><html class="pre-ie9" lang="ja"><![endif]--></xmp></span>
+                <span class="toggle-ie"><xmp><!--[if gte IE 9]><!--><html lang="ja"><!--<![endif]--></xmp></span>
+                <span class="no-ie"><xmp><html lang="ja"></xmp></span>
+                <span><xmp><head></xmp></span>
+                <span><xmp>  <title>タイトル</title></xmp></span>
+                <span><xmp>  <meta charset="UTF-8" /></xmp></span>
+                <span><xmp>  <meta name="viewport" content="width=device-width,initial-scale=1" /></xmp></span>
+                <span><xmp>  <meta name="description" content="" /></xmp></span>
+                <span class="toggle-bootstrapCSS"><xmp>  <link href="https://cdn.jsdelivr.net/npm/bootstrap@</xmp><div class="bv d-inline"></div><xmp>/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"></xmp></span>
+                <span class="toggle-css"><xmp>  <link rel="stylesheet" type="text/css" href="style.css" /></xmp></span>
+                <span class="toggle-favicon"><xmp>  <link rel="icon" href="img/favicon.png"></xmp></span>
+                <span class="toggle-theme"><xmp>  <meta name="theme-color" content=""></xmp></span>
+                <span class="toggle-social"><xmp>  <meta property="og:title" content="" /></xmp></span>
+                <span class="toggle-social"><xmp>  <meta property="og:description" content="" /></xmp></span>
+                <span class="toggle-social"><xmp>  <meta property="og:image" content="" /></xmp></span>
+                <span class="toggle-social"><xmp>  <meta name="twitter:card" content=""></xmp></span>
+                <span class="toggle-social"><xmp>  <meta name="twitter:site" content=""></xmp></span>
+                <span class="toggle-social"><xmp>  <meta name="twitter:title" content=""></xmp></span>
+                <span class="toggle-social"><xmp>  <meta name="twitter:description" content=""></xmp></span>
+                <span class="toggle-social"><xmp>  <meta name="twitter:image" content=""></xmp></span>
+                <span><xmp></head></xmp></span>
+                <span><xmp><body></xmp></span>
+                <span class="toggle-fadein"><xmp>  <div id="fadein"></div></xmp></span>
+                <span class="toggle-fadein"><xmp>  <style></xmp></span>
+                <span class="toggle-fadein"><xmp>    /* For best practice, move CSS below to an external CSS file. */</xmp></span>
+                <span class="toggle-fadein"><xmp>    @keyframes fadeinall {</xmp></span>
+                <span class="toggle-fadein"><xmp>    0% {</xmp></span>
+                <span class="toggle-fadein"><xmp>      opacity: 1; }</xmp></span>
+                <span class="toggle-fadein"><xmp>    97% {</xmp></span>
+                <span class="toggle-fadein"><xmp>      opacity: 0; }</xmp></span>
+                <span class="toggle-fadein"><xmp>    98% {</xmp></span>
+                <span class="toggle-fadein"><xmp>      opacity: 0;</xmp></span>
+                <span class="toggle-fadein"><xmp>      -webkit-transform: translateY(0);</xmp></span>
+                <span class="toggle-fadein"><xmp>      transform: translateY(0); }</xmp></span>
+                <span class="toggle-fadein"><xmp>    99% {</xmp></span>
+                <span class="toggle-fadein"><xmp>      opacity: 0;</xmp></span>
+                <span class="toggle-fadein"><xmp>      -webkit-transform: translateY(-100%);</xmp></span>
+                <span class="toggle-fadein"><xmp>      transform: translateY(-100%); }</xmp></span>
+                <span class="toggle-fadein"><xmp>    100% {</xmp></span>
+                <span class="toggle-fadein"><xmp>      opacity: 0;</xmp></span>
+                <span class="toggle-fadein"><xmp>      z-index: -1; } }</xmp></span>
+                <span class="toggle-fadein"><xmp>    #fadein {</xmp></span>
+                <span class="toggle-fadein"><xmp>      opacity: 1;</xmp></span>
+                <span class="toggle-fadein"><xmp>      position: fixed;</xmp></span>
+                <span class="toggle-fadein"><xmp>      width: 100%;</xmp></span>
+                <span class="toggle-fadein"><xmp>      height: 100%;</xmp></span>
+                <span class="toggle-fadein"><xmp>      -webkit-transform: translateY(0);</xmp></span>
+                <span class="toggle-fadein"><xmp>      -ms-transform: translateY(0);</xmp></span>
+                <span class="toggle-fadein"><xmp>      transform: translateY(0);</xmp></span>
+                <span class="toggle-fadein"><xmp>      background-color: #fff;</xmp></span>
+                <span class="toggle-fadein"><xmp>      z-index: 999;</xmp></span>
+                <span class="toggle-fadein"><xmp>      -webkit-animation-fill-mode: forwards;</xmp></span>
+                <span class="toggle-fadein"><xmp>      animation-fill-mode: forwards;</xmp></span>
+                <span class="toggle-fadein"><xmp>      -webkit-animation: fadeinall 1s normal both;</xmp></span>
+                <span class="toggle-fadein"><xmp>      animation: fadeinall 1s normal both;</xmp></span>
+                <span class="toggle-fadein"><xmp>      -webkit-animation-delay: 0.3s;</xmp></span>
+                <span class="toggle-fadein"><xmp>      animation-delay: 0.3s; }</xmp></span>
+                <span class="toggle-fadein"><xmp>  </style></xmp></span>
+                <span class="toggle-loader"><xmp>  <div id="loader-wrapper"></xmp></span>
+	              <span class="toggle-loader"><xmp>  	<div class="loader"></div></xmp></span>
+	              <span class="toggle-loader"><xmp>  </div></xmp></span>
+                <span class="toggle-loader"><xmp>  <style></xmp></span>
+                <span class="toggle-loader"><xmp>    /* For best practice, move CSS below to an external CSS file. */</xmp></span>
+								<span class="toggle-loader"><xmp>    @keyframes rotation {</xmp></span>
+								<span class="toggle-loader"><xmp>      0% {</xmp></span>
+								<span class="toggle-loader"><xmp>        transform: rotate(0deg); }</xmp></span>
+								<span class="toggle-loader"><xmp>      100% {</xmp></span>
+								<span class="toggle-loader"><xmp>        transform: rotate(360deg); } }</xmp></span>
+								<span class="toggle-loader"><xmp>    #loader-wrapper {</xmp></span>
+								<span class="toggle-loader"><xmp>      background-color: #FFFFFF;</xmp></span>
+								<span class="toggle-loader"><xmp>      position: fixed;</xmp></span>
+								<span class="toggle-loader"><xmp>      z-index: 999;</xmp></span>
+								<span class="toggle-loader"><xmp>      width: 100%;</xmp></span>
+								<span class="toggle-loader"><xmp>      height: 100%;</xmp></span>
+								<span class="toggle-loader"><xmp>      text-align: center; }</xmp></span>
+								<span class="toggle-loader"><xmp>    .loader {</xmp></span>
+								<span class="toggle-loader"><xmp>      width: 40px;</xmp></span>
+								<span class="toggle-loader"><xmp>      height: 40px;</xmp></span>
+								<span class="toggle-loader"><xmp>      border: 5px solid #000000;</xmp></span>
+								<span class="toggle-loader"><xmp>      border-bottom-color: transparent;</xmp></span>
+								<span class="toggle-loader"><xmp>      border-radius: 50%;</xmp></span>
+								<span class="toggle-loader"><xmp>      margin-top:calc(50vh - 20px);</xmp></span>
+								<span class="toggle-loader"><xmp>      display: inline-block;</xmp></span>
+								<span class="toggle-loader"><xmp>      box-sizing: border-box;</xmp></span>
+								<span class="toggle-loader"><xmp>      -webkit-animation: rotation 1s linear infinite;</xmp></span>
+								<span class="toggle-loader"><xmp>      animation: rotation 1s linear infinite; }</xmp></span>
+                <span class="toggle-loader"><xmp>  </style></xmp></span>
+                <span class="hw"><xmp>  <h1>見出し</h1></xmp></span>
+                <div class="toggle-col-wrapper">
+                  <span class="toggle-col toggle-col--1"><xmp>  <div class="container"></xmp></span>
+                  <span class="toggle-col toggle-col--1"><xmp>    <div class="row"></xmp></span>
+                  <span class="toggle-col toggle-col--1"><xmp>      <div class="col">1列</div></xmp></span>
+                  <span class="toggle-col toggle-col--1"><xmp>    </div></xmp></span>
+                  <span class="toggle-col toggle-col--1"><xmp>  </div></xmp></span>
+                  <span class="toggle-col toggle-col--2"><xmp>  <div class="container"></xmp></span>
+                  <span class="toggle-col toggle-col--2"><xmp>    <div class="row"></xmp></span>
+                  <span class="toggle-col toggle-col--2"><xmp>      <div class="col-sm-6">1列</div></xmp></span>
+                  <span class="toggle-col toggle-col--2"><xmp>      <div class="col-sm-6">2列</div></xmp></span>
+                  <span class="toggle-col toggle-col--2"><xmp>    </div></xmp></span>
+                  <span class="toggle-col toggle-col--2"><xmp>  </div></xmp></span>
+                  <span class="toggle-col toggle-col--3"><xmp>  <div class="container"></xmp></span>
+                  <span class="toggle-col toggle-col--3"><xmp>    <div class="row"></xmp></span>
+                  <span class="toggle-col toggle-col--3"><xmp>      <div class="col-sm-4">1列</div></xmp></span>
+                  <span class="toggle-col toggle-col--3"><xmp>      <div class="col-sm-4">2列</div></xmp></span>
+                  <span class="toggle-col toggle-col--3"><xmp>      <div class="col-sm-4">3列</div></xmp></span>
+                  <span class="toggle-col toggle-col--3"><xmp>    </div></xmp></span>
+                  <span class="toggle-col toggle-col--3"><xmp>  </div></xmp></span>
+                  <span class="toggle-col toggle-col--4"><xmp>  <div class="container"></xmp></span>
+                  <span class="toggle-col toggle-col--4"><xmp>    <div class="row"></xmp></span>
+                  <span class="toggle-col toggle-col--4"><xmp>      <div class="col-sm-3">1列</div></xmp></span>
+                  <span class="toggle-col toggle-col--4"><xmp>      <div class="col-sm-3">2列</div></xmp></span>
+                  <span class="toggle-col toggle-col--4"><xmp>      <div class="col-sm-3">3列</div></xmp></span>
+                  <span class="toggle-col toggle-col--4"><xmp>      <div class="col-sm-3">4列</div></xmp></span>
+                  <span class="toggle-col toggle-col--4"><xmp>    </div></xmp></span>
+                  <span class="toggle-col toggle-col--4"><xmp>  </div></xmp></span>
+                </div>
+                <span class="toggle-cookie"><xmp>  <div id="cookie-notice" class="w-100 bg-dark text-white pt-3 px-4 pb-1 position-fixed" style="z-index: 1000; bottom: 0;"></xmp></span>
+                <span class="toggle-cookie"><xmp>    <div class="container p-2"></xmp></span>
+                <span class="toggle-cookie"><xmp>      <div class="row"></xmp></span>
+                <span class="toggle-cookie"><xmp>        <div class="col-sm-8 col-md-9"></xmp></span>
+                <span class="toggle-cookie"><xmp>          <p class="p-2">このサイトでは、サイトや広告を改善するためにCookieを利用します。サイトを利用することで、Cookieの使用に同意するものとします。プライバシーポリシー。<a href="#"><u>プライバシーポリシー</u></a>。</p> </xmp></span>
+                <span class="toggle-cookie"><xmp>        </div></xmp></span>
+                <span class="toggle-cookie"><xmp>        <div class="col-sm-4 col-md-3"></xmp></span>
+                <span class="toggle-cookie"><xmp>          <a class="i-accept btn btn-primary m-2">同意する</a></xmp></span>
+                <span class="toggle-cookie"><xmp>        </div></xmp></span>
+                <span class="toggle-cookie"><xmp>      </div></xmp></span>
+                <span class="toggle-cookie"><xmp>    </div></xmp></span>
+                <span class="toggle-cookie"><xmp>  </div></xmp></span>
+                <span class="toggle-browser"><xmp>  <!--[if IE]><div class="w-100 text-center bg-dark text-white pt-3 px-4 pb-1 position-fixed" style="z-index: 1000; bottom: 0;"><p onClick="parentNode.remove()">より良いブラウジング体験のために最新のブラウザを使用してください。<span class="float-right">X</span></p></div><![endif]--></xmp></span>
+                <span class="toggle-jquery"><xmp>  <script src="https://code.jquery.com/jquery-</xmp><div class="jv d-inline"></div><xmp>.min.js" crossorigin="anonymous"></script></xmp></span>
+                <span class="toggle-bootstrapJS"><xmp>  <script src="https://cdn.jsdelivr.net/npm/bootstrap@</xmp><div class="bv d-inline"></div><xmp>/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script></xmp></span>
+                <span class="toggle-cookie"><xmp>  <script type="text/javascript"></xmp></span>
+                <span class="toggle-cookie"><xmp>    (function($){</xmp></span>
+                <span class="toggle-cookie"><xmp>      $('.i-accept').on('click', function() {   </xmp></span>
+                <span class="toggle-cookie"><xmp>        if(localStorage.noshow !== '1') {</xmp></span>
+                <span class="toggle-cookie"><xmp>          $('#cookie-notice').addClass('d-none');</xmp></span>
+                <span class="toggle-cookie"><xmp>           localStorage.noshow='1';</xmp></span>
+                <span class="toggle-cookie"><xmp>        }  </xmp></span>
+                <span class="toggle-cookie"><xmp>      });</xmp></span>
+                <span class="toggle-cookie"><xmp>      if(localStorage.noshow == '1') {</xmp></span>
+                <span class="toggle-cookie"><xmp>        $('#cookie-notice').addClass('d-none');</xmp></span>
+                <span class="toggle-cookie"><xmp>      };</xmp></span>
+                <span class="toggle-cookie"><xmp>    })(jQuery);</xmp></span>
+                <span class="toggle-cookie"><xmp>  </script></xmp></span>
+                <span class="toggle-fadein"><xmp>  <script type="text/javascript"></xmp></span>
+                <span class="toggle-fadein"><xmp>  window.onload = function(){</xmp></span>
+                <span class="toggle-fadein"><xmp>    setTimeout(function(){</xmp></span>
+                <span class="toggle-fadein"><xmp>      document.getElementById("fadein").remove();</xmp></span>
+                <span class="toggle-fadein"><xmp>    },1000);</xmp></span>
+                <span class="toggle-fadein"><xmp>  };</xmp></span>
+                <span class="toggle-fadein"><xmp>  </script></xmp></span>
+                <span class="toggle-loader"><xmp>  <script type="text/javascript"></xmp></span>   
+                <span class="toggle-loader"><xmp>    $(window).on('load', function() {</xmp></span>
+                <span class="toggle-loader"><xmp>      $("#loader-wrapper").fadeOut(700);</xmp></span>
+                <span class="toggle-loader"><xmp>    });</xmp></span>
+                <span class="toggle-loader"><xmp>  </script></xmp></span>
+                <span class="toggle-form"><xmp>  <form action="#"></xmp></span>
+	              <span class="toggle-form"><xmp>    <label for="lastName">姓:</label><br></xmp></span>
+	              <span class="toggle-form"><xmp>    <input type="text" name="lastName" value=""><br></xmp></span>
+	              <span class="toggle-form"><xmp>    <label for="firstName">名:</label><br></xmp></span>
+	              <span class="toggle-form"><xmp>    <input type="text" name="firstName" value=""><br></xmp></span>
+	              <span class="toggle-form"><xmp>    <label for="email">Email:</label><br></xmp></span>
+	              <span class="toggle-form"><xmp>    <input type="email" name="email" value=""><br></xmp></span>
+	              <span class="toggle-form"><xmp>    <label for="phone">電話番号:</label><br></xmp></span>
+	              <span class="toggle-form"><xmp>    <input type="tel" name="phone" value=""><br></xmp></span>
+	              <span class="toggle-form"><xmp>    <input type="submit" value="送信"></xmp></span>
+	              <span class="toggle-form"><xmp>  </form></xmp></span>
+                <span><xmp></body></xmp></span>
+                <span><xmp></html></xmp></span>
+              </pre>
+              <div class="text-right"><button type="button" class="mb-5" onclick="copyEvent('output')">コピー</button></div>
+              <div class="text-left text-sm-right venmo">
+	              <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('よろしくお願いします', '#61ba00', 'C0C3GC2QV');kofiwidget2.draw();</script> 
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <div id="switch-wrapper" data-toggle="tooltip" data-placement="left" title="テーマを変更する">
+    ◉
+  </div>
+  <footer class="row">
+    <div class="col">
+      <p class="small text-grey text-right opacity-50">日本語訳: <a href="https://coliss.com/" target="_blank">coliss.com</a> • 制作: <a href="https://gasolinehorses.com/">Allen</a> • <a href="https://medium.com/@gasolinehorse" target="_blank">UX design blog</a></p>
+    </div>
+  </footer>
+</main>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  (function($){
+    $("#customSwitchFavicon").click(function(){
+      $(".toggle-favicon").toggleClass("d-block");
+    });
+    $("#customSwitchCSS").click(function(){
+      $(".toggle-css").toggleClass("d-block");
+    });
+    $("#customSwitchJQuery").click(function(){
+      $(".toggle-jquery").toggleClass("d-block");
+    });
+    $("#customSwitchBootstrapJS").click(function(){
+      $(".toggle-bootstrapJS").toggleClass("d-block");
+    });
+    $("#customSwitchBootstrapCSS").click(function(){
+      $(".toggle-bootstrapCSS").toggleClass("d-block");
+    });
+    $("#customSwitchIE").click(function(){
+      $(".toggle-ie").toggleClass("d-block");
+      $(".no-ie").toggleClass("d-none");
+    });
+    $("#customSwitchSocial").click(function(){
+      $(".toggle-social").toggleClass("d-block");
+    });
+    $("#customSwitchTheme").click(function(){
+      $(".toggle-theme").toggleClass("d-block");
+    });
+    $("#customSwitchCol").click(function(){
+      $(".hw").toggleClass("d-none");
+      $(".toggle-col-wrapper").toggleClass(function(){
+        return $(this).is('.d-block, .d-none') ? 'd-block d-none' : 'd-block';
+      })
+    });
+    $("#customSwitchCookie").click(function(){
+      $(".toggle-cookie").toggleClass("d-block");
+      $(".toggle-cookie-star").toggleClass("d-inline");
+    });
+    $("#customSwitchBrowser").click(function(){
+      $(".toggle-browser").toggleClass("d-block");
+    });
+    $("#customSwitchFadein").click(function(){
+      $(".toggle-fadein").toggleClass("d-block");
+    });
+    $("#customSwitchForm").click(function(){
+      $(".toggle-form").toggleClass("d-block");
+    });
+    $("#customSwitchLoader").click(function(){
+      $(".toggle-loader").toggleClass("d-block");
+    });
+    $("#customSwitchDesc").click(function(){
+      $(".table__desc").toggleClass("d-block");
+    });
+    $("select").change(function(){
+      $(this).find("option:selected").each(function(){
+          var optionValue = $(this).attr("value");
+          if(optionValue){
+              $(".toggle-col").not(".toggle-col--" + optionValue).removeClass("d-block");
+              $(".toggle-col--" + optionValue).addClass("d-block");
+          } else{
+              $(".toggle-col").removeClass("d-block");
+          }
+      });
+    }).change();
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  })(jQuery);
+  if (+window.localStorage.getItem("preferDark")) {
+	  $("body").toggleClass("dark");
+	}
+	$("#switch-wrapper").click(function () {
+	  if (+window.localStorage.getItem("preferDark")) {
+	    window.localStorage.setItem("preferDark", 0);
+	  } else {
+	    window.localStorage.setItem("preferDark", 1);
+	  }
+	  $("body").toggleClass("dark");
+    $(".switching").addClass('switching--on');
+      setTimeout(function() {
+        $(".switching").removeClass('switching--on');
+    }, 2000);
+	});
+  function copyEvent(id){
+    var str = document.getElementById(id);
+    window.getSelection().selectAllChildren(str);
+    document.execCommand("copy")
+  }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="../script.js" crossorigin="anonymous"></script>
+</body>
+</html>

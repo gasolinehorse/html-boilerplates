@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://htmlboilerplates.com/</loc>
+  <lastmod>2021-03-04T05:27:56+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://htmlboilerplates.com/modele-html/</loc>
+  <lastmod>2021-03-04T05:28:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://htmlboilerplates.com/html%e7%b6%b2%e7%ab%99%e6%a8%a3%e6%9d%bf/</loc>
+  <lastmod>2021-03-04T05:28:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
