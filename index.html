@@ -75,10 +75,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <input type="checkbox" class="custom-control-input" id="customSwitchBootstrapJS">
                 <label class="custom-control-label" for="customSwitchBootstrapJS"><b>Bootstrap JS</b> (v<span class="bv"></span>)</label>
               </div>
-              <div id="ui-toggle-ie" class="custom-control custom-switch">
+              <div id="ui-toggle-form" class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitchForm">
+                <label class="custom-control-label" for="customSwitchForm"><b>Form</b></label>
+              </div>
+              <!--<div id="ui-toggle-ie" class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="customSwitchIE">
                 <label class="custom-control-label" for="customSwitchIE"><b>IE conditional class</b></label>
-              </div>
+              </div>-->
               <div id="ui-toggle-social" class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="customSwitchSocial">
                 <label class="custom-control-label" for="customSwitchSocial"><b>Social media meta tags</b></label>
@@ -108,15 +112,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
               <div id="ui-toggle-fadein" class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="customSwitchFadein">
-                <label class="custom-control-label" for="customSwitchFadein"><b>Fade-in loader</b></label>
-              </div>
-              <div id="ui-toggle-form" class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitchForm">
-                <label class="custom-control-label" for="customSwitchForm"><b>Form</b></label>
+                <label class="custom-control-label" for="customSwitchFadein"><b>Page fade-in</b></label>
               </div>
               <div id="ui-toggle-loader" class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="customSwitchLoader">
-                <label class="custom-control-label" for="customSwitchLoader"><b>Loading animation</b> (jQuery required)</label>
+                <label class="custom-control-label" for="customSwitchLoader"><b>Page fade-in after fully loaded</b> (jQuery required)</label>
+              </div>
+              <div id="ui-toggle-copyright" class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitchCopyright">
+                <label class="custom-control-label" for="customSwitchCopyright"><b>Footer copyright</b></label>
               </div>
               <span class="toggle-cookie mt-2"><small>* Consult legal team to implement the cookie notice.</small></span>
             </div>
@@ -183,7 +187,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-fadein"><xmp>      animation-delay: 0.3s; }</xmp></span>
                 <span class="toggle-fadein"><xmp>  </style></xmp></span>
                 <span class="toggle-loader"><xmp>  <div id="loader-wrapper"></xmp></span>
-	              <span class="toggle-loader"><xmp>  	<div class="loader"></div></xmp></span>
+	              <span class="toggle-loader"><xmp>    <div class="loader"></div></xmp></span>
 	              <span class="toggle-loader"><xmp>  </div></xmp></span>
                 <span class="toggle-loader"><xmp>  <style></xmp></span>
                 <span class="toggle-loader"><xmp>    /* For best practice, move CSS below to an external CSS file. */</xmp></span>
@@ -291,6 +295,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	              <span class="toggle-form"><xmp>    <input type="tel" name="phone" value="555-555-5555"><br></xmp></span>
 	              <span class="toggle-form"><xmp>    <input type="submit" value="Submit"></xmp></span>
 	              <span class="toggle-form"><xmp>  </form></xmp></span>
+                <span class="toggle-copyright"><xmp>  <footer></xmp></span>
+                <span class="toggle-copyright"><xmp>    <small>© <script>document.write(new Date().getFullYear())</script> Your company name. All Rights Reserved.</small></footer></xmp></span>
+                <span class="toggle-copyright"><xmp>  </footer></xmp></span>
                 <span><xmp></body></xmp></span>
                 <span><xmp></html></xmp></span>
               </pre>
@@ -359,6 +366,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
     $("#customSwitchForm").click(function(){
       $(".toggle-form").toggleClass("d-block");
+    });
+    $("#customSwitchCopyright").click(function(){
+      $(".toggle-copyright").toggleClass("d-block");
     });
     $("#customSwitchLoader").click(function(){
       $(".toggle-loader").toggleClass("d-block");
