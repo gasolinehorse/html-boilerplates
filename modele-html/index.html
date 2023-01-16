@@ -76,9 +76,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <label class="custom-control-label" for="customSwitchBootstrapJS"><b>Bootstrap JS</b> (v<span class="bv"></span>)</label>
               </div>
               <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitchForm">
+                <label class="custom-control-label" for="customSwitchForm"><b>Un formulaire</b></label>
+              </div>
+              <!-- <div class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="customSwitchIE">
                 <label class="custom-control-label" for="customSwitchIE"><b>Commentaire conditionnel IE</b></label>
-              </div>
+              </div> -->
               <div class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="customSwitchSocial">
                 <label class="custom-control-label" for="customSwitchSocial"><b>Balises De Médias Sociaux</b></label>
@@ -111,12 +115,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <label class="custom-control-label" for="customSwitchFadein"><b>Fondu en entrée</b></label>
               </div>
               <div class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitchForm">
-                <label class="custom-control-label" for="customSwitchForm"><b>Un formulaire</b></label>
-              </div>
-              <div class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="customSwitchLoader">
                 <label class="custom-control-label" for="customSwitchLoader"><b>Une animation de chargement</b> (jQuery required)</label>
+              </div>
+              <div id="ui-toggle-copyright" class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitchCopyright">
+                <label class="custom-control-label" for="customSwitchCopyright"><b>©</b></label>
               </div>
               <span class="toggle-cookie mt-2"><small>* Consultez l'équipe juridique pour mettre en œuvre l'avis de cookie.</small></span>
             </div>
@@ -291,6 +295,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	              <span class="toggle-form"><xmp>    <input type="tel" name="phone" value=""><br></xmp></span>
 	              <span class="toggle-form"><xmp>    <input type="submit" value="Envoyer"></xmp></span>
 	              <span class="toggle-form"><xmp>  </form></xmp></span>
+                <span class="toggle-copyright"><xmp>  <footer></xmp></span>
+                <span class="toggle-copyright"><xmp>    <small>© <script>document.write(new Date().getFullYear())</script> Votre entreprise. Tous droits réservés.</small></footer></xmp></span>
+                <span class="toggle-copyright"><xmp>  </footer></xmp></span>
                 <span><xmp></body></xmp></span>
                 <span><xmp></html></xmp></span>
               </pre>
@@ -359,6 +366,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
     $("#customSwitchForm").click(function(){
       $(".toggle-form").toggleClass("d-block");
+    });
+    $("#customSwitchCopyright").click(function(){
+      $(".toggle-copyright").toggleClass("d-block");
     });
     $("#customSwitchLoader").click(function(){
       $(".toggle-loader").toggleClass("d-block");

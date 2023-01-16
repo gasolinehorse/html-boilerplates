@@ -76,6 +76,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <label class="custom-control-label" for="customSwitchBootstrapJS"><b>Bootstrap JS</b> (v<span class="bv"></span>)</label>
               </div>
               <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitchForm">
+                <label class="custom-control-label" for="customSwitchForm"><b>フォームを</b></label>
+              </div>
+              <div class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="customSwitchIE">
                 <label class="custom-control-label" for="customSwitchIE"><b>IE条件付きクラス</b></label>
               </div>
@@ -111,12 +115,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <label class="custom-control-label" for="customSwitchFadein"><b>ページ読み込み時のローダー</b></label>
               </div>
               <div class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitchForm">
-                <label class="custom-control-label" for="customSwitchForm"><b>フォームを</b></label>
-              </div>
-              <div class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="customSwitchLoader">
                 <label class="custom-control-label" for="customSwitchLoader"><b>ナウローディング </b> (要jQuery)</label>
+              </div>
+              <div id="ui-toggle-copyright" class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitchCopyright">
+                <label class="custom-control-label" for="customSwitchCopyright"><b>著作権</b></label>
               </div>
               <span class="toggle-cookie mt-2"><small>法務担当者に相談して、Cookie（クッキー）の通知を実装してください。</small></span>
             </div>
@@ -291,6 +295,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	              <span class="toggle-form"><xmp>    <input type="tel" name="phone" value=""><br></xmp></span>
 	              <span class="toggle-form"><xmp>    <input type="submit" value="送信"></xmp></span>
 	              <span class="toggle-form"><xmp>  </form></xmp></span>
+                <span class="toggle-copyright"><xmp>  <footer></xmp></span>
+                <span class="toggle-copyright"><xmp>    <small>© <script>document.write(new Date().getFullYear())</script> 貴社</small></footer></xmp></span>
+                <span class="toggle-copyright"><xmp>  </footer></xmp></span>
                 <span><xmp></body></xmp></span>
                 <span><xmp></html></xmp></span>
               </pre>
@@ -359,6 +366,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
     $("#customSwitchForm").click(function(){
       $(".toggle-form").toggleClass("d-block");
+    });
+    $("#customSwitchCopyright").click(function(){
+      $(".toggle-copyright").toggleClass("d-block");
     });
     $("#customSwitchLoader").click(function(){
       $(".toggle-loader").toggleClass("d-block");

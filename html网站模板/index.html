@@ -76,6 +76,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <label class="custom-control-label" for="customSwitchBootstrapJS"><b>Bootstrap JS</b> (v<span class="bv"></span>)</label>
               </div>
               <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitchForm">
+                <label class="custom-control-label" for="customSwitchForm"><b>表单</b></label>
+              </div>
+              <div class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="customSwitchIE">
                 <label class="custom-control-label" for="customSwitchIE"><b>IE浏览器专属class</b></label>
               </div>
@@ -111,12 +115,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <label class="custom-control-label" for="customSwitchFadein"><b>Fade-in开场</b></label>
               </div>
               <div class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitchForm">
-                <label class="custom-control-label" for="customSwitchForm"><b>表单</b></label>
-              </div>
-              <div class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="customSwitchLoader">
-                <label class="custom-control-label" for="customSwitchLoader"><b>载入动画</b> (需要jQuery)</label>
+                <label class="custom-control-label" for="customSwitchLoader"><b>载入完成后Fade-in开场</b> (需要jQuery)</label>
+              </div>
+              <div id="ui-toggle-copyright" class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitchCopyright">
+                <label class="custom-control-label" for="customSwitchCopyright"><b>版权声明</b></label>
               </div>
               <span class="toggle-cookie mt-2"><small>* 请与法律人员谘询cookie通知的详情。</small></span>
             </div>
@@ -289,6 +293,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	              <span class="toggle-form"><xmp>    <input type="tel" name="phone" value=""><br></xmp></span>
 	              <span class="toggle-form"><xmp>    <input type="submit" value="发送"></xmp></span>
 	              <span class="toggle-form"><xmp>  </form></xmp></span>
+                <span class="toggle-copyright"><xmp>  <footer></xmp></span>
+                <span class="toggle-copyright"><xmp>    <small>© <script>document.write(new Date().getFullYear())</script> 公司名称版权所有</small></footer></xmp></span>
+                <span class="toggle-copyright"><xmp>  </footer></xmp></span>
                 <span><xmp></body></xmp></span>
                 <span><xmp></html></xmp></span>
               </pre>
@@ -357,6 +364,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
     $("#customSwitchForm").click(function(){
       $(".toggle-form").toggleClass("d-block");
+    });
+    $("#customSwitchCopyright").click(function(){
+      $(".toggle-copyright").toggleClass("d-block");
     });
     $("#customSwitchLoader").click(function(){
       $(".toggle-loader").toggleClass("d-block");
