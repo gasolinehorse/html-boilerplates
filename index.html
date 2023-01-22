@@ -244,9 +244,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	                <span class="toggle-col toggle-col--4"><xmp>    </div></xmp></span>
                   <span class="toggle-col toggle-col--4"><xmp>  </div></xmp></span>
 	              </div>
-                <span class="toggle-cookie"><xmp>  <div id="cookie-notice" style="width: 100%; position: fixed; z-index: 1000; bottom: 0; left: 0; background-color: #eeeeee;">
-                <span class="toggle-cookie"><xmp>    <p>This website uses cookies so that we can provide you with the best website experience. By clicking “I Accept” you acknowledge the use of cookies and to our <a href="#"><u>Privacy Policy</u></a>.</p> 
-                <span class="toggle-cookie"><xmp>    <a id="i-accept">I Accept</a>
+                <span class="toggle-cookie"><xmp>  <div id="cookie-notice" style="width: 100%; position: fixed; z-index: 1000; bottom: 0; left: 0; background-color: #eeeeee;"></xmp></span>
+                <span class="toggle-cookie"><xmp>    <p>This website uses cookies so that we can provide you with the best website experience. By clicking “I Accept” you acknowledge the use of cookies and to our <a href="#"><u>Privacy Policy</u></a>.</p></xmp></span>
+                <span class="toggle-cookie"><xmp>    <a id="i-accept">I Accept</a></xmp></span>
                 <span class="toggle-cookie"><xmp>  </div></xmp></span>
                 <span class="toggle-browser"><xmp>  <!--[if IE]><div style="width: 100%; position: fixed; z-index: 1000; bottom: 0; left: 0; background: #eeeeee;"><p>Outdated browser dectected. Please use a modern browser for a better browsing experience.</p><div onClick="parentNode.remove()">Close [X]</div></div><![endif]--></xmp></span>
                 <span class="toggle-form"><xmp>  <form action="#"></xmp></span>
@@ -337,6 +337,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       $('#customSwitchJQuery').prop('checked', true);
       $(".toggle-bootstrapCSS").toggleClass("d-block");
     }
+  });
+  $("#customSwitchFadein").click(function(){
+    if ($('#customSwitchFadein').is(':checked')){ 
+      $('#customSwitchLoader').prop('checked', false);
+      $(".toggle-loader").toggleClass("d-none");
+    } 
+  });
+  $("#customSwitchLoader").click(function(){
+    if ($('#customSwitchLoader').is(':checked')){ 
+      $('#customSwitchFadein').prop('checked', false);
+      $(".toggle-fadein").toggleClass("d-none");
+    } 
   });
   (function($){
     $("#customSwitchFavicon").click(function(){
