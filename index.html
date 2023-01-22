@@ -413,13 +413,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
     $("select").change(function(){
 	    $(this).find("option:selected").each(function(){
-	        var optionValue = $(this).attr("value");
-	        if(optionValue){
-	            $(".toggle-col").not(".toggle-col--" + optionValue).removeClass("d-block");
-	            $(".toggle-col--" + optionValue).addClass("d-block");
-	        } else{
-	            $(".toggle-col").removeClass("d-block");
-	        }
+        var optionValue = $(this).attr("value");
+        if(optionValue){
+          $(".toggle-col").not(".toggle-col--" + optionValue).removeClass("d-block");
+          $(".toggle-col--" + optionValue).addClass("d-block");
+        } else{
+          $(".toggle-col").removeClass("d-block");
+        }
 	    });
     }).change();
 	  $(function () {
