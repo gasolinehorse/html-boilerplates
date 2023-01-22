@@ -387,3 +387,6 @@ body.dark {
 #lang p a {
 	font-family: helvetica, arial, sans-serif;
 }
+.toggle-col-wrapper {
+  display: none;
+}
