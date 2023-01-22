@@ -63,18 +63,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <input type="checkbox" class="custom-control-input" id="customSwitchCSS">
                 <label class="custom-control-label" for="customSwitchCSS"><b>External CSS stylesheet</b></label>
               </div>
-              <div id="ui-toggle-jquery" class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitchJQuery">
-                <label class="custom-control-label" for="customSwitchJQuery"><b>jQuery</b> (v<span class="jv"></span>)</label>
-              </div>
-              <div id="ui-toggle-bootstrapcss" class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitchBootstrapCSS">
-                <label class="custom-control-label" for="customSwitchBootstrapCSS"><b>Bootstrap CSS</b> (v<span class="bv"></span>)</label>
-              </div>
-              <div id="ui-toggle-bootstrapjs" class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitchBootstrapJS">
-                <label class="custom-control-label" for="customSwitchBootstrapJS"><b>Bootstrap JS</b> (v<span class="bv"></span>)</label>
-              </div>
               <div id="ui-toggle-form" class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="customSwitchForm">
                 <label class="custom-control-label" for="customSwitchForm"><b>Form</b></label>
@@ -91,6 +79,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <input type="checkbox" class="custom-control-input" id="customSwitchTheme">
                 <label class="custom-control-label" for="customSwitchTheme"><b>Theme color</b></label>
               </div>
+              <div id="ui-toggle-bootstrapcss" class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitchBootstrapCSS">
+                <label class="custom-control-label" for="customSwitchBootstrapCSS"><b>Bootstrap CSS</b> (v<span class="bv"></span>)</label>
+              </div>
+              <div id="ui-toggle-bootstrapjs" class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitchBootstrapJS">
+                <label class="custom-control-label" for="customSwitchBootstrapJS"><b>Bootstrap JS</b> (v<span class="bv"></span>)</label>
+              </div>
               <div id="ui-toggle-col" class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="customSwitchCol">
                 <label class="custom-control-label" for="customSwitchCol"><b>Contain
@@ -102,13 +98,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 									  <option value="4">4</option>
 									</select> column(s)</b> (Bootstrap required)</label>
               </div>
+              <div id="ui-toggle-jquery" class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitchJQuery">
+                <label class="custom-control-label" for="customSwitchJQuery"><b>jQuery</b> (v<span class="jv"></span>)</label>
+              </div>
               <div id="ui-toggle-cookie" class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="customSwitchCookie">
                 <label class="custom-control-label" for="customSwitchCookie"><b>Cookie notice<span class="toggle-cookie-star">*</span></b> (jQuery required)</label>
               </div>
               <div id="ui-toggle-browser" class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="customSwitchBrowser">
-                <label class="custom-control-label" for="customSwitchBrowser"><b>Old browser upgrade message</b> (Bootstrap required)</label>
+                <label class="custom-control-label" for="customSwitchBrowser"><b>Old browser upgrade message</b></label>
               </div>
               <div id="ui-toggle-fadein" class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="customSwitchFadein">
@@ -244,11 +244,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	                <span class="toggle-col toggle-col--4"><xmp>    </div></xmp></span>
                   <span class="toggle-col toggle-col--4"><xmp>  </div></xmp></span>
 	              </div>
-                <span class="toggle-cookie"><xmp>  <div id="cookie-notice" style="width: 100%; position: fixed; z-index: 1000; bottom: 0; background-color: #eeeeee;">
+                <span class="toggle-cookie"><xmp>  <div id="cookie-notice" style="width: 100%; position: fixed; z-index: 1000; bottom: 0; left: 0; background-color: #eeeeee;">
                 <span class="toggle-cookie"><xmp>    <p>This website uses cookies so that we can provide you with the best website experience. By clicking “I Accept” you acknowledge the use of cookies and to our <a href="#"><u>Privacy Policy</u></a>.</p> 
                 <span class="toggle-cookie"><xmp>    <a id="i-accept">I Accept</a>
                 <span class="toggle-cookie"><xmp>  </div></xmp></span>
-                <span class="toggle-browser"><xmp>  <!--[if IE]><div class="w-100 text-center bg-dark text-white pt-3 px-4 pb-1 position-fixed" style="z-index: 1000; bottom: 0;"><p onClick="parentNode.remove()">Please use a modern browser for a better browsing experience. <span class="float-right">X</span></p></div><![endif]--></xmp></span>
+                <span class="toggle-browser"><xmp>  <!--[if IE]><div style="width: 100%; position: fixed; z-index: 1000; bottom: 0; left: 0; background: #eeeeee;"><p>Outdated browser dectected. Please use a modern browser for a better browsing experience.</p><div onClick="parentNode.remove()">Close [X]</div></div><![endif]--></xmp></span>
                 <span class="toggle-form"><xmp>  <form action="#"></xmp></span>
                 <span class="toggle-form"><xmp>    <label for="firstName">First name:</label><br></xmp></span>
                 <span class="toggle-form"><xmp>    <input type="text" name="firstName" value="John"><br></xmp></span>
@@ -330,19 +330,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       $(".toggle-bootstrapCSS").toggleClass("d-block");
     }
   });
-  $("#customSwitchBrowser").click(function(){
-    if ($('#customSwitchBootstrapCSS').is(':checked') && $('#customSwitchBrowser').is(':checked')){ 
-    } 
-    else if ($('#customSwitchBrowser').is(':checked')){
-      $('#customSwitchBootstrapCSS').prop('checked', true);
-      $(".toggle-bootstrapCSS").toggleClass("d-block");
-    }
-  });
   $("#customSwitchLoader").click(function(){
-    if ($('#customSwitchBootstrapCSS').is(':checked') && $('#customSwitchLoader').is(':checked')){ 
+    if ($('#customSwitchJQuery').is(':checked') && $('#customSwitchLoader').is(':checked')){ 
     } 
     else if ($('#customSwitchLoader').is(':checked')){
-      $('#customSwitchBootstrapCSS').prop('checked', true);
+      $('#customSwitchJQuery').prop('checked', true);
       $(".toggle-bootstrapCSS").toggleClass("d-block");
     }
   });
