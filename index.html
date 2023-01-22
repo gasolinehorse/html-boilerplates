@@ -322,6 +322,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 <script type="text/javascript">
+  $("#customSwitchCol").click(function(){
+    if ($('#customSwitchBootstrapCSS').is(':checked') && $('#customSwitchCol').is(':checked')){ 
+    } 
+    else if ($('#customSwitchCol').is(':checked')){
+      $('#customSwitchBootstrapCSS').prop('checked', true);
+      $(".toggle-bootstrapCSS").toggleClass("d-block");
+    }
+  });
+  $("#customSwitchCookie").click(function(){
+    if ($('#customSwitchJQuery').is(':checked') && $('#customSwitchCookie').is(':checked')){ 
+    } 
+    else if ($('#customSwitchCookie').is(':checked')){
+      $('#customSwitchJQuery').prop('checked', true);
+      $(".toggle-bootstrapCSS").toggleClass("d-block");
+    }
+  });
+  $("#customSwitchBrowser").click(function(){
+    if ($('#customSwitchBootstrapCSS').is(':checked') && $('#customSwitchBrowser').is(':checked')){ 
+    } 
+    else if ($('#customSwitchBrowser').is(':checked')){
+      $('#customSwitchBootstrapCSS').prop('checked', true);
+      $(".toggle-bootstrapCSS").toggleClass("d-block");
+    }
+  });
+  $("#customSwitchLoader").click(function(){
+    if ($('#customSwitchBootstrapCSS').is(':checked') && $('#customSwitchLoader').is(':checked')){ 
+    } 
+    else if ($('#customSwitchLoader').is(':checked')){
+      $('#customSwitchBootstrapCSS').prop('checked', true);
+      $(".toggle-bootstrapCSS").toggleClass("d-block");
+    }
+  });
   (function($){
     $("#customSwitchFavicon").click(function(){
       $(".toggle-favicon").toggleClass("d-block");
