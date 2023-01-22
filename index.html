@@ -104,7 +104,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
               <div id="ui-toggle-cookie" class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="customSwitchCookie">
-                <label class="custom-control-label" for="customSwitchCookie"><b>Default cookie notice<span class="toggle-cookie-star">*</span></b> (jQuery and Bootstrap required)</label>
+                <label class="custom-control-label" for="customSwitchCookie"><b>Default cookie notice<span class="toggle-cookie-star">*</span></b> (jQuery required)</label>
               </div>
               <div id="ui-toggle-browser" class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="customSwitchBrowser">
@@ -244,17 +244,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	                <span class="toggle-col toggle-col--4"><xmp>    </div></xmp></span>
                   <span class="toggle-col toggle-col--4"><xmp>  </div></xmp></span>
 	              </div>
-                <span class="toggle-cookie"><xmp>  <div id="cookie-notice" class="w-100 bg-dark text-white pt-3 px-4 pb-1 position-fixed" style="z-index: 1000; bottom: 0;"></xmp></span>
-                <span class="toggle-cookie"><xmp>    <div class="container p-2"></xmp></span>
-                <span class="toggle-cookie"><xmp>      <div class="row"></xmp></span>
-                <span class="toggle-cookie"><xmp>        <div class="col-sm-8 col-md-9"></xmp></span>
-                <span class="toggle-cookie"><xmp>          <p class="p-2">This website uses cookies so that we can provide you with the best website experience. By clicking “I Accept” you acknowledge the use of cookies and to our <a href="#"><u>Privacy Policy</u></a>.</p> </xmp></span>
-                <span class="toggle-cookie"><xmp>        </div></xmp></span>
-                <span class="toggle-cookie"><xmp>        <div class="col-sm-4 col-md-3"></xmp></span>
-                <span class="toggle-cookie"><xmp>          <a class="i-accept btn btn-primary m-2">I Accept</a></xmp></span>
-                <span class="toggle-cookie"><xmp>        </div></xmp></span>
-                <span class="toggle-cookie"><xmp>      </div></xmp></span>
-                <span class="toggle-cookie"><xmp>    </div></xmp></span>
+                <span class="toggle-cookie"><xmp>  <div id="cookie-notice" style="width: 100%; position: fixed; z-index: 1000; bottom: 0; background-color: #eeeeee;">
+                <span class="toggle-cookie"><xmp>    <p>This website uses cookies so that we can provide you with the best website experience. By clicking “I Accept” you acknowledge the use of cookies and to our <a href="#"><u>Privacy Policy</u></a>.</p> 
+                <span class="toggle-cookie"><xmp>    <a id="i-accept">I Accept</a>
                 <span class="toggle-cookie"><xmp>  </div></xmp></span>
                 <span class="toggle-browser"><xmp>  <!--[if IE]><div class="w-100 text-center bg-dark text-white pt-3 px-4 pb-1 position-fixed" style="z-index: 1000; bottom: 0;"><p onClick="parentNode.remove()">Please use a modern browser for a better browsing experience. <span class="float-right">X</span></p></div><![endif]--></xmp></span>
                 <span class="toggle-form"><xmp>  <form action="#"></xmp></span>
@@ -272,14 +264,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-bootstrapJS"><xmp>  <script src="https://cdn.jsdelivr.net/npm/bootstrap@</xmp><div class="bv d-inline"></div><xmp>/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script></xmp></span>
                 <span class="toggle-cookie"><xmp>  <script type="text/javascript"></xmp></span>
                 <span class="toggle-cookie"><xmp>    (function($){</xmp></span>
-                <span class="toggle-cookie"><xmp>      $('.i-accept').on('click', function() {   </xmp></span>
+                <span class="toggle-cookie"><xmp>      $('#i-accept').on('click', function() {   </xmp></span>
                 <span class="toggle-cookie"><xmp>        if(localStorage.noshow !== '1') {</xmp></span>
-                <span class="toggle-cookie"><xmp>          $('#cookie-notice').addClass('d-none');</xmp></span>
+                <span class="toggle-cookie"><xmp>          $('#cookie-notice').hide();</xmp></span>
                 <span class="toggle-cookie"><xmp>           localStorage.noshow='1';</xmp></span>
                 <span class="toggle-cookie"><xmp>        }  </xmp></span>
                 <span class="toggle-cookie"><xmp>      });</xmp></span>
                 <span class="toggle-cookie"><xmp>      if(localStorage.noshow == '1') {</xmp></span>
-                <span class="toggle-cookie"><xmp>        $('#cookie-notice').addClass('d-none');</xmp></span>
+                <span class="toggle-cookie"><xmp>        $('#cookie-notice').hide();</xmp></span>
                 <span class="toggle-cookie"><xmp>      };</xmp></span>
                 <span class="toggle-cookie"><xmp>    })(jQuery);</xmp></span>
                 <span class="toggle-cookie"><xmp>  </script></xmp></span>
