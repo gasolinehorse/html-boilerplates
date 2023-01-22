@@ -79,6 +79,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <input type="checkbox" class="custom-control-input" id="customSwitchTheme">
                 <label class="custom-control-label" for="customSwitchTheme"><b>Theme color</b></label>
               </div>
+              <div id="ui-toggle-manifest" class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitchManifest">
+                <label class="custom-control-label" for="customSwitchManifest"><b>Manifest</b></label>
+              </div>
               <div id="ui-toggle-bootstrapcss" class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="customSwitchBootstrapCSS">
                 <label class="custom-control-label" for="customSwitchBootstrapCSS"><b>Bootstrap CSS</b> (v<span class="bv"></span>)</label>
@@ -148,6 +152,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-social"><xmp>  <meta name="twitter:title" content=""></xmp></span>
                 <span class="toggle-social"><xmp>  <meta name="twitter:description" content=""></xmp></span>
                 <span class="toggle-social"><xmp>  <meta name="twitter:image" content=""></xmp></span>
+                <span class="toggle-manifest"><xmp>  <link rel="manifest" href="/webmanifest.json"></xmp></span>
                 <span><xmp></head></xmp></span>
                 <span><xmp><body></xmp></span>
                 <span class="toggle-fadein"><xmp>  <div id="fadein"></div></xmp></span>
@@ -372,6 +377,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
     $("#customSwitchSocial").click(function(){
       $(".toggle-social").toggleClass("d-block");
+    });
+    $("#customSwitchManifest").click(function(){
+      $(".toggle-manifest").toggleClass("d-block");
     });
     $("#customSwitchTheme").click(function(){
       $(".toggle-theme").toggleClass("d-block");
