@@ -32,9 +32,12 @@ body#jp {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
 }
+h1 .outlined {
+  font-family: Arial Black, 'Montserrat', Helvetica Neue, helvetica, Arial, sans-serif;
+}
 @media (max-width: 575px) {
 	.outlined {
-		letter-spacing: 2px;
+		letter-spacing: 0.2px;
 	}
 }
 h1,
@@ -196,6 +199,10 @@ span[class^="toggle-"].d-block {
 .custom-control-input:checked~.custom-control-label::before {
   border-color: var(--green);
   background-color: var(--green);
+}
+.custom-control-input:not(:disabled):active~.custom-control-label::before {
+  border-color: #000000;
+  background-color: #54a200;
 }
 .custom-control-label::before {
   border-color: #000000;
