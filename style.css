@@ -397,3 +397,24 @@ body.dark {
 .toggle-col-wrapper {
   display: none;
 }
+.btn-link {
+  width: 100%;
+  color: #666666;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: left;
+  padding: 0.6rem;
+}
+.btn-link:hover {
+  color: #000000;
+  text-decoration: none;
+}
+.card-header {
+  padding: 0;
+}
+.accordion>.card {
+  border-radius: 0;
+}

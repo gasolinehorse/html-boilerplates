@@ -55,75 +55,120 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="row">
             <div class="col-md-4 col-sm-6">
               <p class="small text-grey">1. Select what to&#160;include:</p>
-              <div id="ui-toggle-favicon" class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitchFavicon">
-                <label class="custom-control-label" for="customSwitchFavicon"><b>Favicon</b></label>
-              </div>
-              <div id="ui-toggle-css" class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitchCSS">
-                <label class="custom-control-label" for="customSwitchCSS"><b>External CSS stylesheet</b></label>
-              </div>
-              <!--<div id="ui-toggle-ie" class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitchIE">
-                <label class="custom-control-label" for="customSwitchIE"><b>IE conditional class</b></label>
-              </div>-->
-              <div id="ui-toggle-social" class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitchSocial">
-                <label class="custom-control-label" for="customSwitchSocial"><b>Social media meta tags</b></label>
-              </div>
-              <div id="ui-toggle-manifest" class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitchManifest">
-                <label class="custom-control-label" for="customSwitchManifest"><b>Manifest</b></label>
-              </div>
-              <div id="ui-toggle-theme" class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitchTheme">
-                <label class="custom-control-label" for="customSwitchTheme"><b>Theme color</b></label>
-              </div>
-              <div id="ui-toggle-form" class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitchForm">
-                <label class="custom-control-label" for="customSwitchForm"><b>Form</b></label>
-              </div>
-              <div id="ui-toggle-bootstrapcss" class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitchBootstrapCSS">
-                <label class="custom-control-label" for="customSwitchBootstrapCSS"><b>Bootstrap CSS</b> (v<span class="bv"></span>)</label>
-              </div>
-              <div id="ui-toggle-bootstrapjs" class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitchBootstrapJS">
-                <label class="custom-control-label" for="customSwitchBootstrapJS"><b>Bootstrap JS</b> (v<span class="bv"></span>)</label>
-              </div>
-              <div id="ui-toggle-col" class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitchCol">
-                <label class="custom-control-label" for="customSwitchCol"><b>Contain
-                	<select name="cols" id="cols">
-									  <option value="1">1</option>
-									  <option value="2">2</option>
-									  <option value="3">3</option>
-									  <option value="4">4</option>
-									</select> column(s)</b> (Bootstrap required)</label>
-              </div>
-              <div id="ui-toggle-jquery" class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitchJQuery">
-                <label class="custom-control-label" for="customSwitchJQuery"><b>jQuery</b> (v<span class="jv"></span>)</label>
-              </div>
-              <div id="ui-toggle-cookie" class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitchCookie">
-                <label class="custom-control-label" for="customSwitchCookie"><b>Cookie notice<span class="toggle-cookie-star">*</span></b> (jQuery required)</label>
-              </div>
-              <div id="ui-toggle-browser" class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitchBrowser">
-                <label class="custom-control-label" for="customSwitchBrowser"><b>Old browser upgrade message</b></label>
-              </div>
-              <div id="ui-toggle-fadein" class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitchFadein">
-                <label class="custom-control-label" for="customSwitchFadein"><b>Page fade-in</b></label>
-              </div>
-              <div id="ui-toggle-loader" class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitchLoader">
-                <label class="custom-control-label" for="customSwitchLoader"><b>Page fade-in after fully loaded</b> (jQuery required)</label>
-              </div>
-              <div id="ui-toggle-copyright" class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitchCopyright">
-                <label class="custom-control-label" for="customSwitchCopyright"><b>Footer copyright</b></label>
+              <div class="accordion mb-3" id="accordionSwitches">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        General
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
+                    <div class="card-body">
+                      <div id="ui-toggle-favicon" class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitchFavicon">
+                        <label class="custom-control-label" for="customSwitchFavicon"><b>Favicon</b></label>
+                      </div>
+                      <div id="ui-toggle-css" class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitchCSS">
+                        <label class="custom-control-label" for="customSwitchCSS"><b>External CSS stylesheet</b></label>
+                      </div>
+                      <!--<div id="ui-toggle-ie" class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitchIE">
+                        <label class="custom-control-label" for="customSwitchIE"><b>IE conditional class</b></label>
+                      </div>-->
+                      <div id="ui-toggle-social" class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitchSocial">
+                        <label class="custom-control-label" for="customSwitchSocial"><b>Social media meta tags</b></label>
+                      </div>
+                      <div id="ui-toggle-manifest" class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitchManifest">
+                        <label class="custom-control-label" for="customSwitchManifest"><b>Manifest</b></label>
+                      </div>
+                      <div id="ui-toggle-theme" class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitchTheme">
+                        <label class="custom-control-label" for="customSwitchTheme"><b>Theme color</b></label>
+                      </div>
+                      <div id="ui-toggle-bootstrapcss" class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitchBootstrapCSS">
+                        <label class="custom-control-label" for="customSwitchBootstrapCSS"><b>Bootstrap CSS</b> (v<span class="bv"></span>)</label>
+                      </div>
+                      <div id="ui-toggle-bootstrapjs" class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitchBootstrapJS">
+                        <label class="custom-control-label" for="customSwitchBootstrapJS"><b>Bootstrap JS</b> (v<span class="bv"></span>)</label>
+                      </div>
+                      <div id="ui-toggle-tailwind" class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitchTailwind">
+                        <label class="custom-control-label" for="customSwitchTailwind"><b>Tailwind CSS</b></label>
+                      </div>
+                      <div id="ui-toggle-jquery" class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitchJQuery">
+                        <label class="custom-control-label" for="customSwitchJQuery"><b>jQuery</b> (v<span class="jv"></span>)</label>
+                      </div>
+                      <div id="ui-toggle-cookie" class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitchCookie">
+                        <label class="custom-control-label" for="customSwitchCookie"><b>Cookie notice<span class="toggle-cookie-star">*</span></b> (jQuery required)</label>
+                      </div>
+                      <div id="ui-toggle-browser" class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitchBrowser">
+                        <label class="custom-control-label" for="customSwitchBrowser"><b>Old browser upgrade message</b></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Layout & Design
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo">
+                    <div class="card-body">
+                      <div id="ui-toggle-form" class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitchForm">
+                        <label class="custom-control-label" for="customSwitchForm"><b>Form</b></label>
+                      </div>
+                      <div id="ui-toggle-col" class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitchCol">
+                        <label class="custom-control-label" for="customSwitchCol"><b>Contain
+                          <select name="cols" id="cols">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                          </select> column(s)</b> (Bootstrap required)</label>
+                      </div>
+                      <div id="ui-toggle-copyright" class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitchCopyright">
+                        <label class="custom-control-label" for="customSwitchCopyright"><b>Footer copyright</b></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Fancy Shit
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapseThree" class="collapse show" aria-labelledby="headingThree">
+                    <div class="card-body">
+                      <div id="ui-toggle-fadein" class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitchFadein">
+                        <label class="custom-control-label" for="customSwitchFadein"><b>Page fade-in</b></label>
+                      </div>
+                      <div id="ui-toggle-loader" class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitchLoader">
+                        <label class="custom-control-label" for="customSwitchLoader"><b>Page fade-in after fully loaded</b> (jQuery required)</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <span class="toggle-cookie mt-2"><small>* Consult legal team to implement the cookie notice.</small></span>
             </div>
@@ -140,6 +185,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span><xmp>  <meta name="viewport" content="width=device-width,initial-scale=1" /></xmp></span>
                 <span><xmp>  <meta name="description" content="" /></xmp></span>
                 <span class="toggle-bootstrapCSS"><xmp>  <link href="https://cdn.jsdelivr.net/npm/bootstrap@</xmp><div class="bv d-inline"></div><xmp>/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"></xmp></span>
+                <span class="toggle-tailwind"><xmp>  <script src="https://cdn.tailwindcss.com"></script></xmp></span>
                 <span class="toggle-css"><xmp>  <link rel="stylesheet" type="text/css" href="style.css" /></xmp></span>
                 <span class="toggle-favicon"><xmp>  <link rel="icon" href="img/favicon.png"></xmp></span>
                 <span class="toggle-theme"><xmp>  <meta name="theme-color" content=""></xmp></span>
@@ -369,6 +415,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
     $("#customSwitchBootstrapCSS").click(function(){
       $(".toggle-bootstrapCSS").toggleClass("d-block");
+    });
+    $("#customSwitchTailwind").click(function(){
+      $(".toggle-tailwind").toggleClass("d-block");
     });
     $("#customSwitchIE").click(function(){
       $(".toggle-ie").toggleClass("d-block");
