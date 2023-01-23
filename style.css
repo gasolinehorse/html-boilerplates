@@ -221,7 +221,6 @@ tr input:focus {
 }
 a {
   color: inherit;
-  font-weight: bold;
   border: 0;
 }
 a:hover {
@@ -393,6 +392,7 @@ body.dark {
 }
 #lang p a {
 	font-family: helvetica, arial, sans-serif;
+  font-weight: bold;
 }
 .toggle-col-wrapper {
   display: none;
@@ -411,6 +411,15 @@ body.dark {
 .btn-link:hover {
   color: #000000;
   text-decoration: none;
+}
+.btn.btn-link::after {
+  content: "—";
+  font-family: Verdana;
+  float: right;
+}
+.btn.btn-link.collapsed::after {
+  content: "+";
+  font-size: 0.9rem;
 }
 .card-header {
   padding: 0;
