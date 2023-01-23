@@ -131,6 +131,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <input type="checkbox" class="custom-control-input" id="customSwitchForm">
                         <label class="custom-control-label" for="customSwitchForm"><b>Form</b></label>
                       </div>
+                      <div id="ui-toggle-accordion" class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitchAccordion">
+                        <label class="custom-control-label" for="customSwitchAccordion"><b>Accordion</b></label>
+                      </div>
                       <div id="ui-toggle-col" class="custom-control custom-switch">
                         <input type="checkbox" class="custom-control-input" id="customSwitchCol">
                         <label class="custom-control-label" for="customSwitchCol"><b>Contain
@@ -449,6 +453,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
     $("#customSwitchForm").click(function(){
       $(".toggle-form").toggleClass("d-block");
+    });
+    $("#customSwitchAccordion").click(function(){
+      $(".toggle-accordion").toggleClass("d-block");
     });
     $("#customSwitchCopyright").click(function(){
       $(".toggle-copyright").toggleClass("d-block");
