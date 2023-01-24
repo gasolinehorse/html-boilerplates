@@ -67,12 +67,81 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
                     <div class="card-body">
                       <div id="ui-toggle-lang" class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitchLang">
+                        <input type="checkbox" class="custom-control-input" id="customSwitchLang" checked>
                         <label class="custom-control-label" for="customSwitchLang"><b>Language:
                           <select name="langs" id="langs">
-                            <option value="en">en</option>
-                            <option value="de">de</option>
-                            <option value="ja">ja</option>
+                            <option value="af">Afrikaans</option>
+                            <option value="sq">Albanian</option>
+                            <option value="ar">Arabic</option>
+                            <option value="hy">Armenian</option>
+                            <option value="eu">Basque</option>
+                            <option value="bn">Bengali</option>
+                            <option value="bg">Bulgarian</option>
+                            <option value="ca">Catalan</option>
+                            <option value="km">Cambodian</option>
+                            <option value="zh">Chinese</option>
+                            <option value="hr">Croatian</option>
+                            <option value="cs">Czech</option>
+                            <option value="da">Danish</option>
+                            <option value="nl">Dutch</option>
+                            <option value="en" selected>English</option>
+                            <option value="et">Estonian</option>
+                            <option value="fj">Fiji</option>
+                            <option value="fi">Finnish</option>
+                            <option value="fr">French</option>
+                            <option value="ka">Georgian</option>
+                            <option value="de">German</option>
+                            <option value="el">Greek</option>
+                            <option value="gu">Gujarati</option>
+                            <option value="he">Hebrew</option>
+                            <option value="hi">Hindi</option>
+                            <option value="hu">Hungarian</option>
+                            <option value="is">Icelandic</option>
+                            <option value="id">Indonesian</option>
+                            <option value="ga">Irish</option>
+                            <option value="it">Italian</option>
+                            <option value="ja">Japanese</option>
+                            <option value="jw">Javanese</option>
+                            <option value="ko">Korean</option>
+                            <option value="la">Latin</option>
+                            <option value="lv">Latvian</option>
+                            <option value="lt">Lithuanian</option>
+                            <option value="mk">Macedonian</option>
+                            <option value="ms">Malay</option>
+                            <option value="ml">Malayalam</option>
+                            <option value="mt">Maltese</option>
+                            <option value="mi">Maori</option>
+                            <option value="mr">Marathi</option>
+                            <option value="mn">Mongolian</option>
+                            <option value="ne">Nepali</option>
+                            <option value="no">Norwegian</option>
+                            <option value="fa">Persian</option>
+                            <option value="pl">Polish</option>
+                            <option value="pt">Portuguese</option>
+                            <option value="pa">Punjabi</option>
+                            <option value="qu">Quechua</option>
+                            <option value="ro">Romanian</option>
+                            <option value="ru">Russian</option>
+                            <option value="sm">Samoan</option>
+                            <option value="sr">Serbian</option>
+                            <option value="sk">Slovak</option>
+                            <option value="sl">Slovenian</option>
+                            <option value="es">Spanish</option>
+                            <option value="sw">Swahili</option>
+                            <option value="sv">Swedish </option>
+                            <option value="ta">Tamil</option>
+                            <option value="tt">Tatar</option>
+                            <option value="te">Telugu</option>
+                            <option value="th">Thai</option>
+                            <option value="bo">Tibetan</option>
+                            <option value="to">Tonga</option>
+                            <option value="tr">Turkish</option>
+                            <option value="uk">Ukrainian</option>
+                            <option value="ur">Urdu</option>
+                            <option value="uz">Uzbek</option>
+                            <option value="vi">Vietnamese</option>
+                            <option value="cy">Welsh</option>
+                            <option value="xh">Xhosa</option>
                           </select></b></label>
                       </div>
                       <div id="ui-toggle-favicon" class="custom-control custom-switch">
@@ -210,7 +279,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span><xmp><!DOCTYPE html></xmp></span>
                 <span class="toggle-ie"><xmp><!--[if lte 8]><html class="pre-ie9" lang="en"><![endif]--></xmp></span>
                 <span class="toggle-ie"><xmp><!--[if gte IE 9]><!--><html lang="en"><!--<![endif]--></xmp></span>
-                <span id="test-lang" class="no-ie"><xmp><html lang="en"></xmp></span>
+                <span class="toggle-lang-no-lang no-ie"><xmp><html lang=""></xmp></span>
+                <span id="select-lang" class="toggle-lang d-block no-ie"><xmp><html lang="en"></xmp></span>
                 <span><xmp><head></xmp></span>
                 <span><xmp>  <title>Hello, world!</title></xmp></span>
                 <span><xmp>  <meta charset="UTF-8" /></xmp></span>
@@ -648,6 +718,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     $("#customSwitchFavicon").click(function(){
       $(".toggle-favicon").toggleClass("d-block");
     });
+    $("#customSwitchLang").click(function(){
+      $(".toggle-lang").toggleClass("d-block");
+      $(".toggle-lang-no-lang").toggleClass("d-block");
+    });
     $("#customSwitchCSS").click(function(){
       $(".toggle-css").toggleClass("d-block");
     });
@@ -725,6 +799,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           $(".toggle-col").removeClass("d-block");
         }
 	    });
+    }).change();
+    $("select#langs").change(function(){
+      $(this).find("option:selected").each(function(){
+        var optionValue = $(this).attr("value");
+        if(optionValue){
+          $( '#select-lang' ).text('<html lang="'+optionValue+'">');
+        }
+      });
     }).change();
 	  $(function () {
 		  $('[data-toggle="tooltip"]').tooltip()
