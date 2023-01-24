@@ -178,7 +178,7 @@ pre span:before {
   counter-increment: line;
   content: counter(line);
   display: inline-block;
-  border-right: 1px solid #ddd;
+  border-right: 1px solid #DDDDDD;
   padding: 0 0.5em;
   margin-right: 0.5em;
   width: 33px;
@@ -202,7 +202,7 @@ span[class^="toggle-"].d-block {
 }
 .custom-control-input:not(:disabled):active~.custom-control-label::before {
   border-color: #000000;
-  background-color: #54a200;
+  background-color: #DDDDDD;
 }
 .custom-control-label::before {
   border-color: #000000;
@@ -242,9 +242,6 @@ _:-moz-read-write, :root button {
 }
 .custom-control-label {
   margin-bottom: 15px;
-}
-.table__desc {
-  display: none;
 }
 @media (min-height: 800px) and (min-width: 576px) {
 	footer {
