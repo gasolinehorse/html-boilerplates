@@ -205,11 +205,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <input type="checkbox" class="custom-control-input" id="customSwitchForm">
                         <label class="custom-control-label" for="customSwitchForm"><b>Form</b></label>
                       </div>
-                      <div id="ui-toggle-accordion" class="custom-control custom-switch">
+                      <div id="ui-toggle-accordion" class="custom-control custom-switch bs-repel">
                         <input type="checkbox" class="custom-control-input" id="customSwitchAccordion">
                         <label class="custom-control-label" for="customSwitchAccordion"><b>Accordion</b></label>
                       </div>
-                      <div id="ui-toggle-col" class="custom-control custom-switch">
+                      <div id="ui-toggle-accordion-bs" class="custom-control custom-switch bs-only">
+                        <input type="checkbox" class="custom-control-input" id="customSwitchAccordionBs">
+                        <label class="custom-control-label" for="customSwitchAccordionBs"><b>Accordion</b> (Bootstrap Required)</label>
+                      </div>
+                      <div id="ui-toggle-col" class="custom-control custom-switch bs-only">
                         <input type="checkbox" class="custom-control-input" id="customSwitchCol">
                         <label class="custom-control-label" for="customSwitchCol"><b>Contain
                           <select name="cols" id="cols">
@@ -229,7 +233,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <input type="checkbox" class="custom-control-input" id="customSwitchTable">
                         <label class="custom-control-label" for="customSwitchTable"><b>Table</b></label>
                       </div>
-                      <div id="ui-toggle-carousel" class="custom-control custom-switch">
+                      <div id="ui-toggle-carousel" class="custom-control custom-switch bs-only">
                         <input type="checkbox" class="custom-control-input" id="customSwitchCarousel">
                         <label class="custom-control-label" for="customSwitchCarousel"><b>Carousel</b> (Bootstrap required)</label>
                       </div>
@@ -500,66 +504,104 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-form"><xmp>    <input type="tel" name="phone" value="555-555-5555"><br></xmp></span>
                 <span class="toggle-form"><xmp>    <input type="submit" value="Submit"></xmp></span>
                 <span class="toggle-form"><xmp>  </form></xmp></span>
-                <span class="toggle-accordion"><xmp>  <button class="accordion"></xmp></span>
-                <span class="toggle-accordion"><xmp>    Accordion Section Heading 1<span class="accordion__indicator"></span></xmp></span>
-                <span class="toggle-accordion"><xmp>  </button></xmp></span>
-                <span class="toggle-accordion"><xmp>  <div class="accordion-panel"></xmp></span>
-                <span class="toggle-accordion"><xmp>    <p>Accordion Section Content 1</p></xmp></span>
-                <span class="toggle-accordion"><xmp>  </div></xmp></span>
-                <span class="toggle-accordion"><xmp>  <button class="accordion"></xmp></span>
-                <span class="toggle-accordion"><xmp>    Accordion Section Heading 2<span class="accordion__indicator"></span></xmp></span>
-                <span class="toggle-accordion"><xmp>  </button></xmp></span>
-                <span class="toggle-accordion"><xmp>  <div class="accordion-panel"></xmp></span>
-                <span class="toggle-accordion"><xmp>    <p>Accordion Section Content 2</p></xmp></span>
-                <span class="toggle-accordion"><xmp>  </div></xmp></span>
-                <span class="toggle-accordion"><xmp>  <button class="accordion"></xmp></span>
-                <span class="toggle-accordion"><xmp>    Accordion Section Heading 3<span class="accordion__indicator"></span></xmp></span>
-                <span class="toggle-accordion"><xmp>  </button></xmp></span>
-                <span class="toggle-accordion"><xmp>  <div class="accordion-panel"></xmp></span>
-                <span class="toggle-accordion"><xmp>    <p>Accordion Section Content 3</p></xmp></span>
-                <span class="toggle-accordion"><xmp>  </div></xmp></span>
-                <span class="toggle-accordion"><xmp>  <style></xmp></span>
-                <span class="toggle-accordion"><xmp>  /* For best practice, move CSS below to an external CSS file. */</xmp></span>
-                <span class="toggle-accordion"><xmp>  .accordion {</xmp></span>
-                <span class="toggle-accordion"><xmp>    background-color: #61BA00;</xmp></span>
-                <span class="toggle-accordion"><xmp>    color: #000000;</xmp></span>
-                <span class="toggle-accordion"><xmp>    cursor: pointer;</xmp></span>
-                <span class="toggle-accordion"><xmp>    padding: 18px;</xmp></span>
-                <span class="toggle-accordion"><xmp>    width: 100%;</xmp></span>
-                <span class="toggle-accordion"><xmp>    border: none;</xmp></span>
-                <span class="toggle-accordion"><xmp>    text-align: left;</xmp></span>
-                <span class="toggle-accordion"><xmp>    outline: none;</xmp></span>
-                <span class="toggle-accordion"><xmp>    font-size: 15px;</xmp></span>
-                <span class="toggle-accordion"><xmp>    transition: 0.4s; }</xmp></span>
-                <span class="toggle-accordion"><xmp>  .accordion-panel {</xmp></span>
-                <span class="toggle-accordion"><xmp>    padding: 0 18px;</xmp></span>
-                <span class="toggle-accordion"><xmp>    display: none;</xmp></span>
-                <span class="toggle-accordion"><xmp>    background-color: white;</xmp></span>
-                <span class="toggle-accordion"><xmp>    overflow: hidden; }</xmp></span>
-                <span class="toggle-accordion"><xmp>  .arrow-icon__line {</xmp></span>
-                <span class="toggle-accordion"><xmp>    width: 20px;</xmp></span>
-                <span class="toggle-accordion"><xmp>    height: 4px;</xmp></span>
-                <span class="toggle-accordion"><xmp>    background-color: #000000; }</xmp></span>
-                <span class="toggle-accordion"><xmp>  .accordion__indicator::after {</xmp></span>
-                <span class="toggle-accordion"><xmp>    content: "+"; }</xmp></span>
-                <span class="toggle-accordion"><xmp>  .accordion--open .accordion__indicator::after {</xmp></span>
-                <span class="toggle-accordion"><xmp>    content: "-"; }</xmp></span>
-                <span class="toggle-accordion"><xmp>  </style></xmp></span>
-                <span class="toggle-accordion"><xmp>  <script></xmp></span>
-                <span class="toggle-accordion"><xmp>  var acc = document.getElementsByClassName("accordion");</xmp></span>
-                <span class="toggle-accordion"><xmp>  var i;</xmp></span>
-                <span class="toggle-accordion"><xmp>  for (i = 0; i < acc.length; i++) {</xmp></span>
-                <span class="toggle-accordion"><xmp>    acc[i].addEventListener("click", function() {</xmp></span>
-                <span class="toggle-accordion"><xmp>      this.classList.toggle("accordion--open");</xmp></span>
-                <span class="toggle-accordion"><xmp>      var panel = this.nextElementSibling;</xmp></span>
-                <span class="toggle-accordion"><xmp>      if (panel.style.display === "block") {</xmp></span>
-                <span class="toggle-accordion"><xmp>        panel.style.display = "none";</xmp></span>
-                <span class="toggle-accordion"><xmp>      } else {</xmp></span>
-                <span class="toggle-accordion"><xmp>        panel.style.display = "block";</xmp></span>
-                <span class="toggle-accordion"><xmp>      }</xmp></span>
-                <span class="toggle-accordion"><xmp>    });</xmp></span>
-                <span class="toggle-accordion"><xmp>  }</xmp></span>
-                <span class="toggle-accordion"><xmp>  </script></xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  <button class="accordion"></xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>    Accordion Section Heading 1<span class="accordion__indicator"></span></xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  </button></xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  <div class="accordion-panel"></xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>    <p>Accordion Section Content 1</p></xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  </div></xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  <button class="accordion"></xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>    Accordion Section Heading 2<span class="accordion__indicator"></span></xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  </button></xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  <div class="accordion-panel"></xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>    <p>Accordion Section Content 2</p></xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  </div></xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  <button class="accordion"></xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>    Accordion Section Heading 3<span class="accordion__indicator"></span></xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  </button></xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  <div class="accordion-panel"></xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>    <p>Accordion Section Content 3</p></xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  </div></xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  <style></xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  /* For best practice, move CSS below to an external CSS file. */</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  .accordion {</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>    background-color: #61BA00;</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>    color: #000000;</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>    cursor: pointer;</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>    padding: 18px;</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>    width: 100%;</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>    border: none;</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>    text-align: left;</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>    outline: none;</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>    font-size: 15px;</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>    transition: 0.4s; }</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  .accordion-panel {</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>    padding: 0 18px;</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>    display: none;</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>    background-color: white;</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>    overflow: hidden; }</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  .arrow-icon__line {</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>    width: 20px;</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>    height: 4px;</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>    background-color: #000000; }</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  .accordion__indicator::after {</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>    content: "+"; }</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  .accordion--open .accordion__indicator::after {</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>    content: "-"; }</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  </style></xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  <script></xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  var acc = document.getElementsByClassName("accordion");</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  var i;</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  for (i = 0; i < acc.length; i++) {</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>    acc[i].addEventListener("click", function() {</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>      this.classList.toggle("accordion--open");</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>      var panel = this.nextElementSibling;</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>      if (panel.style.display === "block") {</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>        panel.style.display = "none";</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>      } else {</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>        panel.style.display = "block";</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>      }</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>    });</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  }</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  </script></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>  <div class="accordion" id="accordionExample"></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>    <div class="accordion-item"></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>      <h2 class="accordion-header" id="headingOne"></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>          Accordion Section Heading 1</xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>        </button></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>      </h2></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample"></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>        <div class="accordion-body"></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>          Accordion Section Content 1</xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>        </div></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>      </div></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>    </div></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>    <div class="accordion-item"></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>      <h2 class="accordion-header" id="headingTwo"></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>          Accordion Section Heading 2</xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>        </button></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>      </h2></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample"></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>        <div class="accordion-body"></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>          Accordion Section Content 2</xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>        </div></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>      </div></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>    </div></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>    <div class="accordion-item"></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>      <h2 class="accordion-header" id="headingThree"></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>          Accordion Section Heading 3</xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>        </button></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>      </h2></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample"></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>        <div class="accordion-body"></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>          Accordion Section Content 3</xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>        </div></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>      </div></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>    </div></xmp></span>
+                <span class="toggle-accordion-bs toggle-bs-only"><xmp>  </div>                </xmp></span>
                 <span class="toggle-carousel"><xmp>  <div id="carouselExampleCaptions" class="carousel slide"></xmp></span>
                 <span class="toggle-carousel"><xmp>    <div class="carousel-indicators"></xmp></span>
                 <span class="toggle-carousel"><xmp>      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button></xmp></span>
@@ -695,6 +737,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       $(".toggle-bootstrapCSS").toggleClass("d-block");
     }
   });
+  $("#customSwitchAccordionBs").click(function(){
+    if ($('#customSwitchBootstrapCSS').is(':checked') && $('#customSwitchAccordionBs').is(':checked')){ 
+    } 
+    else if ($('#customSwitchAccordionBs').is(':checked')){
+      $('#customSwitchBootstrapCSS').prop('checked', true);
+      $(".toggle-bootstrapCSS").toggleClass("d-block");
+    }
+  });
+  $("#customSwitchBootstrapCSS").click(function(){
+    if ($('#customSwitchAccordionBs').is(':checked')) {
+      $('#customSwitchAccordion').prop('checked', true);
+      $(".toggle-accordion").removeClass("d-none").addClass("d-block");
+    } 
+  });
+  // $("#customSwitchBootstrapCSS").click(function(){
+  //   if ($('#customSwitchAccordionBs').is(':checked')){ 
+  //   } 
+  //   else if ($('#customSwitchAccordion').is(':checked')){
+  //     $('#customSwitchAccordion').prop('checked', false);
+  //     $(".toggle-accordion").removeClass("d-block").addClass("d-none");
+  //   }
+  // });
+  $("#customSwitchBootstrapCSS").click(function(){
+    if ($('#customSwitchAccordion').is(':checked')){
+      $(".toggle-accordion").removeClass("d-block").addClass("d-none");
+      $('#customSwitchAccordionBs').prop('checked', true);
+      $(".toggle-accordion-bs").removeClass("d-none").addClass("d-block");
+    } 
+    else {
+      $('#customSwitchAccordionBs').prop('checked', false);
+      $(".toggle-accordion-bs").removeClass("d-block").addClass("d-none");
+    }
+  });
+  $("#customSwitchBootstrapCSS").click(function(){
+    if ($('#customSwitchAccordion').is(':checked') && $('#ui-toggle-accordion').hasClass('d-none')) {
+      $(".toggle-accordion-bs").removeClass("d-block").addClass("d-none");
+      $(".toggle-accordion").removeClass("d-none").addClass("d-block");
+    }
+  });
   $("#customSwitchFadein").click(function(){
     if ($('#customSwitchFadein').is(':checked')){ 
       $('#customSwitchLoader').prop('checked', false);
@@ -733,6 +814,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
     $("#customSwitchBootstrapCSS").click(function(){
       $(".toggle-bootstrapCSS").toggleClass("d-block");
+      $(".bs-only").toggleClass("d-block");
+      $(".bs-repel").toggleClass("d-none");
     });
     $("#customSwitchTailwind").click(function(){
       $(".toggle-tailwind").toggleClass("d-block");
@@ -776,6 +859,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
     $("#customSwitchAccordion").click(function(){
       $(".toggle-accordion").toggleClass("d-block");
+    });
+    $("#customSwitchAccordionBs").click(function(){
+      $(".toggle-accordion-bs").toggleClass("d-block");
     });
     $("#customSwitchTable").click(function(){
       $(".toggle-table").toggleClass("d-block");

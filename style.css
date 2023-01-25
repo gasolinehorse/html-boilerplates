@@ -202,7 +202,7 @@ span[class^="toggle-"].d-block {
 }
 .custom-control-input:not(:disabled):active~.custom-control-label::before {
   border-color: #000000;
-  background-color: #DDDDDD;
+  background-color: #c3f490;
 }
 .custom-control-label::before {
   border-color: #000000;
@@ -241,7 +241,7 @@ _:-moz-read-write, :root button {
 	display: none;
 }
 .custom-control-label {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 @media (min-height: 800px) and (min-width: 576px) {
 	footer {
@@ -445,4 +445,7 @@ body.dark {
 }
 .accordion>.card {
   border-radius: 0;
+}
+.bs-only {
+  display: none;
 }
