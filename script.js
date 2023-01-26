@@ -17,3 +17,13 @@ $.ajax ({
 		$(".jv").text(result.tag_name);
 	}
 })
+
+const urlEntries2 = "https://api.github.com/repos/sindresorhus/modern-normalize/releases/latest"
+
+$.ajax ({
+	url: urlEntries3,
+	success: function (result) {
+		console.log(result);
+		$(".nv").text(result.tag_name);
+	}
+})
