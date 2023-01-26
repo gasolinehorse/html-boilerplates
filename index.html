@@ -52,7 +52,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </header>
         <section class="pt-1">
           <hr>
-          <div class="row">
+          <div class="row html-boilerplates no-bs">
             <div class="col-sm-6 col-md-5 col-lg-4">
               <p class="small text-grey">1. Select what to&#160;include:</p>
               <div class="accordion mb-3" id="accordionSwitches">
@@ -283,7 +283,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="col-sm-6 col-md-7 col-lg-8">
               <p class="small text-grey">2. Copy and paste the following code into your code editor to&#160;use:</p>
-              <pre id="output" class="border">
+              <pre id="output" class="border position-relative">
+                <div class="msg msg--bs">Bootstrap enabled</div>
+                <div class="msg msg--no-bs">Bootstrap disabled</div>
                 <span><xmp><!DOCTYPE html></xmp></span>
                 <span class="toggle-ie"><xmp><!--[if lte 8]><html class="pre-ie9" lang="en"><![endif]--></xmp></span>
                 <span class="toggle-ie"><xmp><!--[if gte IE 9]><!--><html lang="en"><!--<![endif]--></xmp></span>
@@ -710,52 +712,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 <script type="text/javascript">
-  $("#customSwitchCol").click(function(){
-    if ($('#customSwitchBootstrapCSS').is(':checked') && $('#customSwitchCol').is(':checked')){ 
-    } 
-    else if ($('#customSwitchCol').is(':checked')){
-      $('#customSwitchBootstrapCSS').prop('checked', true);
-      $(".toggle-bootstrapCSS").toggleClass("d-block");
-    }
-  });
   $("#customSwitchCookie").click(function(){
-    if ($('#customSwitchJQuery').is(':checked') && $('#customSwitchCookie').is(':checked')){ 
-    } 
-    else if ($('#customSwitchCookie').is(':checked')){
+    if ($('#customSwitchCookie').is(':checked')){
       $('#customSwitchJQuery').prop('checked', true);
       $(".toggle-jquery").toggleClass("d-block");
     }
   });
   $("#customSwitchLoader").click(function(){
-    if ($('#customSwitchJQuery').is(':checked') && $('#customSwitchLoader').is(':checked')){ 
-    } 
-    else if ($('#customSwitchLoader').is(':checked')){
+    if ($('#customSwitchLoader').is(':checked')){
       $('#customSwitchJQuery').prop('checked', true);
       $(".toggle-jquery").toggleClass("d-block");
     }
   });
-
-  $("#customSwitchAccordion").click(function(){
-    if ($('#customSwitchAccordion').is(':checked')){ 
-      $('#customSwitchAccordionBs').prop('checked', true);
-      $(".toggle-accordion-bs").addClass("d-block").removeClass("d-none");
-    } 
-    else {
-      $('#customSwitchAccordionBs').prop('checked', false);
-      $(".toggle-accordion-bs").addClass("d-none").removeClass("d-block");
-    }
-  });
-  $("#customSwitchAccordionBs").click(function(){
-    if ($('#customSwitchAccordionBs').is(':checked')){ 
-      $('#customSwitchAccordion').prop('checked', true);
-      $(".toggle-accordion").addClass("d-block").removeClass("d-none");
-    } 
-    else {
-      $('#customSwitchAccordion').prop('checked', false);
-      $(".toggle-accordion").addClass("d-none").removeClass("d-block");
-    }
-  });
-
   $("#customSwitchFadein").click(function(){
     if ($('#customSwitchFadein').is(':checked')){ 
       $('#customSwitchLoader').prop('checked', false);
@@ -794,11 +762,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
     $("#customSwitchBootstrapCSS").click(function(){
       $(".toggle-bootstrapCSS").toggleClass("d-block");
-      $("#output").toggleClass("bs-enabled");
-
-      $(".bs-only, .toggle-bs-only").toggleClass("d-block");
-      $(".bs-repel, .toggle-bs-repel").toggleClass("d-none");
-
+      $(".html-boilerplates").toggleClass("bs-enabled").toggleClass("no-bs");
     });
     $("#customSwitchTailwind").click(function(){
       $(".toggle-tailwind").toggleClass("d-block");
@@ -904,6 +868,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     window.getSelection().selectAllChildren(str);
     document.execCommand("copy")
   }
+
+  $("#customSwitchAccordion").click(function(){
+    if ($('#customSwitchAccordion').is(':checked')){ 
+      $('#customSwitchAccordionBs').prop('checked', true);
+      $(".toggle-accordion-bs").addClass("d-none d-none--bs-block");
+      $(".toggle-accordion").removeClass("d-none");
+    } 
+    else {
+      $('#customSwitchAccordionBs').prop('checked', false);
+      $(".toggle-accordion-bs").addClass("d-none").removeClass("d-none--bs-block d-block");
+      $(".toggle-accordion").addClass("d-none").removeClass("d-none--no-bs-block d-block");
+    }
+  });
+  $("#customSwitchAccordionBs").click(function(){
+    if ($('#customSwitchAccordionBs').is(':checked')){ 
+      $('#customSwitchAccordion').prop('checked', true);
+      $(".toggle-accordion").addClass("d-none d-none--no-bs-block");
+      $(".toggle-accordion-bs").removeClass("d-none");
+    } 
+    else {
+      $('#customSwitchAccordion').prop('checked', false);
+      $(".toggle-accordion").addClass("d-none").removeClass("d-none--no-bs-block d-block");
+      $(".toggle-accordion-bs").addClass("d-none").removeClass("d-none--bs-block d-block");
+    }
+  });
+  $("#customSwitchBootstrapCSS").click(function(){
+    if ($('#customSwitchBootstrapCSS').is(':checked')){ 
+      $(".msg--bs").fadeIn().delay(1000).fadeOut();
+    } 
+    else {
+      $(".msg--no-bs").fadeIn().delay(1000).fadeOut();
+    }
+  });
+
+
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>

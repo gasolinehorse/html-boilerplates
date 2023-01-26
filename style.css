@@ -449,3 +449,25 @@ body.dark {
 .bs-only {
   display: none;
 }
+.bs-enabled .bs-only,
+.bs-enabled .d-none--bs-block {
+  display: block !important;
+}
+.bs-enabled .bs-repel,
+.bs-enabled .toggle-bs-repel {
+  display: none !important;
+}
+.no-bs .d-none--no-bs-block {
+  display: block !important;
+}
+.no-bs .bs-only,
+.no-bs .toggle-bs-only {
+  display: none !important;
+}
+.msg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
