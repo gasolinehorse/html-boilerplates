@@ -15,7 +15,7 @@
   <meta name="twitter:description" content="Build and download your HTML boilerplate for free.">
   <meta name="twitter:image" content="https://htmlboilerplates.com/html-boilerplates.png">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" crossorigin="anonymous">
   <link href="style.css" rel="stylesheet" type="text/css">
   <link rel="icon" type="image/png" href="favicon_html-boilerpates.png">
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-GM8JZWLKKW"></script>
@@ -42,7 +42,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="loader"></div>
 <div class="switching"></div>
 <main class="container position-relative">
-	<div id="lang" class="position-absolute"><p class="small text-grey text-right"><a class="px-2 px-md-1" href="#"><i>EN</i></a> | <a class="px-2 px-md-1" href="../HTMLのテンプレート">JP</a> | <a class="px-2 px-md-1" href="/modele-html">FR</a> | <a class="px-2 px-md-1" href="/html網站樣板">TW</a> | <a class="px-2 px-md-1" href="../html网站模板">CN</a> | <a class="px-2 px-md-1" href="../alien-html">ALIEN</a> | <a class="px-2 px-md-1 d-none d-md-inline-block" href="mailto:allen@gasolinehorses.com" target="_blank">Request Features</a></p></div>
+	<div id="lang" class="position-absolute"><p class="small text-grey text-end"><a class="px-2 px-md-1" href="#"><i>EN</i></a> | <a class="px-2 px-md-1" href="../HTMLのテンプレート">JP</a> | <a class="px-2 px-md-1" href="/modele-html">FR</a> | <a class="px-2 px-md-1" href="/html網站樣板">TW</a> | <a class="px-2 px-md-1" href="../html网站模板">CN</a> | <a class="px-2 px-md-1" href="../alien-html">ALIEN</a> | <a class="px-2 px-md-1 d-none d-md-inline-block" href="mailto:allen@gasolinehorses.com" target="_blank">Request Features</a></p></div>
   <div class="row">
     <div class="col ml-sm-auto px-4">
       <div class="py-5">
@@ -56,19 +56,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="col-sm-6 col-md-5 col-lg-4">
               <p class="small text-grey">1. Select what to&#160;include:</p>
               <div class="accordion mb-3" id="accordionSwitches">
-                <div class="card">
-                  <div class="card-header" id="headingOne">
-                    <h2 class="mb-0">
-                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        General
-                      </button>
-                    </h2>
-                  </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      General
+                    </button>
+                  </h3>
                   <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
-                    <div class="card-body">
-                      <div id="ui-toggle-lang" class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitchLang" checked>
-                        <label class="custom-control-label" for="customSwitchLang"><b>Language:
+                    <div class="accordion-body pt-2">
+                      <div id="ui-toggle-lang" class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="customSwitchLang" checked>
+                        <label class="form-check-label" for="customSwitchLang"><b>Language:
                           <select name="langs" id="langs">
                             <option value="af">Afrikaans</option>
                             <option value="sq">Albanian</option>
@@ -144,82 +142,80 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <option value="xh">Xhosa</option>
                           </select></b></label>
                       </div>
-                      <div id="ui-toggle-favicon" class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitchFavicon">
-                        <label class="custom-control-label" for="customSwitchFavicon"><b>Favicon</b></label>
+                      <div id="ui-toggle-favicon" class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="customSwitchFavicon">
+                        <label class="form-check-label" for="customSwitchFavicon"><b>Favicon</b></label>
                       </div>
-                      <div id="ui-toggle-css" class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitchCSS">
-                        <label class="custom-control-label" for="customSwitchCSS"><b>External CSS stylesheet</b></label>
+                      <div id="ui-toggle-css" class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="customSwitchCSS">
+                        <label class="form-check-label" for="customSwitchCSS"><b>External CSS stylesheet</b></label>
                       </div>
-                      <!--<div id="ui-toggle-ie" class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitchIE">
-                        <label class="custom-control-label" for="customSwitchIE"><b>IE conditional class</b></label>
+                      <!--<div id="ui-toggle-ie" class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="customSwitchIE">
+                        <label class="form-check-label" for="customSwitchIE"><b>IE conditional class</b></label>
                       </div>-->
-                      <div id="ui-toggle-social" class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitchSocial">
-                        <label class="custom-control-label" for="customSwitchSocial"><b>Social media meta tags</b></label>
+                      <div id="ui-toggle-social" class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="customSwitchSocial">
+                        <label class="form-check-label" for="customSwitchSocial"><b>Social media meta tags</b></label>
                       </div>
-                      <div id="ui-toggle-manifest" class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitchManifest">
-                        <label class="custom-control-label" for="customSwitchManifest"><b>Manifest</b></label>
+                      <div id="ui-toggle-manifest" class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="customSwitchManifest">
+                        <label class="form-check-label" for="customSwitchManifest"><b>Manifest</b></label>
                       </div>
-                      <div id="ui-toggle-theme" class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitchTheme">
-                        <label class="custom-control-label" for="customSwitchTheme"><b>Theme color</b></label>
+                      <div id="ui-toggle-theme" class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="customSwitchTheme">
+                        <label class="form-check-label" for="customSwitchTheme"><b>Theme color</b></label>
                       </div>
-                      <div id="ui-toggle-bootstrapcss" class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitchBootstrapCSS">
-                        <label class="custom-control-label" for="customSwitchBootstrapCSS"><b>Bootstrap CSS</b> (v<span class="bv"></span>)</label>
+                      <div id="ui-toggle-bootstrapcss" class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="customSwitchBootstrapCSS">
+                        <label class="form-check-label" for="customSwitchBootstrapCSS"><b>Bootstrap CSS</b> (v<span class="bv"></span>)</label>
                       </div>
-                      <div id="ui-toggle-bootstrapjs" class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitchBootstrapJS">
-                        <label class="custom-control-label" for="customSwitchBootstrapJS"><b>Bootstrap JS</b> (v<span class="bv"></span>)</label>
+                      <div id="ui-toggle-bootstrapjs" class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="customSwitchBootstrapJS">
+                        <label class="form-check-label" for="customSwitchBootstrapJS"><b>Bootstrap JS</b> (v<span class="bv"></span>)</label>
                       </div>
-                      <div id="ui-toggle-tailwind" class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitchTailwind">
-                        <label class="custom-control-label" for="customSwitchTailwind"><b>Tailwind CSS</b></label>
+                      <div id="ui-toggle-tailwind" class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="customSwitchTailwind">
+                        <label class="form-check-label" for="customSwitchTailwind"><b>Tailwind CSS</b></label>
                       </div>
-                      <div id="ui-toggle-normalize" class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitchNormalize">
-                        <label class="custom-control-label" for="customSwitchNormalize"><b>Modern Normalize CSS</b></label>
+                      <div id="ui-toggle-normalize" class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="customSwitchNormalize">
+                        <label class="form-check-label" for="customSwitchNormalize"><b>Modern Normalize CSS</b></label>
                       </div>
-                      <div id="ui-toggle-jquery" class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitchJQuery">
-                        <label class="custom-control-label" for="customSwitchJQuery"><b>jQuery</b> (v<span class="jv"></span>)</label>
+                      <div id="ui-toggle-jquery" class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="customSwitchJQuery">
+                        <label class="form-check-label" for="customSwitchJQuery"><b>jQuery</b> (v<span class="jv"></span>)</label>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header" id="headingTwo">
-                    <h2 class="mb-0">
-                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Content & Design
-                      </button>
-                    </h2>
-                  </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Content & Design
+                    </button>
+                  </h3>
                   <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo">
-                    <div class="card-body">
-                      <div id="ui-toggle-nav" class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitchNav">
-                        <label class="custom-control-label" for="customSwitchNav"><b>Top menu</b></label>
+                    <div class="accordion-body pt-2">
+                      <div id="ui-toggle-nav" class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="customSwitchNav">
+                        <label class="form-check-label" for="customSwitchNav"><b>Top menu</b></label>
                       </div>
-                      <div id="ui-toggle-form" class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitchForm">
-                        <label class="custom-control-label" for="customSwitchForm"><b>Form</b></label>
+                      <div id="ui-toggle-form" class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="customSwitchForm">
+                        <label class="form-check-label" for="customSwitchForm"><b>Form</b></label>
                       </div>
-                      <div id="ui-toggle-accordion" class="custom-control custom-switch bs-repel">
-                        <input type="checkbox" class="custom-control-input" id="customSwitchAccordion">
-                        <label class="custom-control-label" for="customSwitchAccordion"><b>Accordion</b></label>
+                      <div id="ui-toggle-accordion" class="form-check form-switch bs-repel">
+                        <input type="checkbox" class="form-check-input" id="customSwitchAccordion">
+                        <label class="form-check-label" for="customSwitchAccordion"><b>Accordion</b></label>
                       </div>
-                      <div id="ui-toggle-accordion-bs" class="custom-control custom-switch bs-only">
-                        <input type="checkbox" class="custom-control-input" id="customSwitchAccordionBs">
-                        <label class="custom-control-label" for="customSwitchAccordionBs"><b>Accordion</b> (Bootstrap Required)</label>
+                      <div id="ui-toggle-accordion-bs" class="form-check form-switch bs-only">
+                        <input type="checkbox" class="form-check-input" id="customSwitchAccordionBs">
+                        <label class="form-check-label" for="customSwitchAccordionBs"><b>Accordion</b> (Bootstrap Required)</label>
                       </div>
-                      <div id="ui-toggle-col" class="custom-control custom-switch bs-only">
-                        <input type="checkbox" class="custom-control-input" id="customSwitchCol">
-                        <label class="custom-control-label" for="customSwitchCol"><b>Contain
+                      <div id="ui-toggle-col" class="form-check form-switch bs-only">
+                        <input type="checkbox" class="form-check-input" id="customSwitchCol">
+                        <label class="form-check-label" for="customSwitchCol"><b>Contain
                           <select name="cols" id="cols">
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -229,52 +225,50 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <option value="1">1</option>
                           </select> column(s)</b> (Bootstrap required)</label>
                       </div>
-                      <div id="ui-toggle-HTML5" class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitchHTML5">
-                        <label class="custom-control-label" for="customSwitchHTML5"><b>Basic HTML 5 tags</b></label>
+                      <div id="ui-toggle-HTML5" class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="customSwitchHTML5">
+                        <label class="form-check-label" for="customSwitchHTML5"><b>Basic HTML 5 tags</b></label>
                       </div>
-                      <div id="ui-toggle-table" class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitchTable">
-                        <label class="custom-control-label" for="customSwitchTable"><b>Table</b></label>
+                      <div id="ui-toggle-table" class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="customSwitchTable">
+                        <label class="form-check-label" for="customSwitchTable"><b>Table</b></label>
                       </div>
-                      <div id="ui-toggle-carousel" class="custom-control custom-switch bs-only">
-                        <input type="checkbox" class="custom-control-input" id="customSwitchCarousel">
-                        <label class="custom-control-label" for="customSwitchCarousel"><b>Carousel</b> (Bootstrap required)</label>
+                      <div id="ui-toggle-carousel" class="form-check form-switch bs-only">
+                        <input type="checkbox" class="form-check-input" id="customSwitchCarousel">
+                        <label class="form-check-label" for="customSwitchCarousel"><b>Carousel</b> (Bootstrap required)</label>
                       </div>
-                      <div id="ui-toggle-copyright" class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitchCopyright">
-                        <label class="custom-control-label" for="customSwitchCopyright"><b>Footer copyright</b></label>
+                      <div id="ui-toggle-copyright" class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="customSwitchCopyright">
+                        <label class="form-check-label" for="customSwitchCopyright"><b>Footer copyright</b></label>
                       </div>
-                      <div id="ui-toggle-cookie" class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitchCookie">
-                        <label class="custom-control-label" for="customSwitchCookie"><b>Cookie notice<span class="toggle-cookie-star">*</span></b> (jQuery required)</label>
+                      <div id="ui-toggle-cookie" class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="customSwitchCookie">
+                        <label class="form-check-label" for="customSwitchCookie"><b>Cookie notice<span class="toggle-cookie-star">*</span></b> (jQuery required)</label>
                       </div>
-                      <div id="ui-toggle-browser" class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitchBrowser">
-                        <label class="custom-control-label" for="customSwitchBrowser"><b>Old browser upgrade message</b></label>
+                      <div id="ui-toggle-browser" class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="customSwitchBrowser">
+                        <label class="form-check-label" for="customSwitchBrowser"><b>Old browser upgrade message</b></label>
                       </div>
                       <p class="small"><u><a href="https://changetocase.com" target="_blank">Letter case changer + lorem ipsum generator&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" fill="none"><path stroke="#000" stroke-linecap="round" d="m.976 7.518 6.5-6.5"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M3.478 1.018h3.998v3.999"/></svg></a></u></p>
                       <span class="toggle-cookie mt-2 pl-2"><small>* Consult your legal team first.</small></span>
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header" id="headingThree">
-                    <h2 class="mb-0">
-                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Fancy Shit
-                      </button>
-                    </h2>
-                  </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="headingThree">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Fancy Shit
+                    </button>
+                  </h3>
                   <div id="collapseThree" class="collapse show" aria-labelledby="headingThree">
-                    <div class="card-body">
-                      <div id="ui-toggle-fadein" class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitchFadein">
-                        <label class="custom-control-label" for="customSwitchFadein"><b>Page fade-in</b></label>
+                    <div class="accordion-body pt-2">
+                      <div id="ui-toggle-fadein" class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="customSwitchFadein">
+                        <label class="form-check-label" for="customSwitchFadein"><b>Page fade-in</b></label>
                       </div>
-                      <div id="ui-toggle-loader" class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitchLoader">
-                        <label class="custom-control-label" for="customSwitchLoader"><b>Page fade-in after fully loaded</b> (jQuery required)</label>
+                      <div id="ui-toggle-loader" class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="customSwitchLoader">
+                        <label class="form-check-label" for="customSwitchLoader"><b>Page fade-in after fully loaded</b> (jQuery required)</label>
                       </div>
                     </div>
                   </div>
@@ -284,8 +278,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="col-sm-6 col-md-7 col-lg-8">
               <p class="small text-grey">2. Copy and paste the following code into your code editor to&#160;use:</p>
               <pre id="output" class="border position-relative">
-                <div class="msg msg--bs">Bootstrap enabled</div>
-                <div class="msg msg--no-bs">Bootstrap disabled</div>
+                <div class="msg msg--bs"><h4>Your code is now Bootstrap-friendly</h4></div>
+                <div class="msg msg--no-bs">Your code is now works without Bootstrap</div>
                 <span><xmp><!DOCTYPE html></xmp></span>
                 <span class="toggle-ie"><xmp><!--[if lte 8]><html class="pre-ie9" lang="en"><![endif]--></xmp></span>
                 <span class="toggle-ie"><xmp><!--[if gte IE 9]><!--><html lang="en"><!--<![endif]--></xmp></span>
@@ -693,8 +687,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span><xmp></body></xmp></span>
                 <span><xmp></html></xmp></span>
               </pre>
-              <div class="text-right"><button type="button" class="mb-5" onclick="copyEvent('output')">Copy Code</button></div>
-              <div class="text-left text-sm-right venmo">
+              <div class="text-end"><button type="button" class="mb-5" onclick="copyEvent('output')">Copy Code</button></div>
+              <div class="text-left text-sm-end venmo">
 	              <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy Me a Bubble Tea', '#61ba00', 'C0C3GC2QV');kofiwidget2.draw();</script> 
               </div>
             </div>
@@ -703,10 +697,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
   </div>
-  <div id="switch-wrapper" data-toggle="tooltip" data-placement="left" title="Switch theme"></div>
+  <div id="switch-wrapper" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Switch theme"></div>
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <img src="..." class="rounded me-2" alt="...">
+        <strong class="me-auto">Bootstrap</strong>
+        <small>11 mins ago</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Your code is now Bootstrap-friendly.
+      </div>
+    </div>
+  </div>
   <footer class="row">
   	<div class="col">
-  		<p class="small text-grey text-right">Created by <a href="https://gasolinehorses.com/">Allen</a> • <a href="https://medium.com/@gasolinehorse" target="_blank">UX design blog</a></p>
+  		<p class="small text-grey text-end">Created by <a class="fw-bold" href="https://gasolinehorses.com/">Allen</a> • <a class="fw-bold" href="https://medium.com/@gasolinehorse" target="_blank">UX design blog</a></p>
   	</div>
   </footer>
 </main>
@@ -845,7 +852,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       });
     }).change();
 	  $(function () {
-		  $('[data-toggle="tooltip"]').tooltip()
+		  $('[data-bs-toggle="tooltip"]').tooltip()
 		})
   })(jQuery);
   if (+window.localStorage.getItem("preferDark")) {
@@ -895,17 +902,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   });
   $("#customSwitchBootstrapCSS").click(function(){
     if ($('#customSwitchBootstrapCSS').is(':checked')){ 
-      $(".msg--bs").fadeIn().delay(1000).fadeOut();
+      $(".msg--bs").css("display", "flex").delay(800).fadeOut();
     } 
     else {
-      $(".msg--no-bs").fadeIn().delay(1000).fadeOut();
+      $(".msg--no-bs").css("display", "flex").delay(800).fadeOut();
     }
   });
+  document.getElementById("ui-toggle-bootstrapcss").onclick = function() {
+    var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+    var toastList = toastElList.map(function(toastEl) {
+    // Creates an array of toasts (it only initializes them)
+      return new bootstrap.Toast(toastEl) // No need for options; use the default options
+    });
+   toastList.forEach(toast => toast.show()); // This show them
 
-
+    console.log(toastList); // Testing to see if it works
+  };
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
 <script src="script.js" crossorigin="anonymous"></script>
 </body>
 </html>
