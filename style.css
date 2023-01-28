@@ -185,6 +185,8 @@ pre span:before {
   width: 33px;
   color: #ADADAD;
   background-color: #F9F9F9;
+  user-select: none;
+  -webkit-user-select: none;
 }
 xmp {
   display: inline;
@@ -482,4 +484,21 @@ body.dark {
 a.kofi-button {
   box-shadow: none !important;
   border-radius: 0 !important;
+}
+span.kofitext {
+  font-family: 'Montserrat', helvetica, Arial, sans-serif;
+}
+#follower {
+  width: 93px;
+  height: 156px;
+  background-image: url("flying-dude-r.svg");
+  background-repeat: no-repeat;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(.11,1.28,.62,1.1);
+  position: fixed;
+  transform: translate(50%, 50%) scale(1);
+  transform-origin: center;
+}
+#step2:hover + #follower {
+  transform: translate(-100%, 50%) scaleX(-1);
 }
