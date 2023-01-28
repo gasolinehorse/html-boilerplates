@@ -16,6 +16,11 @@
   <meta name="twitter:image" content="https://htmlboilerplates.com/html-boilerplates.png">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" crossorigin="anonymous">
+  <style>
+  :root {
+    --green: #61BA00;
+  }
+  </style>
   <link href="style.css" rel="stylesheet" type="text/css">
   <link rel="icon" type="image/png" href="favicon_html-boilerpates.png">
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-GM8JZWLKKW"></script>
@@ -65,7 +70,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
                     <div class="accordion-body pt-2">
                       <div id="ui-toggle-lang" class="form-check form-switch">
-                        <input type="checkbox" class="form-check-input" id="customSwitchLang" checked>
+                        <input type="checkbox" class="form-check-input" id="customSwitchLang">
                         <label class="form-check-label" for="customSwitchLang"><b>Language:
                           <select name="langs" id="langs">
                             <option value="af">Afrikaans</option>
@@ -283,8 +288,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span><xmp><!DOCTYPE html></xmp></span>
                 <span class="toggle-ie"><xmp><!--[if lte 8]><html class="pre-ie9" lang="en"><![endif]--></xmp></span>
                 <span class="toggle-ie"><xmp><!--[if gte IE 9]><!--><html lang="en"><!--<![endif]--></xmp></span>
-                <span class="toggle-lang-no-lang no-ie"><xmp><html lang=""></xmp></span>
-                <span id="select-lang" class="toggle-lang d-block no-ie"><xmp><html lang="en"></xmp></span>
+                <span class="toggle-lang-no-lang d-block no-ie"><xmp><html lang=""></xmp></span>
+                <span id="select-lang" class="toggle-lang no-ie"><xmp><html lang=""></xmp></span>
                 <span><xmp><head></xmp></span>
                 <span><xmp>  <title>Hello, world!</title></xmp></span>
                 <span><xmp>  <meta charset="UTF-8" /></xmp></span>
@@ -689,7 +694,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </pre>
               <div class="text-end"><button type="button" class="mb-5" onclick="copyEvent('output')">Copy Code</button></div>
               <div class="text-left text-sm-end venmo">
-	              <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy Me a Bubble Tea', '#61ba00', 'C0C3GC2QV');kofiwidget2.draw();</script> 
+	              <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+                <script type="text/javascript">
+                  var r = document.querySelector(':root');
+                  var rs = getComputedStyle(r);
+                  (function newColor() {
+                    var colors = ['#61BA00', '#00C3CF', '#6900EE', '#2051FF','#C9B500','#ECD400','#F2003A'];
+                    var randomColor = Math.floor(Math.random() * colors.length);
+                    r.style.setProperty('--green', colors[randomColor]);
+                  })();
+                </script>
+                <script type='text/javascript'>kofiwidget2.init('Buy Me a Bubble Tea', rs.getPropertyValue('--green'), 'C0C3GC2QV');kofiwidget2.draw();</script> 
               </div>
             </div>
           </div>
@@ -719,6 +734,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 <script type="text/javascript">
+  setTimeout(function(){
+    $('#customSwitchLang').trigger('click');
+  }, 1900);
   $("#customSwitchCookie").click(function(){
     if ($('#customSwitchCookie').is(':checked')){
       $('#customSwitchJQuery').prop('checked', true);
