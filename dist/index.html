@@ -153,11 +153,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       </div>
                       <div id="ui-toggle-manifest" class="form-check form-switch">
                         <input type="checkbox" class="form-check-input" id="customSwitchManifest">
-                        <label class="form-check-label" for="customSwitchManifest"><b>Wen app manifest</b></label>
+                        <label class="form-check-label" for="customSwitchManifest"><b>Web app manifest</b></label>
                       </div>
                       <div id="ui-toggle-css" class="form-check form-switch">
                         <input type="checkbox" class="form-check-input" id="customSwitchCSS">
                         <label class="form-check-label" for="customSwitchCSS"><b>External CSS stylesheet</b></label>
+                      </div>
+                      <div id="ui-toggle-js" class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="customSwitchJS">
+                        <label class="form-check-label" for="customSwitchJS"><b>External Javascript file</b></label>
                       </div>
                       <!--<div id="ui-toggle-ie" class="form-check form-switch">
                         <input type="checkbox" class="form-check-input" id="customSwitchIE">
@@ -169,7 +173,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       </div>
                       <div id="ui-toggle-theme" class="form-check form-switch">
                         <input type="checkbox" class="form-check-input" id="customSwitchTheme">
-                        <label class="form-check-label" for="customSwitchTheme"><b>Theme color</b></label>
+                        <label class="form-check-label" for="customSwitchTheme"><b>Theme color:</b> <span id="theme-color-wrapper"><input id="theme-color" type="color" value="#000000"></label></span>
                       </div>
                       <div id="ui-toggle-bootstrapcss" class="form-check form-switch">
                         <input type="checkbox" class="form-check-input" id="customSwitchBootstrapCSS">
@@ -303,7 +307,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-favicon"><xmp>  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"></xmp></span>
                 <span class="toggle-favicon"><xmp>  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png"></xmp></span>
                 <span class="toggle-favicon"><xmp>  <link rel="icon" type="image/svg+xml" href="favicon.svg"></xmp></span>
-                <span class="toggle-theme"><xmp>  <meta name="theme-color" content=""></xmp></span>
+                <span class="toggle-theme"><xmp>  <meta name="theme-color" content="</xmp><div id="tc" class="d-inline"></div><xmp>"></xmp></span>
                 <span class="toggle-social"><xmp>  <meta property="og:title" content="" /></xmp></span>
                 <span class="toggle-social"><xmp>  <meta property="og:description" content="" /></xmp></span>
                 <span class="toggle-social"><xmp>  <meta property="og:image" content="" /></xmp></span>
@@ -692,6 +696,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-loader"><xmp>      $("#loader-wrapper").fadeOut(700);</xmp></span>
                 <span class="toggle-loader"><xmp>    });</xmp></span>
                 <span class="toggle-loader"><xmp>  </script></xmp></span>
+                <span class="toggle-js"><xmp>  <script src="app.js"></script></xmp></span>
                 <span><xmp></body></xmp></span>
                 <span><xmp></html></xmp></span>
               </pre>
@@ -711,36 +716,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
             </div>
             <div id="follower"></div>
+            <div id="light"></div>
           </div>
         </section>
       </div>
     </div>
   </div>
-  <article class="row">
-    <div class="col">
-<h2>HTML Boilerplate: A Beginner's Guide to Building Consistent and Efficient Websites</h2>
+  <article class="row justify-content-center">
+    <div class="col-lg-8 col-xl-7 col-xxl-6">
+<h1 class="text-center">HTML Boilerplate</h1>
+<h2 class="text-center text-grey">A Beginner's Guide to Building Consistent and Efficient Websites</h2>
 
 <h3>Introduction</h3>
-HTML starter template
-HTML skeleton
-HTML foundation
-HTML scaffold
-HTML template
-HTML base template
-HTML starter kit
-HTML framework
-HTML base code
-HTML foundation code
-<p>HTML Boilerplate is a pre-prepared library of code that is meant to be used as a starting point for building web pages. It is a set of HTML, CSS, and JavaScript files that are designed to provide a solid foundation for a website. In this article, we will explore what HTML Boilerplate is, why it is needed, and how it can be used to streamline the web development process.</p>
+<p>HTML Boilerplate is a pre-prepared library of code that is meant to be used as a starting point to start building web pages. It is sometimes referred to as HTML starter template, HTML framework, HTML skeleton, or HTML foundation and is a set of HTML, CSS, and JavaScript files that are designed to provide a solid foundation for a website.</p>
 
 <h3>What is HTML Boilerplate and why it is needed</h3>
-<p>HTML Boilerplate is a set of files that includes a basic structure for an HTML document, including the typical head and body sections, as well as links to CSS and JavaScript files. It may also include some basic CSS styling, such as a basic layout or typography, and may include some basic JavaScript functionality, such as form validation or a responsive navigation menu.</p>
+<p>HTML Boilerplate is a set of files that includes a basic structure for an HTML document, including the typical <code>head</code> and <code>body</code> sections, as well as links to CSS and JavaScript files. It may also include some basic CSS styling, such as basic stylings to reset or nomalize which helps improve consistency between rendering in different browsers, and may include some basic JavaScript functionality, such as form validation or a responsive navigation menu.</p>
 
-<p>The main use of an HTML Boilerplate is to provide a consistent starting point for developers, making it easier to quickly get a new web project up and running. This can save time and effort, as developers do not have to start from scratch each time they begin a new project. Additionally, HTML Boilerplate can help to ensure that a website is built in a consistent and standardized way, which can make it easier for other developers to understand and maintain in the future.</p>
+<h3>How HTML Boilerplate can save time and effort in web development</h3>
+<p>The main use of an HTML Boilerplate is to make coding easier for the developers to quickly get a new web project up and running. This can save time and effort, as developers do not have to start from scratch and write the same code over and over again every time they begin a new project. Additionally, HTML Boilerplate can help to ensure that a website is built in a consistent and standardized way, which can make it easier for other developers who work on the same projects to understand and maintain in the future.</p>
 
 <h3>The components of HTML Boilerplate</h3>
-<p>HTML Boilerplate typically includes a basic structure for an HTML document, including the typical head and body sections, as well as links to CSS and JavaScript files. It may also include some basic CSS styling, such as a basic layout or typography, and may include some basic JavaScript functionality, such as form validation or a responsive navigation menu.</p>
-<p>In addition to the standard HTML, CSS, and JavaScript, HTML Boilerplate may also include other technologies such as Normalize.css which makes sure that all browsers display all elements more consistently and in line with modern standards. And also, it may include a responsive grid system, which helps ensure that a website looks good on different screen sizes and devices.</p>
+<p>In addition to the standard HTML, CSS, and JavaScript, HTML Boilerplate may also include other technologies such as Normalize.css which, as discussed, makes sure that all browsers display all elements more consistently and in line with modern standards. And also, it may include a responsive grid system, which helps ensure that a website looks good on different screen sizes and devices.</p>
 <p>HTML Boilerplate typically includes the following components:</p>
 <ul>
   <li>HTML: The markup language used to structure the content of a website.</li>
@@ -750,11 +747,8 @@ HTML foundation code
   <li>Grid system: A framework for creating responsive, mobile-first layouts.</li>
 </ul>
 
-<h3>How HTML Boilerplate can save time and effort in web development</h3>
-<p>One of the main benefits of using an HTML Boilerplate is that it can save time and effort when building a new website. By providing a consistent starting point, developers can quickly get a new project up and running without having to start from scratch. This can be especially useful for developers who are working on multiple projects at once, or for those who are just getting started with web development.</p>
-
 <h3>Conclusion</h3>
-<p>In conclusion, HTML Boilerplate is a pre-prepared library of HTML, CSS, and JavaScript that provides a consistent starting point for web developers. It can save time and effort, and can help to ensure that a website is built in a consistent and standardized way. It is used by web developers building websites from scratch and it is a great tool for developers to quickly set up a new web project.</p>
+<p>HTML Boilerplate can save time and effort for the developers and it is a great tool for developers to quickly set up a new web project.</p>
     </div>
   </article>
   <div id="switch-wrapper" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Switch theme"></div>
@@ -844,6 +838,9 @@ HTML foundation code
     });
     $("#customSwitchCSS").click(function(){
       $(".toggle-css").toggleClass("d-block");
+    });
+    $("#customSwitchJS").click(function(){
+      $(".toggle-js").toggleClass("d-block");
     });
     $("#customSwitchJQuery").click(function(){
       $(".toggle-jquery").toggleClass("d-block");
@@ -1017,10 +1014,19 @@ HTML foundation code
     }
   });
   $(document).on('mousemove', (event) => {
-    $('#follower').css({
+    $('#follower, #light').css({
       left: event.clientX,
       top: event.clientY,
     });
+  });
+  const themeColor = document.getElementById('theme-color');
+  themeColor.addEventListener('change', function(){
+    var tc = document.getElementById("theme-color").value;
+    document.getElementById("tc").innerHTML = tc;
+  });
+  $("input[type='color']").click(function(){
+    $("#theme-color-wrapper").css({"background-color": "transparent", "border-color": "transparent", "box-shadow": "none"});
+    $(this).css("opacity", "1");
   });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>

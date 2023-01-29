@@ -277,6 +277,19 @@ _:-moz-read-write, :root button {
 .form-check-label {
   margin-bottom: 12px;
 }
+#theme-color-wrapper {
+  border: 1px solid #DDDDDD;
+  background-color: rgba(var(--green));
+  box-shadow: inset 0 0 0 1px #FFFFFF;
+}
+input[type="color"] {
+  width: 25px;
+  height: 19px;
+  transform: translateY(2px);
+  border: 1px solid #DDDDDD;
+  background-color: #FFFFFF;
+  opacity: 0;
+}
 @media (min-height: 800px) and (min-width: 576px) {
 	footer {
 		position: fixed;
@@ -455,11 +468,45 @@ _:-moz-read-write, :root button {
 .no-bs .toggle-bs-only {
   display: none !important;
 }
+#follower {
+  width: 93px;
+  height: 156px;
+  background-image: url("flying-dude-r.svg");
+  background-repeat: no-repeat;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(.11,1.28,.62,1.1);
+  position: fixed;
+  transform: translate(50%, 50%);
+  transform-origin: center;
+}
+#light {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: rgba(var(--green));
+  filter: blur(12px);
+  position: fixed;
+  transform: translate(-10px, -10px);
+  transform-origin: center;
+  opacity: 0.4;
+}
+#step2:hover + #follower {
+  transform: translate(-100%, 50%) scaleX(-1);
+}
+#step1:hover ~ #follower {
+  transform: scale(0.8);
+  transition-duration: 1.8s;
+  filter: blur(3px);
+  opacity: 0.9;
+}
 .dark #switch-wrapper {
   background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0ZGRiIgZD0iTS4yMDIgNy4zOTlhNy40IDcuNCAwIDEgMCAxNC43OTkgMCA3LjQgNy40IDAgMCAwLTE0Ljc5OSAwWm0xLjIzMyAwYzAtMy40IDIuNzY2LTYuMTY2IDYuMTY2LTYuMTY2djEyLjMzMmE2LjE3MyA2LjE3MyAwIDAgMS02LjE2Ni02LjE2NloiLz48L3N2Zz4=")
   no-repeat
   center center;
   filter: drop-shadow(0 0 8px rgba(var(--green), 0.8));
+}
+.dark #light {
+  opacity: 1;
 }
 body.dark {
 	color: #EAEAEA;
@@ -538,24 +585,4 @@ a.kofi-button {
 }
 span.kofitext {
   font-family: 'Montserrat', helvetica, Arial, sans-serif;
-}
-#follower {
-  width: 93px;
-  height: 156px;
-  background-image: url("flying-dude-r.svg");
-  background-repeat: no-repeat;
-  transition-duration: 1s;
-  transition-timing-function: cubic-bezier(.11,1.28,.62,1.1);
-  position: fixed;
-  transform: translate(50%, 50%);
-  transform-origin: center;
-}
-#step2:hover + #follower {
-  transform: translate(-100%, 50%) scaleX(-1);
-}
-#step1:hover ~ #follower {
-  transform: scale(0.8);
-  transition-duration: 1.8s;
-  filter: blur(3px);
-  opacity: 0.9;
 }
