@@ -6,6 +6,7 @@ body {
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
 }
 body#tw,
 body#cn {
@@ -15,7 +16,7 @@ body#jp {
 	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "ＭＳ ゴシック" , "MS Gothic", "Noto Sans CJK JP", TakaoPGothic, sans-serif;
 }
 ::selection {
-  background: var(--green);
+  background: rgba(var(--green), 1);
   color: #ffffff;
 }
 ::-webkit-scrollbar {
@@ -33,7 +34,7 @@ body#jp {
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:horizontal {
-  background: var(--green);
+  background: rgba(var(--green), 1);
   border-radius: 0px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -62,6 +63,7 @@ h1 {
   font-weight: bold;
   line-height: 1.12;
   animation: ls 1s ease-out forwards;
+  text-shadow: 0 0 30px rgba(var(--green), 0.15);
 }
 @media (max-width: 991px) {
   h1 {
@@ -160,7 +162,7 @@ p.small {
 	.html-bar {
 		width: 0;
 		height: 11px;
-		background-color: var(--green);
+		background-color: rgba(var(--green), 1);
 		animation: draw 0.2s ease-out forwards;
 		animation-delay: 1.3s;
 	}
@@ -182,6 +184,7 @@ code {
 }
 pre {
   font-family: monospace;
+  font-size: 0.8rem;
   backdrop-filter: blur(6px);
   background-color: rgba(255,255,255, 0.2);
   line-height: 0;
@@ -208,7 +211,6 @@ pre span:before {
   color: #ADADAD;
   background-color: #F9F9F9;
   user-select: none;
-  -webkit-user-select: none;
 }
 xmp {
   display: inline;
@@ -241,7 +243,7 @@ button {
   border-top: 0;
   border-left: 0;
   border-right: 0;
-  border-bottom: 5px solid var(--green);
+  border-bottom: 5px solid rgba(var(--green), 1);
 }
 .btn:focus,
 .btn:hover,
@@ -263,8 +265,8 @@ _:-moz-read-write, :root button {
 	display: none;
 }
 .form-check-input:checked {
-  border-color: var(--green);
-  background-color: var(--green);
+  border-color: rgba(var(--green), 1);
+  background-color: rgba(var(--green), 1);
 }
 .form-check-input {
   border-color: #000000;
@@ -284,11 +286,9 @@ _:-moz-read-write, :root button {
 }
 @keyframes switching {
 0% {
-  -webkit-backdrop-filter: blur(50px);
   backdrop-filter: blur(50px);
   opacity: 1; }  
 99% {
-  -webkit-backdrop-filter: blur(0px);
   backdrop-filter: blur(0px);
   opacity: 1;
   height: 100%;
@@ -306,7 +306,6 @@ _:-moz-read-write, :root button {
   backdrop-filter: blur(10px);
   z-index: 999;
   animation-fill-mode: forwards;
-  -webkit-animation: switching 2s cubic-bezier(.07, .90, .19, 1);
   animation: switching 2s cubic-bezier(.07, .90, .19, 1);
 }
 @keyframes fadeinall {
@@ -316,11 +315,9 @@ _:-moz-read-write, :root button {
   opacity: 0; }
 98% {
   opacity: 0;
-  -webkit-transform: translateY(0);
   transform: translateY(0); }
 99% {
   opacity: 0;
-  -webkit-transform: translateY(-100%);
   transform: translateY(-100%); }
 100% {
   opacity: 0;
@@ -331,15 +328,11 @@ _:-moz-read-write, :root button {
   position: fixed;
   width: 100%;
   height: 100%;
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
   transform: translateY(0);
   background-color: #ffffff;
   z-index: 999;
   animation-fill-mode: forwards;
-  -webkit-animation: fadeinall 1s normal both;
   animation: fadeinall 1s normal both;
-  -webkit-animation-delay: 0.3s;
   animation-delay: 0.3s; 
 }
 @keyframes fadein {
@@ -351,9 +344,7 @@ _:-moz-read-write, :root button {
 .venmo {
 	opacity: 0;
 	animation-fill-mode: forwards;
-  -webkit-animation: fadein 1s normal both;
   animation: fadein 1s normal both;
-  -webkit-animation-delay: 0.3s;
   animation-delay: 4s; 
 }
 @media (max-width: 767px) {
@@ -468,16 +459,21 @@ _:-moz-read-write, :root button {
   background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0ZGRiIgZD0iTS4yMDIgNy4zOTlhNy40IDcuNCAwIDEgMCAxNC43OTkgMCA3LjQgNy40IDAgMCAwLTE0Ljc5OSAwWm0xLjIzMyAwYzAtMy40IDIuNzY2LTYuMTY2IDYuMTY2LTYuMTY2djEyLjMzMmE2LjE3MyA2LjE3MyAwIDAgMS02LjE2Ni02LjE2NloiLz48L3N2Zz4=")
   no-repeat
   center center;
+  filter: drop-shadow(0 0 8px rgba(var(--green), 0.8));
 }
 body.dark {
 	color: #EAEAEA;
 	background-color: #111111;
+  background-image: radial-gradient(white, rgba(255,255,255,.05) 2px, transparent 40px), radial-gradient(white, rgba(255,255,255,.03) 1px, transparent 30px), radial-gradient(white, rgba(255,255,255,.01) 2px, transparent 40px), radial-gradient(rgba(255,255,255,.04), rgba(255,255,255,.01) 2px, transparent 30px);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
 .dark h1 {
   color: #FFFFFF;
+  text-shadow: 0 0 30px rgba(var(--green), 0.4);
 }
 .dark .outlined {
-  -webkit-text-fill-color: #111111;
+  -webkit-text-fill-color: rgba(0,0,0,0.4);
   -webkit-text-stroke-color: #FFFFFF;
 }
 .dark pre {
@@ -516,7 +512,7 @@ body.dark {
 .dark #copy-btn {
   box-shadow: none;
   background-color: transparent;
-  text-shadow: 0 0 10px rgba(100,100,100,0.8);
+  text-shadow: 0 0 20px rgba(var(--green), 0.8);
 }
 .dark .toast-header,
 .dark .toast {
@@ -531,9 +527,14 @@ body.dark {
 .dark #follower {
   background-image: url("flying-dude-r-dark.svg");
 }
+.dark a.kofi-button {
+  box-shadow: 0 0 30px 3px rgba(var(--green), 0.7) !important;
+}
 a.kofi-button {
   box-shadow: none !important;
   border-radius: 0 !important;
+  background: rgba(var(--green), 1) !important;
+  box-shadow: 0 0 30px 3px rgba(var(--green), 0.2) !important;
 }
 span.kofitext {
   font-family: 'Montserrat', helvetica, Arial, sans-serif;
