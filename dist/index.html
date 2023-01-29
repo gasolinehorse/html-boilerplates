@@ -58,7 +58,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <section class="pt-1">
           <hr>
           <div class="row html-boilerplates no-bs">
-            <div id="step1" class="col-sm-6 col-md-5 col-lg-4">
+            <div id="step1" class="col-sm-6 col-md-5 col-lg-4 position-relative z-2">
               <p class="small text-grey">1. Select what to&#160;include:</p>
               <div class="accordion mb-3" id="accordionSwitches">
                 <div class="accordion-item">
@@ -281,11 +281,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
               </div>
             </div>
-            <div id="step2" class="col-sm-6 col-md-7 col-lg-8">
+            <div id="step2" class="col-sm-6 col-md-7 col-lg-8 position-relative z-2">
               <p class="small text-grey">2. Copy and paste the following code into your code editor to&#160;use:</p>
               <pre id="output" class="border position-relative">
-                <div class="msg msg--bs"><h4>Your code is now Bootstrap-friendly</h4></div>
-                <div class="msg msg--no-bs">Your code is now works without Bootstrap</div>
                 <span><xmp><!DOCTYPE html></xmp></span>
                 <span class="toggle-ie"><xmp><!--[if lte 8]><html class="pre-ie9" lang="en"><![endif]--></xmp></span>
                 <span class="toggle-ie"><xmp><!--[if gte IE 9]><!--><html lang="en"><!--<![endif]--></xmp></span>
@@ -716,15 +714,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div id="switch-wrapper" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Switch theme"></div>
   <div class="toast-container position-fixed bottom-0 end-0 p-3">
-    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div id="toast--bootstrapCSS" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="toast-header">
-        <img src="..." class="rounded me-2" alt="...">
-        <strong class="me-auto">Bootstrap</strong>
-        <small>11 mins ago</small>
+        <strong class="me-auto">Bootstrap Mode On</strong>
         <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
       </div>
       <div class="toast-body">
-        Your code is now Bootstrap-friendly.
+        The toggles and the code are now Bootstrap-friendly.
+      </div>
+    </div>
+  </div>
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="toast--bootstrapCSS-no" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Bootstrap Mode Off</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        The code now works without Bootstrap.
+      </div>
+    </div>
+  </div>
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="toast--browser" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Reminder</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        This old browser upgrade message will only be visible to users using IE5-9.
       </div>
     </div>
   </div>
@@ -823,6 +841,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     $("#customSwitchBrowser").click(function(){
       $(".toggle-browser").toggleClass("d-block");
     });
+    $("#customSwitchBrowser").click(function(){
+      if ($('#customSwitchBrowser').is(':checked')){ 
+        var toastElList = [].slice.call(document.querySelectorAll('#toast--browser'))
+        var toastList = toastElList.map(function(toastEl) {
+          return new bootstrap.Toast(toastEl) 
+        });
+       toastList.forEach(toast => toast.show());
+      }
+    });
     $("#customSwitchFadein").click(function(){
       $(".toggle-fadein").toggleClass("d-block");
     });
@@ -903,7 +930,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     window.getSelection().selectAllChildren(str);
     document.execCommand("copy")
   }
-
   $("#customSwitchAccordion").click(function(){
     if ($('#customSwitchAccordion').is(':checked')){ 
       $('#customSwitchAccordionBs').prop('checked', true);
@@ -930,22 +956,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   });
   $("#customSwitchBootstrapCSS").click(function(){
     if ($('#customSwitchBootstrapCSS').is(':checked')){ 
-      $(".msg--bs").css("display", "flex").delay(800).fadeOut();
+      var toastElList = [].slice.call(document.querySelectorAll('#toast--bootstrapCSS'))
+      var toastList = toastElList.map(function(toastEl) {
+        return new bootstrap.Toast(toastEl) 
+      });
+     toastList.forEach(toast => toast.show());
     } 
     else {
-      $(".msg--no-bs").css("display", "flex").delay(800).fadeOut();
+      var toastElList = [].slice.call(document.querySelectorAll('#toast--bootstrapCSS-no'))
+      var toastList = toastElList.map(function(toastEl) {
+        return new bootstrap.Toast(toastEl) 
+      });
+     toastList.forEach(toast => toast.show());
     }
   });
-  document.getElementById("ui-toggle-bootstrapcss").onclick = function() {
-    var toastElList = [].slice.call(document.querySelectorAll('.toast'))
-    var toastList = toastElList.map(function(toastEl) {
-    // Creates an array of toasts (it only initializes them)
-      return new bootstrap.Toast(toastEl) // No need for options; use the default options
-    });
-   toastList.forEach(toast => toast.show()); // This show them
-
-    console.log(toastList); // Testing to see if it works
-  };
   $(document).on('mousemove', (event) => {
     $('#follower').css({
       left: event.clientX,
