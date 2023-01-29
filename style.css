@@ -227,6 +227,10 @@ a:hover,
 input:focus {
   opacity: 0.8;
 }
+#copy-btn {
+  box-shadow: 0 0 6px 8px #FFFFFF;
+  background-color: #FFFFFF;
+}
 hr {
   opacity: 0.1;
 }
@@ -480,6 +484,11 @@ body.dark {
 }
 .dark #ui-toggle-lang {
   padding-top: 1rem;
+}
+.dark #copy-btn {
+  box-shadow: none;
+  background-color: transparent;
+  text-shadow: 0 0 10px #111111;
 }
 a.kofi-button {
   box-shadow: none !important;

@@ -173,11 +173,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       </div>
                       <div id="ui-toggle-bootstrapcss" class="form-check form-switch">
                         <input type="checkbox" class="form-check-input" id="customSwitchBootstrapCSS">
-                        <label class="form-check-label" for="customSwitchBootstrapCSS"><b>Bootstrap CSS</b> (v<span class="bv"></span>)</label>
-                      </div>
-                      <div id="ui-toggle-bootstrapcss-local" class="form-check form-switch">
-                        <input type="checkbox" class="form-check-input" id="customSwitchBootstrapCSSLocal">
-                        <label class="form-check-label" for="customSwitchBootstrapCSSLocal"><b>Bootstrap CSS</b> - <a class="bdu-dist" href="" target="_blank"><u>Download a local dist copy</u></a>/<a class="bdu-src" href="" target="_blank"><u>Download a local src copy</u></a> (v<span class="bv"></span>)</label>
+                        <label class="form-check-label" for="customSwitchBootstrapCSS"><b>Bootstrap CSS<span class="toggle-bootstrapCSS-star">*</span></b> (v<span class="bv"></span>)</label>
                       </div>
                       <div id="ui-toggle-bootstrapjs" class="form-check form-switch">
                         <input type="checkbox" class="form-check-input" id="customSwitchBootstrapJS">
@@ -195,6 +191,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <input type="checkbox" class="form-check-input" id="customSwitchJQuery">
                         <label class="form-check-label" for="customSwitchJQuery"><b>jQuery</b> (v<span class="jv"></span>)</label>
                       </div>
+                      <span class="toggle-bootstrapCSS mt-2 ps-2"><small>* You can also download a <a class="bdu-dist" href="" target="_blank"><u>dist copy</u></a> or a <a class="bdu-src" href="" target="_blank"><u>src copy</u></a> to customize.</small></span>
                     </div>
                   </div>
                 </div>
@@ -259,7 +256,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <label class="form-check-label" for="customSwitchBrowser"><b>Old browser upgrade message</b></label>
                       </div>
                       <p class="small"><u><a href="https://changetocase.com" target="_blank">Letter case changer + lorem ipsum generator&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" fill="none"><path stroke="#000" stroke-linecap="round" d="m.976 7.518 6.5-6.5"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M3.478 1.018h3.998v3.999"/></svg></a></u></p>
-                      <span class="toggle-cookie mt-2 pl-2"><small>* Consult your legal team first.</small></span>
+                      <span class="toggle-cookie mt-2 ps-2"><small>* Consult your legal team first.</small></span>
                     </div>
                   </div>
                 </div>
@@ -696,7 +693,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span><xmp></body></xmp></span>
                 <span><xmp></html></xmp></span>
               </pre>
-              <div class="text-end"><button type="button" class="mb-5" onclick="copyEvent('output')">Copy Code</button></div>
+              <div class="text-center"><button type="button" id="copy-btn" class="mb-5" onclick="copyEvent('output')">Copy Code</button></div>
               <div class="text-left text-sm-end venmo">
 	              <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
                 <script type="text/javascript">
@@ -731,9 +728,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
   </div>
-  <div id="div1" style="background:red; height: 500px; width: 500px;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-  <br>
-  <img id="drag1" src="https://via.placeholder.com/300.png/09f/fff " draggable="true" ondragstart="drag(event)" width="336" height="69">
   <footer class="row">
   	<div class="col">
   		<p class="small text-grey text-end">Created by <a class="fw-bold" href="https://gasolinehorses.com/">Allen</a> • <a class="fw-bold" href="https://medium.com/@gasolinehorse" target="_blank">UX design blog</a></p>
@@ -796,6 +790,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     $("#customSwitchBootstrapCSS").click(function(){
       $(".toggle-bootstrapCSS").toggleClass("d-block");
       $(".html-boilerplates").toggleClass("bs-enabled").toggleClass("no-bs");
+      $(".toggle-bootstrapCSS-star").toggleClass("d-inline");
     });
     $("#customSwitchTailwind").click(function(){
       $(".toggle-tailwind").toggleClass("d-block");
@@ -880,6 +875,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	  $(function () {
 		  $('[data-bs-toggle="tooltip"]').tooltip()
 		})
+    $("div[id^='ui-toggle-']").click(function(){
+      if ($('#output').height() > 700 && $(window).width() > 576) {
+        $("#copy-btn").addClass("position-fixed bottom-0").css("margin-left", "-54px");
+      } else {
+        $("#copy-btn").removeClass("position-fixed bottom-0").css("margin-left", "auto");
+      }
+    });
   })(jQuery);
   if (+window.localStorage.getItem("preferDark")) {
 	  $("body").toggleClass("dark");
@@ -950,17 +952,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       top: event.clientY,
     });
   });
-  function allowDrop(ev) {
-  ev.preventDefault();
-  }
-  function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-  }
-  function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-  }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
