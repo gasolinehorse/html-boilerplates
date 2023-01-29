@@ -20,7 +20,7 @@ body#jp {
 }
 ::-webkit-scrollbar {
   width: 10px;
-  height: 10px;
+  height: 8px;
 }
 ::-webkit-scrollbar-track {
   background: #F9F9F9;

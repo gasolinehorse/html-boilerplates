@@ -149,7 +149,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       </div>
                       <div id="ui-toggle-favicon" class="form-check form-switch">
                         <input type="checkbox" class="form-check-input" id="customSwitchFavicon">
-                        <label class="form-check-label" for="customSwitchFavicon"><b>Favicon</b></label>
+                        <label class="form-check-label" for="customSwitchFavicon"><b>More favicons</b></label>
+                      </div>
+                      <div id="ui-toggle-manifest" class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="customSwitchManifest">
+                        <label class="form-check-label" for="customSwitchManifest"><b>Manifest</b></label>
                       </div>
                       <div id="ui-toggle-css" class="form-check form-switch">
                         <input type="checkbox" class="form-check-input" id="customSwitchCSS">
@@ -162,10 +166,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       <div id="ui-toggle-social" class="form-check form-switch">
                         <input type="checkbox" class="form-check-input" id="customSwitchSocial">
                         <label class="form-check-label" for="customSwitchSocial"><b>Social media meta tags</b></label>
-                      </div>
-                      <div id="ui-toggle-manifest" class="form-check form-switch">
-                        <input type="checkbox" class="form-check-input" id="customSwitchManifest">
-                        <label class="form-check-label" for="customSwitchManifest"><b>Manifest</b></label>
                       </div>
                       <div id="ui-toggle-theme" class="form-check form-switch">
                         <input type="checkbox" class="form-check-input" id="customSwitchTheme">
@@ -298,7 +298,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-bootstrapCSS"><xmp>  <link href="https://cdn.jsdelivr.net/npm/bootstrap@</xmp><div class="bv d-inline"></div><xmp>/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"></xmp></span>
                 <span class="toggle-tailwind"><xmp>  <script src="https://cdn.tailwindcss.com"></script></xmp></span>
                 <span class="toggle-css"><xmp>  <link rel="stylesheet" type="text/css" href="style.css" /></xmp></span>
-                <span class="toggle-favicon"><xmp>  <link rel="icon" href="img/favicon.png"></xmp></span>
+                <span class="no-basic-favicon"><xmp>  <link rel="icon" href="favicon.png"></xmp></span>
+                <span class="toggle-favicon"><xmp>  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png"></xmp></span>
+                <span class="toggle-favicon"><xmp>  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"></xmp></span>
+                <span class="toggle-favicon"><xmp>  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"></xmp></span>
+                <span class="toggle-favicon"><xmp>  <link rel="icon" type="image/svg+xml" href="favicon.svg"></xmp></span>
                 <span class="toggle-theme"><xmp>  <meta name="theme-color" content=""></xmp></span>
                 <span class="toggle-social"><xmp>  <meta property="og:title" content="" /></xmp></span>
                 <span class="toggle-social"><xmp>  <meta property="og:description" content="" /></xmp></span>
@@ -717,6 +721,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>HTML Boilerplate: A Beginner's Guide to Building Consistent and Efficient Websites</h2>
 
 <h3>Introduction</h3>
+HTML starter template
+HTML skeleton
+HTML foundation
+HTML scaffold
+HTML template
+HTML base template
+HTML starter kit
+HTML framework
+HTML base code
+HTML foundation code
 <p>HTML Boilerplate is a pre-prepared library of code that is meant to be used as a starting point for building web pages. It is a set of HTML, CSS, and JavaScript files that are designed to provide a solid foundation for a website. In this article, we will explore what HTML Boilerplate is, why it is needed, and how it can be used to streamline the web development process.</p>
 
 <h3>What is HTML Boilerplate and why it is needed</h3>
@@ -822,6 +836,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   (function($){
     $("#customSwitchFavicon").click(function(){
       $(".toggle-favicon").toggleClass("d-block");
+      $(".no-basic-favicon").toggleClass("d-none");
     });
     $("#customSwitchLang").click(function(){
       $(".toggle-lang").toggleClass("d-block");
