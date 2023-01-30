@@ -226,6 +226,9 @@ span[class^="toggle-"].d-block {
 select {
   font-size: 13px;
 }
+input#greek {
+  font-size: 0.9rem;
+}
 a {
   color: inherit;
   border: 0;
@@ -489,15 +492,89 @@ input[type="color"] {
   transform: translate(-10px, -10px);
   transform-origin: center;
   opacity: 0.4;
+  pointer-events: none;
 }
-#step2:hover + #follower {
+@keyframes shine {
+  0% {
+    opacity: 0.2; }
+  50% {
+    opacity: 0.4; }
+  100% {
+    opacity: 0.2; } 
+}
+#light-on-follower {
+  width: 25px;
+  height: 10px;
+  border-radius: 20px;
+  background-color: rgba(var(--green));
+  filter: blur(4px);
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(.11,1.28,.62,1.1);
+  position: fixed;
+  transform: translate(220%, 890%) rotate(10deg);
+  transform-origin: center;
+  z-index: 1;
+  opacity: 0.3;
+  animation: shine 1.5s ease infinite;
+}
+#step2:hover ~ #follower {
   transform: translate(-100%, 50%) scaleX(-1);
+}
+#step2:hover + #light-on-follower {
+  transform: translate(-120%, 890%) scaleX(-1);
 }
 #step1:hover ~ #follower {
   transform: scale(0.8);
   transition-duration: 1.8s;
   filter: blur(3px);
   opacity: 0.9;
+}
+#step1:hover ~ #light-on-follower {
+  display: none;
+}
+article h1 {
+  font-size: 2.1rem;
+}
+article h2 {
+  font-size: 1.1rem;
+  font-family: helvetica, arial, sans-serif;
+}
+article h3 {
+  font-size: 0.9rem;
+  font-family: helvetica, arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(var(--green));
+  margin-top: 2.2rem;
+  margin-bottom: 1rem;
+  filter: brightness(80%);
+}
+article p {
+  line-height: 1.95;
+}
+article ul {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+article ul li::before {
+  content: "\2022";
+  color: rgba(var(--green));
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em;
+}
+article ul li {
+  font-size: 1rem;
+  font-family: helvetica, arial, sans-serif;
+  margin-bottom: 1rem;
+}
+article code {
+  background-color: rgba(var(--green));
+}
+.dark article h3 {
+  filter: brightness(100%);
 }
 .dark #switch-wrapper {
   background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0ZGRiIgZD0iTS4yMDIgNy4zOTlhNy40IDcuNCAwIDEgMCAxNC43OTkgMCA3LjQgNy40IDAgMCAwLTE0Ljc5OSAwWm0xLjIzMyAwYzAtMy40IDIuNzY2LTYuMTY2IDYuMTY2LTYuMTY2djEyLjMzMmE2LjE3MyA2LjE3MyAwIDAgMS02LjE2Ni02LjE2NloiLz48L3N2Zz4=")
