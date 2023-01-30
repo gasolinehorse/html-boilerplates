@@ -284,6 +284,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <input type="checkbox" class="form-check-input" id="customSwitchLoader">
                         <label class="form-check-label" for="customSwitchLoader"><b>Page fade-in after fully loaded</b> (jQuery required)</label>
                       </div>
+                      <div id="ui-toggle-art" class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="customSwitchArt">
+                        <label class="form-check-label" for="customSwitchArt"><b>Hidden Trollface</b></label>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -674,6 +678,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-copyright"><xmp>  <footer></xmp></span>
                 <span class="toggle-copyright"><xmp>    <small>© <script>document.write(new Date().getFullYear())</script> Your company name. All Rights Reserved.</small></footer></xmp></span>
                 <span class="toggle-copyright"><xmp>  </footer></xmp></span>
+                <span class="toggle-art"><xmp>  <!-- ░░░░░▄▄▄▄▀▀▀▀▀▀▀▀▄▄▄▄▄▄░░░░░░░░ --></xmp></span>
+                <span class="toggle-art"><xmp>  <!-- ░░░░░█░░░░▒▒▒▒▒▒▒▒▒▒▒▒░░▀▀▄░░░░ --></xmp></span>
+                <span class="toggle-art"><xmp>  <!-- ░░░░█░░░▒▒▒▒▒▒░░░░░░░░▒▒▒░░█░░░ --></xmp></span>
+                <span class="toggle-art"><xmp>  <!-- ░░░█░░░░░░▄██▀▄▄░░░░░▄▄▄░░░░█░░ --></xmp></span>
+                <span class="toggle-art"><xmp>  <!-- ░▄▀▒▄▄▄▒░█▀▀▀▀▄▄█░░░██▄▄█░░░░█░ --></xmp></span>
+                <span class="toggle-art"><xmp>  <!-- █░▒█▒▄░▀▄▄▄▀░░░░░░░░█░░░▒▒▒▒▒░█ --></xmp></span>
+                <span class="toggle-art"><xmp>  <!-- █░▒█░█▀▄▄░░░░░█▀░░░░▀▄░░▄▀▀▀▄▒█ --></xmp></span>
+                <span class="toggle-art"><xmp>  <!-- ░█░▀▄░█▄░█▀▄▄░▀░▀▀░▄▄▀░░░░█░░█░ --></xmp></span>
+                <span class="toggle-art"><xmp>  <!-- ░░█░░░▀▄▀█▄▄░█▀▀▀▄▄▄▄▀▀█▀██░█░░ --></xmp></span>
+                <span class="toggle-art"><xmp>  <!-- ░░░█░░░░██░░▀█▄▄▄█▄▄█▄████░█░░░ --></xmp></span>
+                <span class="toggle-art"><xmp>  <!-- ░░░░█░░░░▀▀▄░█░░░█░█▀██████░█░░ --></xmp></span>
+                <span class="toggle-art"><xmp>  <!-- ░░░░░▀▄░░░░░▀▀▄▄▄█▄█▄█▄█▄▀░░█░░ --></xmp></span>
+                <span class="toggle-art"><xmp>  <!-- ░░░░░░░▀▄▄░▒▒▒▒░░░░░░░░░░▒░░░█░ --></xmp></span>
+                <span class="toggle-art"><xmp>  <!-- ░░░░░░░░░░▀▀▄▄░▒▒▒▒▒▒▒▒▒▒░░░░█░ --></xmp></span>
+                <span class="toggle-art"><xmp>  <!-- ░░░░░░░░░░░░░░▀▄▄▄▄▄░░░░░░░▄█░░ --></xmp></span>
                 <span class="toggle-jquery"><xmp>  <script src="https://code.jquery.com/jquery-</xmp><div class="jv d-inline"></div><xmp>.min.js" crossorigin="anonymous"></script></xmp></span>
                 <span class="toggle-bootstrapJS"><xmp>  <script src="https://cdn.jsdelivr.net/npm/bootstrap@</xmp><div class="bv d-inline"></div><xmp>/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script></xmp></span>
                 <span class="toggle-cookie"><xmp>  <script type="text/javascript"></xmp></span>
@@ -948,6 +967,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
     $("#customSwitchLoader").click(function(){
       $(".toggle-loader").toggleClass("d-block");
+    });
+    $("#customSwitchArt").click(function(){
+      $(".toggle-art").toggleClass("d-block");
     });
     $("select#cols").change(function(){
 	    $(this).find("option:selected").each(function(){
