@@ -215,6 +215,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <input type="checkbox" class="form-check-input" id="customSwitchLorem">
                         <label class="form-check-label" for="customSwitchLorem"><b>Lorem Ipsum</b>: <div class="d-inline-block"><input type="number" id="greek" min="1" max="999" value="10" class="ms-1" onkeyup=enforceMinMax(this)> words</label></div>
                       </div>
+                      <div id="ui-toggle-img" class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="customSwitchImg">
+                        <label class="form-check-label" for="customSwitchImg"><b>Placeholder image</b>: <div class="d-inline-block"><input type="number" id="img-w" min="1" max="9999" value="800" class="ms-1" onkeyup=enforceMinMax(this)>px X <input type="number" id="img-h" min="1" max="9999" value="600" class="ms-1" onkeyup=enforceMinMax(this)>px</label></div>
+                      </div>
                       <div id="ui-toggle-form" class="form-check form-switch">
                         <input type="checkbox" class="form-check-input" id="customSwitchForm">
                         <label class="form-check-label" for="customSwitchForm"><b>Form</b></label>
@@ -263,7 +267,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <input type="checkbox" class="form-check-input" id="customSwitchBrowser">
                         <label class="form-check-label" for="customSwitchBrowser"><b>Old browser upgrade message</b></label>
                       </div>
-                      <p class="small"><u><a href="https://changetocase.com" target="_blank">Letter case changer + lorem ipsum generator&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" fill="none"><path stroke="#000" stroke-linecap="round" d="m.976 7.518 6.5-6.5"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M3.478 1.018h3.998v3.999"/></svg></a></u></p>
+                      <p class="small"><a href="https://changetocase.com" target="_blank"><span class="text-decoration-underline">Letter case changer</span>&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" fill="none"><path stroke="#000" stroke-linecap="round" d="m.976 7.518 6.5-6.5"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M3.478 1.018h3.998v3.999"/></svg></a></p>
                       <span class="toggle-cookie mt-2 ps-2"><small>* Consult your legal team first.</small></span>
                     </div>
                   </div>
@@ -458,6 +462,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-nav"><xmp>  </script></xmp></span>
                 <span class="hw"><xmp>  <h1>Hello, world!</h1></xmp></span>
                 <span class="toggle-lorem"><xmp>  </xmp><div id="li" class="d-inline"><xmp><p></xmp>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. <xmp></p></xmp></div><xmp></xmp></span>
+                <span class="toggle-img"><xmp>  <img src="https://via.placeholder.com/</xmp><div id="iw" class="d-inline">800</div><xmp>x</xmp><div id="ih" class="d-inline">600</div><xmp>/" alt=""></xmp></span>
                 <span class="toggle-HTML5"><xmp>  <main></xmp></span>
                 <span class="toggle-HTML5"><xmp>    <section></section></xmp></span>
                 <span class="toggle-HTML5"><xmp>    <section></section></xmp></span>
@@ -750,19 +755,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <article class="row justify-content-center">
     <div class="col-lg-8 col-xl-7 col-xxl-6 pb-5 mb-lg-5">
 <h1 class="text-center pt-5 mb-0">HTML Boilerplate</h1>
-<h2 class="text-center text-grey pb-lg-3 mb-5">A Developer's Guide to Building Consistent and Efficient Websites</h2>
+<h2 class="text-center text-grey pb-lg-3 mb-3">A Developer's Guide to Building Consistent and Efficient Websites</h2>
+<p class="text-center text-decoration-underline fw-bold mb-1"><a href="#introduction">Introduction</a></p>
+<p class="text-center text-decoration-underline fw-bold mb-1"><a href="#what-is-an-html-boilerplate">What is an HTML Boilerplate</a></p>
+<p class="text-center text-decoration-underline fw-bold mb-1"><a href="#why-html-boilerplates">Why is an HTML Boilerplate needed in web development</a></p>
+<p class="text-center text-decoration-underline fw-bold mb-1"><a href="#components-of-html-boilerplates">The components of HTML Boilerplate</a></p>
+<p class="text-center text-decoration-underline fw-bold pb-3 mb-5"><a href="#free-html-boilerplates">Keeping HTML Boilerplates Free</a></p>
 
-<h3>Introduction</h3>
+<h3 id="introduction">Introduction</h3>
 <p>To build a house, you need tools ready and set up no matther what you are building. It is the same with web development projects. Luckily, in a digital world we are blessed with the ability to copy and paste to make our prep work easier. An HTML Boilerplate is a pre-prepared library of code that can be copied and is meant to be used as a starting point to start building web projects. It is sometimes referred to as HTML starter template, HTML framework, HTML skeleton, or HTML foundation. Despite having "HTML" in its name, it is actually often a set of HTML, CSS, and JavaScript files that are designed to provide a solid foundation for websites.</p>
 
-<h3>What is an HTML Boilerplate</h3>
+<h3 id="what-is-an-html-boilerplate">What is an HTML Boilerplate</h3>
 <p>An HTML Boilerplate includes a basic structure for an HTML document, like the typical <code>html</code>, <code>head</code> and <code>body</code> sections, as well as links to CSS and JavaScript files. It may also include some basic CSS stylings, such as stylings to reset or nomalize code which helps improve consistency between renderings in different browsers, and may include some basic JavaScript functionality, such as form validation or a responsive navigation menu.</p>
 <p>As you may have noticed by now, it is important to customize your boilerplate prior to utilizing one, due to the unique requirements of each project and individual developer preferences. Some may prefer to include a normalize CSS file while the others prefer to normalize as they go. That is why HTML Boilerplates do our best to provide ample customization options to accommodate these varying needs.</p>
 
-<h3>Why is an HTML Boilerplate needed in web development</h3>
+<h3 id="why-html-boilerplates">Why is an HTML Boilerplate needed in web development</h3>
 <p>The main use of an HTML Boilerplate is to make coding faster and easier for the developers to get a new web project up and running. This can save time and effort, as developers do not have to start from scratch and write the same code over and over again every time they begin a new project. Additionally, an HTML boilerplate can help to ensure that a website is built in a consistent and standardized way, which can make it easier for other developers who work on the same projects to understand and maintain in the future.</p>
 
-<h3>The components of HTML Boilerplate</h3>
+<h3 id="components-of-html-boilerplates">The components of HTML Boilerplate</h3>
 <p>HTML Boilerplate typically includes the following components:</p>
 <ul>
   <li><span class="fw-bold">HTML: </span>The markup language used to structure the content of a website.</li>
@@ -789,7 +799,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <li><span class="fw-bold d-inline-block pb-1">jQuery: </span><br>Despite its age, jQuery is still one of the most widely used JavaScript libraries among web client-side web development, and has been in use for over a decade. Its popularity can be attributed to several factors, including its ease of use, compatibility with a wide range of browsers, and the availability of a large number of plugins and extensions. It provides a simple API for performing complex tasks in client-side web development, and has become a staple in many web development projects.</li>
 </ul>
 
-<h3>Keeping HTML Boilerplates Free</h3>
+<h3 id="free-html-boilerplates">Keeping HTML Boilerplates Free</h3>
 <p>No credit cards, no signups, no downloading zipped code and forgetting where you downloaded it from. What's my trick to keep it profitable? Well, it's not. As a developer, HTML Boilerplates was built to supercharge my web development workflow and it ends up being a time-saver. However, a lot of hours are being spend to build and maintain the site. Please help me keep HTML Boilerplates on the cutting edge and more important, free, with <a class="fw-bold text-decoration-underline" href="https://ko-fi.com/gasolinehorse" target="_blank">a small donation</a>. </p>
     </div>
   </article>
@@ -943,6 +953,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
     $("#customSwitchLorem").click(function(){
       $(".toggle-lorem").toggleClass("d-block");
+    });
+    $("#customSwitchImg").click(function(){
+      $(".toggle-img").toggleClass("d-block");
     });
     $("#customSwitchHTML5").click(function(){
       $(".toggle-HTML5").toggleClass("d-block");
@@ -1104,6 +1117,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }
     }
   }
+  const imgW = document.getElementById('img-w');
+  imgW.addEventListener('change', function(){
+    var iw = document.getElementById("img-w").value;
+    document.getElementById("iw").innerHTML = iw;
+  });
+  const imgH = document.getElementById('img-h');
+  imgH.addEventListener('change', function(){
+    var ih = document.getElementById("img-h").value;
+    document.getElementById("ih").innerHTML = ih;
+  });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
