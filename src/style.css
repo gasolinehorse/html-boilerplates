@@ -226,7 +226,7 @@ span[class^="toggle-"].d-block {
 select {
   font-size: 13px;
 }
-input#greek {
+input[type="number"] {
   font-size: 0.9rem;
 }
 a {
