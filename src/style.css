@@ -366,7 +366,7 @@ input[type="color"] {
   height: 0; } 
 }
 .switching--on {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   opacity: 1;
