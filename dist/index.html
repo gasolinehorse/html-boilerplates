@@ -213,15 +213,53 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       </div>
                       <div id="ui-toggle-lorem" class="form-check form-switch">
                         <input type="checkbox" class="form-check-input" id="customSwitchLorem">
-                        <label class="form-check-label" for="customSwitchLorem"><b>Lorem Ipsum</b>: <div class="d-inline-block"><input type="number" id="greek" min="1" max="999" value="10" class="ms-1" onkeyup=enforceMinMax(this)> words</label></div>
+                        <label class="form-check-label" for="customSwitchLorem"><b>Lorem Ipsum</b> 
+                          <div class="word-count d-inline-block d-none"><input type="number" id="greek" min="1" max="999" value="10" class="ms-1" onkeyup=enforceMinMax(this)> words</div>
+                        </label>
                       </div>
                       <div id="ui-toggle-img" class="form-check form-switch">
                         <input type="checkbox" class="form-check-input" id="customSwitchImg">
-                        <label class="form-check-label" for="customSwitchImg"><b>Placeholder image</b>: <div class="d-inline-block"><input type="number" id="img-w" min="1" max="9999" value="800" class="ms-1" onkeyup=enforceMinMax(this)> px X <input type="number" id="img-h" min="1" max="9999" value="600" class="ms-1" onkeyup=enforceMinMax(this)> px</label></div>
+                        <label class="form-check-label" for="customSwitchImg"><b>Placeholder image</b>
+                          <div class="img-dimension d-none"><input type="number" id="img-w" min="1" max="9999" value="800" class="ms-1" onkeyup=enforceMinMax(this)> px X <input type="number" id="img-h" min="1" max="9999" value="600" class="ms-1" onkeyup=enforceMinMax(this)> px</div>
+                        </label>
                       </div>
                       <div id="ui-toggle-form" class="form-check form-switch">
                         <input type="checkbox" class="form-check-input" id="customSwitchForm">
-                        <label class="form-check-label" for="customSwitchForm"><b>Form</b></label>
+                        <label class="form-check-label w-100" for="customSwitchForm"><b>Form</b>
+                          <div class="dropdown-multi d-none" data-control="checkbox-dropdown">
+                            <label class="dropdown-multi__dropdown-label">Select</label>
+                            <div class="dropdown-multi__dropdown-list">
+                              <label class="dropdown-multi__dropdown-list__dropdown-option">
+                                <input id="f-first-name" type="checkbox" name="dropdown-group" value="First Name" />
+                                First Name
+                              </label>
+                              <label class="dropdown-multi__dropdown-list__dropdown-option">
+                                <input id="f-last-name" type="checkbox" name="dropdown-group" value="Last Name" />
+                                Last Name
+                              </label>
+                              <label class="dropdown-multi__dropdown-list__dropdown-option">
+                                <input id="f-email" type="checkbox" name="dropdown-group" value="Email" />
+                                Email
+                              </label>
+                              <label class="dropdown-multi__dropdown-list__dropdown-option">
+                                <input id="f-phone" type="checkbox" name="dropdown-group" value="Phone" />
+                                Phone
+                              </label>
+                              <label class="dropdown-multi__dropdown-list__dropdown-option">
+                                <input id="f-company" type="checkbox" name="dropdown-group" value="Company" />
+                                Company
+                              </label>
+                              <label class="dropdown-multi__dropdown-list__dropdown-option">
+                                <input id="f-industry" type="checkbox" name="dropdown-group" value="Industry" />
+                                Industry
+                              </label>
+                              <label class="dropdown-multi__dropdown-list__dropdown-option">
+                                <input id="f-message" type="checkbox" name="dropdown-group" value="Message" />
+                                Message
+                              </label>
+                            </div>
+                          </div>
+                        </label>
                       </div>
                       <div id="ui-toggle-accordion" class="form-check form-switch bs-repel">
                         <input type="checkbox" class="form-check-input" id="customSwitchAccordion">
@@ -520,17 +558,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-cookie"><xmp>    <a id="i-accept">I Accept</a></xmp></span>
                 <span class="toggle-cookie"><xmp>  </div></xmp></span>
                 <span class="toggle-browser"><xmp>  <!--[if IE]><div style="width: 100%; position: fixed; z-index: 1000; bottom: 0; left: 0; background: #61BA00;"><p>Outdated browser dectected. Please use a modern browser for a better browsing experience.</p><div onClick="parentNode.remove()">Close [X]</div></div><![endif]--></xmp></span>
-                <span class="toggle-form"><xmp>  <form action="#"></xmp></span>
-                <span class="toggle-form"><xmp>    <label for="firstName">First name:</label><br></xmp></span>
-                <span class="toggle-form"><xmp>    <input type="text" name="firstName" value="John"><br></xmp></span>
-                <span class="toggle-form"><xmp>    <label for="lastName">Last name:</label><br></xmp></span>
-                <span class="toggle-form"><xmp>    <input type="text" name="lastName" value="Doe"><br></xmp></span>
-                <span class="toggle-form"><xmp>    <label for="email">Email:</label><br></xmp></span>
-                <span class="toggle-form"><xmp>    <input type="email" name="email" value="example@example.com"><br></xmp></span>
-                <span class="toggle-form"><xmp>    <label for="phone">Phone:</label><br></xmp></span>
-                <span class="toggle-form"><xmp>    <input type="tel" name="phone" value="555-555-5555"><br></xmp></span>
-                <span class="toggle-form"><xmp>    <input type="submit" value="Submit"></xmp></span>
-                <span class="toggle-form"><xmp>  </form></xmp></span>
+                <span class="toggle-form-essential"><xmp>  <form action="#"></xmp></span>
+                <span class="toggle-form--first-name"><xmp>    <label for="firstName">First name:</label><br></xmp></span>
+                <span class="toggle-form--first-name"><xmp>    <input type="text" name="firstName" value="John"><br></xmp></span>
+                <span class="toggle-form--last-name"><xmp>    <label for="lastName">Last name:</label><br></xmp></span>
+                <span class="toggle-form--last-name"><xmp>    <input type="text" name="lastName" value="Doe"><br></xmp></span>
+                <span class="toggle-form--email"><xmp>    <label for="email">Email:</label><br></xmp></span>
+                <span class="toggle-form--email"><xmp>    <input type="email" name="email" value="example@example.com"><br></xmp></span>
+                <span class="toggle-form--phone"><xmp>    <label for="phone">Phone:</label><br></xmp></span>
+                <span class="toggle-form--phone"><xmp>    <input type="tel" name="phone" value="555-555-5555"><br></xmp></span>
+                <span class="toggle-form--company"><xmp>    <label for="company">Company:</label><br></xmp></span>
+                <span class="toggle-form--company"><xmp>    <input type="text" name="company" value="XYZ Co."><br></xmp></span>
+                <span class="toggle-form--industry"><xmp>    <label for="industry">Industry:</label><br></xmp></span>
+                <span class="toggle-form--industry"><xmp>    <select name="industry"></xmp></span>
+                <span class="toggle-form--industry"><xmp>      <option value="" selected disabled hidden>-- Select one --</option></xmp></span>
+                <span class="toggle-form--industry"><xmp>      <option value="industry 1">Industry 1</option></xmp></span>
+                <span class="toggle-form--industry"><xmp>      <option value="industry 2">Industry 2</option></xmp></span>
+                <span class="toggle-form--industry"><xmp>      <option value="industry 3">Industry 3</option></xmp></span>
+                <span class="toggle-form--industry"><xmp>    </select><br></xmp></span>
+                <span class="toggle-form--message"><xmp>    <label for="message">Message:</label><br></xmp></span>
+                <span class="toggle-form--message"><xmp>    <textarea name="message"></textarea><br></xmp></span>
+                <span class="toggle-form-essential"><xmp>    <input type="submit" value="Submit"></xmp></span>
+                <span class="toggle-form-essential"><xmp>  </form></xmp></span>
                 <span class="toggle-accordion toggle-bs-repel"><xmp>  <button class="accordion"></xmp></span>
                 <span class="toggle-accordion toggle-bs-repel"><xmp>    Accordion Section Heading 1<span class="accordion__indicator"></span></xmp></span>
                 <span class="toggle-accordion toggle-bs-repel"><xmp>  </button></xmp></span>
@@ -953,15 +1002,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
     $("#customSwitchLorem").click(function(){
       $(".toggle-lorem").toggleClass("d-block");
+      $(".word-count").toggleClass("d-none");
     });
     $("#customSwitchImg").click(function(){
       $(".toggle-img").toggleClass("d-block");
+      $(".img-dimension").toggleClass("d-none");
     });
     $("#customSwitchHTML5").click(function(){
       $(".toggle-HTML5").toggleClass("d-block");
     });
     $("#customSwitchForm").click(function(){
-      $(".toggle-form").toggleClass("d-block");
+      $(".toggle-form-essential").toggleClass("d-block");
+      $(".dropdown-multi").toggleClass("d-none");
+      if (!$('#customSwitchForm').is(':checked')){ 
+        $("span[class^='toggle-form-']").removeClass("d-block");
+        $("input[id^='f-']").prop('checked', false);
+        $(".dropdown-multi__dropdown-label").text("Select fields");
+      }
     });
     $("#customSwitchAccordion").click(function(){
       $(".toggle-accordion").toggleClass("d-block");
@@ -1127,6 +1184,101 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var ih = document.getElementById("img-h").value;
     document.getElementById("ih").innerHTML = ih;
   });
+  (function($) {
+    var CheckboxDropdown = function(el) {
+      var _this = this;
+      this.isOpen = false;
+      this.areAllChecked = false;
+      this.$el = $(el);
+      this.$label = this.$el.find('.dropdown-multi__dropdown-label');
+      this.$inputs = this.$el.find('[type="checkbox"]');
+      this.onCheckBox();
+      this.$label.on('click', function(e) {
+        e.preventDefault();
+        _this.toggleOpen();
+      });
+      this.$inputs.on('change', function(e) {
+        _this.onCheckBox();
+      });
+    };
+    CheckboxDropdown.prototype.onCheckBox = function() {
+      this.updateStatus();
+    };
+    CheckboxDropdown.prototype.updateStatus = function() {
+      var checked = this.$el.find(':checked');
+      this.areAllChecked = false;
+      
+      if(checked.length <= 0) {
+        this.$label.html('Select fields');
+      }
+      else if(checked.length === 1) {
+        this.$label.html(checked.parent('label').text());
+      }
+      else if(checked.length === this.$inputs.length) {
+        this.$label.html('All Selected');
+        this.areAllChecked = true;
+      }
+      else {
+        this.$label.html(checked.length + ' Selected');
+      }
+    };
+    CheckboxDropdown.prototype.toggleOpen = function(forceOpen) {
+      var _this = this;
+      if(!this.isOpen || forceOpen) {
+         this.isOpen = true;
+         this.$el.addClass('on');
+        $(document).on('click', function(e) {
+          if(!$(e.target).closest('[data-control]').length) {
+           _this.toggleOpen();
+          }
+        });
+      }
+      else {
+        this.isOpen = false;
+        this.$el.removeClass('on');
+        $(document).off('click');
+      }
+    };
+    var checkboxesDropdowns = document.querySelectorAll('[data-control="checkbox-dropdown"]');
+    for(var i = 0, length = checkboxesDropdowns.length; i < length; i++) {
+      new CheckboxDropdown(checkboxesDropdowns[i]);
+    }
+    $("#f-first-name").click(function(){
+      if ($('#customSwitchForm').is(':checked')){ 
+        $(".toggle-form--first-name").toggleClass("d-block");
+      }
+    });
+    $("#f-last-name").click(function(){
+      if ($('#customSwitchForm').is(':checked')){ 
+        $(".toggle-form--last-name").toggleClass("d-block");
+      }
+    });
+    $("#f-email").click(function(){
+      if ($('#customSwitchForm').is(':checked')){ 
+        $(".toggle-form--email").toggleClass("d-block");
+      }
+    });
+    $("#f-phone").click(function(){
+      if ($('#customSwitchForm').is(':checked')){ 
+        $(".toggle-form--phone").toggleClass("d-block");
+      }
+    });
+    $("#f-company").click(function(){
+      if ($('#customSwitchForm').is(':checked')){ 
+        $(".toggle-form--company").toggleClass("d-block");
+      }
+    });
+    $("#f-industry").click(function(){
+      if ($('#customSwitchForm').is(':checked')){ 
+        $(".toggle-form--industry").toggleClass("d-block");
+      }
+    });
+    $("#f-message").click(function(){
+      if ($('#customSwitchForm').is(':checked')){ 
+        $(".toggle-form--message").toggleClass("d-block");
+      }
+    });
+  })(jQuery);
 </script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
