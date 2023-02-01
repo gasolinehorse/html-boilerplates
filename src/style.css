@@ -489,10 +489,21 @@ input[type="color"] {
 .accordion-item {
   backdrop-filter: blur(8px);
   background-color: rgba(255,255,255, 0.2);
+  transition: all 0.2s ease-in;
 }
 .accordion-item:first-of-type,
 .accordion-item:last-of-type {
   border-radius: 0 !important;
+}
+.accordion-item:hover .accordion-button {
+  background-color: #F9F9F9;
+  box-shadow: 0 0 0 1px rgb(222, 226, 230);
+}
+.accordion-body {
+  transition: all 0.2s ease-in;
+}
+.accordion-item:hover .accordion-body {
+  padding-top: 1rem !important;
 }
 .accordion-header {
   padding: 0;
@@ -561,7 +572,7 @@ input[type="color"] {
   border-radius: 20px;
   background-color: rgba(var(--green));
   filter: blur(4px);
-  transition-duration: 1s;
+  transition-duration: 0.7s;
   transition-timing-function: cubic-bezier(.11,1.28,.62,1.1);
   position: fixed;
   transform: translate(220%, 890%) rotate(10deg);
@@ -678,13 +689,17 @@ body.dark {
 .dark .accordion-button:not(.collapsed) {
   border-bottom: 1px solid #FFFFFF;
 }
+.dark .accordion-item:hover .accordion-button {
+  background-color: #3E3E3E;
+  box-shadow: none;
+}
+.dark .accordion-item .accordion-body {
+  padding-top: 1rem !important;
+}
 .dark .accordion-item {
   backdrop-filter: blur(8px); 
   background-color: rgba(100,100,100, 0.2);
   color: #FFFFFF;
-}
-.dark #ui-toggle-lang {
-  padding-top: 1rem;
 }
 .dark #copy-btn {
   box-shadow: none;
