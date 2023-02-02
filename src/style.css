@@ -258,8 +258,12 @@ input:focus {
   opacity: 0.8;
 }
 #copy-btn {
-  box-shadow: 0 0 6px 8px rgba(255,255,255, 0.8);
-  background-color: rgba(255,255,255, 0.8);
+  background-color: rgba(255,255,255, 1);
+}
+#copy-btn:hover,
+#copy-btn:focus {
+  opacity: 1;
+  filter: contrast(0.9);
 }
 hr {
   opacity: 0.1;
