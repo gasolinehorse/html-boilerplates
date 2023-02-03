@@ -220,8 +220,12 @@ span[class^="toggle-"],
 .toggle-col.span[class^="toggle-col--"] {
   display: none;
 }
-span[class^="toggle-"].d-block {
-  background-color: #f9f9f9;
+span[class^="toggle-"].d-block,
+#t.toggle-table.d-block span {
+  background-color: #F9F9F9;
+}
+#t.toggle-table.d-block {
+  background-color: transparent;
 }
 select {
   font-size: 13px;

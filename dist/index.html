@@ -288,7 +288,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       <div id="ui-toggle-table" class="form-check form-switch">
                         <input type="checkbox" class="form-check-input" id="customSwitchTable">
                         <label class="form-check-label" for="customSwitchTable"><b>Table</b>
-                          <div class="img-dimension d-none"><input type="number" id="img-w" min="1" max="9999" value="800" class="ms-1" onkeyup=enforceMinMax(this)> px X <input type="number" id="img-h" min="1" max="9999" value="600" class="ms-1" onkeyup=enforceMinMax(this)> px</div>
+                          <div class="table-dimension d-none"><input type="number" id="rowsInput" value="2" min="1" max="100"> rows & <input type="number" id="columnsInput" value="3" min="1" max="100"> columns</div>
                         </label>
                       </div>
                       <div id="ui-toggle-carousel" class="form-check form-switch bs-only">
@@ -718,18 +718,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-carousel"><xmp>      <span class="visually-hidden">Next</span></xmp></span>
                 <span class="toggle-carousel"><xmp>    </button></xmp></span>
                 <span class="toggle-carousel"><xmp>  </div></xmp></span>
-                <span class="toggle-table"><xmp>  <table border="1"></xmp></span>
-                <span class="toggle-table"><xmp>    <tr></xmp></span>
-                <span class="toggle-table"><xmp>      <td>Row 1/Column 1</td></xmp></span>
-                <span class="toggle-table"><xmp>      <td>Row 1/Column 2</td></xmp></span>
-                <span class="toggle-table"><xmp>      <td>Row 1/Column 3</td></xmp></span>
-                <span class="toggle-table"><xmp>    </tr></xmp></span>
-                <span class="toggle-table"><xmp>    <tr></xmp></span>
-                <span class="toggle-table"><xmp>      <td>Row 2/Column 1</td></xmp></span>
-                <span class="toggle-table"><xmp>      <td>Row 2/Column 2</td></xmp></span>
-                <span class="toggle-table"><xmp>      <td>Row 2/Column 3</td></xmp></span>
-                <span class="toggle-table"><xmp>    </tr></xmp></span>
-                <span class="toggle-table"><xmp>  </table></xmp></span>
+                <div id="t" class="toggle-table d-none">aa</div>
                 <span class="toggle-HTML5 toggle-HTML5--footer"><xmp>  <footer></footer></xmp></span>
                 <span class="toggle-copyright"><xmp>  <footer></xmp></span>
                 <span class="toggle-copyright"><xmp>    <small>© <script>document.write(new Date().getFullYear())</script> Your company name. All Rights Reserved.</small></footer></xmp></span>
@@ -1035,7 +1024,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       $(".toggle-accordion-bs").toggleClass("d-block");
     });
     $("#customSwitchTable").click(function(){
-      $(".toggle-table").toggleClass("d-block");
+      $(".toggle-table").toggleClass("d-block, d-none");
+      $(".table-dimension").toggleClass("d-none");
     });
     $("#customSwitchCarousel").click(function(){
       $(".toggle-carousel").toggleClass("d-block");
@@ -1192,6 +1182,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var ih = document.getElementById("img-h").value;
     document.getElementById("ih").innerHTML = ih;
   });
+  var rowsInput = document.getElementById("rowsInput");
+  var columnsInput = document.getElementById("columnsInput");
+  rowsInput.addEventListener("input", updateTable);
+  columnsInput.addEventListener("input", updateTable);
+  function updateTable() {
+    var rows = document.getElementById("rowsInput").value;
+    var columns = document.getElementById("columnsInput").value;
+    document.getElementById("t").innerHTML = generateTable(rows, columns);
+  }
+  function generateTable(rows, columns) {
+    var table = '<span><xmp>  <table border="1" cellspacing="0" cellpadding="5"></xmp></span>';
+    for (var i = 0; i < rows; i++) {
+      table += '<span><xmp>    <tr></xmp></span>';
+      for (var j = 0; j < columns; j++) {
+        table += '<span><xmp>      <td>Row ' + (i+1) + ', Column ' + (j+1) + '</td></xmp></span>';
+      }
+      table += '<span><xmp>    </tr></xmp></span>';
+    }
+    table += '<span><xmp>  </table></xmp></span>' 
+    return table;
+  }
+  updateTable();
   (function($) {
     var CheckboxDropdown = function(el) {
       var _this = this;
