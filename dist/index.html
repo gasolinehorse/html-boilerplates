@@ -177,7 +177,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       </div>
                       <div id="ui-toggle-bootstrapcss" class="form-check form-switch">
                         <input type="checkbox" class="form-check-input" id="customSwitchBootstrapCSS">
-                        <label class="form-check-label" for="customSwitchBootstrapCSS"><b>Bootstrap CSS<span class="toggle-bootstrapCSS-star">*</span></b> (v<span class="bv"></span>)</label>
+                        <label class="form-check-label" for="customSwitchBootstrapCSS"><b>Bootstrap CSS<span class="toggle-bootstrapcss-star">*</span></b> (v<span class="bv"></span>)</label>
                       </div>
                       <div id="ui-toggle-bootstrapjs" class="form-check form-switch">
                         <input type="checkbox" class="form-check-input" id="customSwitchBootstrapJS">
@@ -195,7 +195,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <input type="checkbox" class="form-check-input" id="customSwitchJQuery">
                         <label class="form-check-label" for="customSwitchJQuery"><b>jQuery</b> (v<span class="jv"></span>)</label>
                       </div>
-                      <span class="toggle-bootstrapCSS mt-2 ps-2"><small>* You can also download a <a class="bdu-dist" href="" target="_blank"><u>dist copy</u></a> or a <a class="bdu-src" href="" target="_blank"><u>src copy</u></a> to customize.</small></span>
+                      <span class="toggle-bootstrapcss mt-2 ps-2"><small>* You can also download a <a class="bdu-dist" href="" target="_blank"><u>dist copy</u></a> or a <a class="bdu-src" href="" target="_blank"><u>src copy</u></a> to customize.</small></span>
                     </div>
                   </div>
                 </div>
@@ -213,13 +213,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       </div>
                       <div id="ui-toggle-lorem" class="form-check form-switch">
                         <input type="checkbox" class="form-check-input" id="customSwitchLorem">
-                        <label class="form-check-label" for="customSwitchLorem"><b>Lorem Ipsum</b> 
+                        <label class="form-check-label" for="customSwitchLorem"><b>Text (placeholder)</b> 
                           <div class="word-count d-inline-block d-none"><input type="number" id="greek" min="1" max="999" value="10" class="ms-1" onkeyup=enforceMinMax(this)> words</div>
                         </label>
                       </div>
                       <div id="ui-toggle-img" class="form-check form-switch">
                         <input type="checkbox" class="form-check-input" id="customSwitchImg">
-                        <label class="form-check-label" for="customSwitchImg"><b>Placeholder image</b>
+                        <label class="form-check-label" for="customSwitchImg"><b>Image (placeholder)</b>
                           <div class="img-dimension d-none"><input type="number" id="img-w" min="1" max="9999" value="800" class="ms-1" onkeyup=enforceMinMax(this)> px X <input type="number" id="img-h" min="1" max="9999" value="600" class="ms-1" onkeyup=enforceMinMax(this)> px</div>
                         </label>
                       </div>
@@ -265,7 +265,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <input type="checkbox" class="form-check-input" id="customSwitchAccordion">
                         <label class="form-check-label" for="customSwitchAccordion"><b>Accordion</b></label>
                       </div>
-                      <div id="ui-toggle-accordion-bs" class="form-check form-switch bs-only">
+                      <div id="ui-toggle-accordionbs" class="form-check form-switch bs-only">
                         <input type="checkbox" class="form-check-input" id="customSwitchAccordionBs">
                         <label class="form-check-label" for="customSwitchAccordionBs"><b>Accordion</b> (Bootstrap JS Required)</label>
                       </div>
@@ -281,7 +281,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <option value="1">1</option>
                           </select> column(s)</b> (Bootstrap required)</label>
                       </div>
-                      <div id="ui-toggle-HTML5" class="form-check form-switch">
+                      <div id="ui-toggle-html5" class="form-check form-switch">
                         <input type="checkbox" class="form-check-input" id="customSwitchHTML5">
                         <label class="form-check-label" for="customSwitchHTML5"><b>Basic HTML 5 tags</b></label>
                       </div>
@@ -291,13 +291,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                           <div class="table-dimension toggle-bs-repel d-none"><input type="number" id="rowsInput" value="2" min="1" max="100"> rows & <input type="number" id="columnsInput" value="3" min="1" max="100"> columns</div>
                         </label>
                       </div>
-                      <div id="ui-toggle-table-bs" class="form-check form-switch bs-only">
+                      <div id="ui-toggle-tablebs" class="form-check form-switch bs-only">
                         <input type="checkbox" class="form-check-input" id="customSwitchTableBs">
                         <label class="form-check-label" for="customSwitchTableBs"><b>Table</b>
                           <div class="table-dimension-bs d-none"><input type="number" id="rowsInput-bs" value="2" min="1" max="100"> rows & <input type="number" id="columnsInput-bs" value="3" min="1" max="100"> columns</div>
                         </label>
                       </div>
-
                       <div id="ui-toggle-carousel" class="form-check form-switch bs-only">
                         <input type="checkbox" class="form-check-input" id="customSwitchCarousel">
                         <label class="form-check-label" for="customSwitchCarousel"><b>Carousel</b> (Bootstrap required)</label>
@@ -306,16 +305,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <input type="checkbox" class="form-check-input" id="customSwitchCopyright">
                         <label class="form-check-label" for="customSwitchCopyright"><b>Footer copyright</b></label>
                       </div>
-                      <div id="ui-toggle-cookie" class="form-check form-switch">
-                        <input type="checkbox" class="form-check-input" id="customSwitchCookie">
-                        <label class="form-check-label" for="customSwitchCookie"><b>Cookie notice<span class="toggle-cookie-star">*</span></b> (jQuery required)</label>
-                      </div>
-                      <div id="ui-toggle-browser" class="form-check form-switch">
-                        <input type="checkbox" class="form-check-input" id="customSwitchBrowser">
-                        <label class="form-check-label" for="customSwitchBrowser"><b>Old browser upgrade message</b></label>
-                      </div>
-                      <p class="small"><a href="https://changetocase.com" target="_blank"><span class="text-decoration-underline">Letter case changer</span>&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" fill="none"><path stroke="#000" stroke-linecap="round" d="m.976 7.518 6.5-6.5"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M3.478 1.018h3.998v3.999"/></svg></a></p>
-                      <span class="toggle-cookie mt-2 ps-2"><small>* Consult your legal team first.</small></span>
                     </div>
                   </div>
                 </div>
@@ -335,10 +324,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <input type="checkbox" class="form-check-input" id="customSwitchLoader">
                         <label class="form-check-label" for="customSwitchLoader"><b>Page fade-in after fully loaded</b> (jQuery required)</label>
                       </div>
+                      <div id="ui-toggle-cookie" class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="customSwitchCookie">
+                        <label class="form-check-label" for="customSwitchCookie"><b>Cookie notice<span class="toggle-cookie-star">*</span></b> (jQuery required)</label>
+                      </div>
+                      <div id="ui-toggle-announcement" class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="customSwitchAnnouncement">
+                        <label class="form-check-label" for="customSwitchAnnouncement"><b>Announcement bar</b></label>
+                      </div>
+                      <div id="ui-toggle-browser" class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="customSwitchBrowser">
+                        <label class="form-check-label" for="customSwitchBrowser"><b>Old browser upgrade message</b></label>
+                      </div>
+                      <!-- <p class="small"><a href="https://changetocase.com" target="_blank"><span class="text-decoration-underline">Letter case changer</span>&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" fill="none"><path stroke="#000" stroke-linecap="round" d="m.976 7.518 6.5-6.5"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M3.478 1.018h3.998v3.999"/></svg></a></p> -->
                       <div id="ui-toggle-art" class="form-check form-switch">
                         <input type="checkbox" class="form-check-input" id="customSwitchArt">
                         <label class="form-check-label" for="customSwitchArt"><b>Hidden Trollface</b></label>
                       </div>
+                      <span class="toggle-cookie mt-2 ps-2"><small>* Consult your legal team first.</small></span>
                     </div>
                   </div>
                 </div>
@@ -358,7 +361,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span><xmp>  <meta name="viewport" content="width=device-width,initial-scale=1" /></xmp></span>
                 <span><xmp>  <meta name="description" content="" /></xmp></span>
                 <span class="toggle-normalize"><xmp>  <link href="https://cdn.jsdelivr.net/npm/modern-normalize@</xmp><div class="nv d-inline"></div><xmp>/modern-normalize.min.css" rel="stylesheet"></xmp></span>
-                <span class="toggle-bootstrapCSS"><xmp>  <link href="https://cdn.jsdelivr.net/npm/bootstrap@</xmp><div class="bv d-inline"></div><xmp>/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"></xmp></span>
+                <span class="toggle-bootstrapcss"><xmp>  <link href="https://cdn.jsdelivr.net/npm/bootstrap@</xmp><div class="bv d-inline"></div><xmp>/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"></xmp></span>
                 <span class="toggle-tailwind"><xmp>  <script src="https://cdn.tailwindcss.com"></script></xmp></span>
                 <span class="toggle-css"><xmp>  <link rel="stylesheet" type="text/css" href="style.css" /></xmp></span>
                 <span class="no-basic-favicon"><xmp>  <link rel="icon" href="favicon.png"></xmp></span>
@@ -443,8 +446,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-loader"><xmp>      -webkit-animation: rotation 1s linear infinite;</xmp></span>
                 <span class="toggle-loader"><xmp>      animation: rotation 1s linear infinite; }</xmp></span>
                 <span class="toggle-loader"><xmp>  </style></xmp></span>
-                <span class="toggle-HTML5"><xmp>  <header></header></xmp></span>
-                <span class="toggle-HTML5"><xmp>  <nav></nav></xmp></span>
+                <span class="toggle-html5"><xmp>  <header></header></xmp></span>
+                <span class="toggle-html5"><xmp>  <nav></nav></xmp></span>
                 <span class="toggle-nav"><xmp>  <nav class="nav" id="nav"></xmp></span>
                 <span class="toggle-nav"><xmp>    <a href="#home">Logo</a></xmp></span>
                 <span class="toggle-nav"><xmp>    <a href="#menu-item-1">Menu Item 1</a></xmp></span>
@@ -510,11 +513,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="hw"><xmp>  <h1>Hello, world!</h1></xmp></span>
                 <span class="toggle-lorem"><xmp>  </xmp><div id="li" class="d-inline"><xmp><p></xmp>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. <xmp></p></xmp></div><xmp></xmp></span>
                 <span class="toggle-img"><xmp>  <img src="https://via.placeholder.com/</xmp><div id="iw" class="d-inline">800</div><xmp>x</xmp><div id="ih" class="d-inline">600</div><xmp>/" alt=""></xmp></span>
-                <span class="toggle-HTML5"><xmp>  <main></xmp></span>
-                <span class="toggle-HTML5"><xmp>    <section></section></xmp></span>
-                <span class="toggle-HTML5"><xmp>    <section></section></xmp></span>
-                <span class="toggle-HTML5"><xmp>    <section></section></xmp></span>
-                <span class="toggle-HTML5"><xmp>  </main></xmp></span>
+                <span class="toggle-html5"><xmp>  <main></xmp></span>
+                <span class="toggle-html5"><xmp>    <section></section></xmp></span>
+                <span class="toggle-html5"><xmp>    <section></section></xmp></span>
+                <span class="toggle-html5"><xmp>    <section></section></xmp></span>
+                <span class="toggle-html5"><xmp>  </main></xmp></span>
                 <div class="toggle-col-wrapper">
                   <span class="toggle-col toggle-col--1"><xmp>  <div class="container"></xmp></span>
                   <span class="toggle-col toggle-col--1"><xmp>    <div class="row"></xmp></span>
@@ -649,44 +652,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-accordion toggle-bs-repel"><xmp>    });</xmp></span>
                 <span class="toggle-accordion toggle-bs-repel"><xmp>  }</xmp></span>
                 <span class="toggle-accordion toggle-bs-repel"><xmp>  </script></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>  <div class="accordion" id="accordionExample"></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>    <div class="accordion-item"></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>      <h2 class="accordion-header" id="headingOne"></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>          Accordion Section Heading 1</xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>        </button></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>      </h2></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample"></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>        <div class="accordion-body"></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>          Accordion Section Content 1</xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>        </div></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>      </div></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>    </div></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>    <div class="accordion-item"></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>      <h2 class="accordion-header" id="headingTwo"></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>          Accordion Section Heading 2</xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>        </button></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>      </h2></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample"></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>        <div class="accordion-body"></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>          Accordion Section Content 2</xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>        </div></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>      </div></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>    </div></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>    <div class="accordion-item"></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>      <h2 class="accordion-header" id="headingThree"></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>          Accordion Section Heading 3</xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>        </button></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>      </h2></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample"></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>        <div class="accordion-body"></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>          Accordion Section Content 3</xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>        </div></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>      </div></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>    </div></xmp></span>
-                <span class="toggle-accordion-bs toggle-bs-only"><xmp>  </div>                </xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>  <div class="accordion" id="accordionExample"></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>    <div class="accordion-item"></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>      <h2 class="accordion-header" id="headingOne"></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>          Accordion Section Heading 1</xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>        </button></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>      </h2></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample"></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>        <div class="accordion-body"></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>          Accordion Section Content 1</xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>        </div></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>      </div></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>    </div></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>    <div class="accordion-item"></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>      <h2 class="accordion-header" id="headingTwo"></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>          Accordion Section Heading 2</xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>        </button></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>      </h2></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample"></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>        <div class="accordion-body"></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>          Accordion Section Content 2</xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>        </div></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>      </div></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>    </div></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>    <div class="accordion-item"></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>      <h2 class="accordion-header" id="headingThree"></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>          Accordion Section Heading 3</xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>        </button></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>      </h2></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample"></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>        <div class="accordion-body"></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>          Accordion Section Content 3</xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>        </div></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>      </div></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>    </div></xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>  </div>                </xmp></span>
                 <span class="toggle-carousel"><xmp>  <div id="carouselExampleCaptions" class="carousel slide"></xmp></span>
                 <span class="toggle-carousel"><xmp>    <div class="carousel-indicators"></xmp></span>
                 <span class="toggle-carousel"><xmp>      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button></xmp></span>
@@ -726,8 +729,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-carousel"><xmp>    </button></xmp></span>
                 <span class="toggle-carousel"><xmp>  </div></xmp></span>
                 <div id="t" class="toggle-table toggle-bs-repel d-none"></div>
-                <div id="t-bs" class="toggle-table-bs d-none"></div>
-                <span class="toggle-HTML5 toggle-HTML5--footer"><xmp>  <footer></footer></xmp></span>
+                <div id="t-bs" class="toggle-tablebs d-none"></div>
+                <span class="toggle-html5 toggle-html5--footer"><xmp>  <footer></footer></xmp></span>
                 <span class="toggle-copyright"><xmp>  <footer></xmp></span>
                 <span class="toggle-copyright"><xmp>    <small>© <script>document.write(new Date().getFullYear())</script> Your company name. All Rights Reserved.</small></footer></xmp></span>
                 <span class="toggle-copyright"><xmp>  </footer></xmp></span>
@@ -747,7 +750,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-art"><xmp>  <!-- ░░░░░░░░░░▀▀▄▄░▒▒▒▒▒▒▒▒▒▒░░░░█░ --></xmp></span>
                 <span class="toggle-art"><xmp>  <!-- ░░░░░░░░░░░░░░▀▄▄▄▄▄░░░░░░░▄█░░ --></xmp></span>
                 <span class="toggle-jquery"><xmp>  <script src="https://code.jquery.com/jquery-</xmp><div class="jv d-inline"></div><xmp>.min.js" crossorigin="anonymous"></script></xmp></span>
-                <span class="toggle-bootstrapJS"><xmp>  <script src="https://cdn.jsdelivr.net/npm/bootstrap@</xmp><div class="bv d-inline"></div><xmp>/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script></xmp></span>
+                <span class="toggle-bootstrapjs"><xmp>  <script src="https://cdn.jsdelivr.net/npm/bootstrap@</xmp><div class="bv d-inline"></div><xmp>/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script></xmp></span>
                 <span class="toggle-cookie"><xmp>  <script type="text/javascript"></xmp></span>
                 <span class="toggle-cookie"><xmp>    (function($){</xmp></span>
                 <span class="toggle-cookie"><xmp>      $('#i-accept').on('click', function() {   </xmp></span>
@@ -853,9 +856,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </article>
   <div id="switch-wrapper" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Switch theme"></div>
   <div class="toast-container position-fixed bottom-0 end-0 p-3">
-    <div id="toast--bootstrapCSS" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div id="toast--Bootstrapcss" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="toast-header">
-        <strong class="me-auto">Bootstrap Mode On</strong>
+        <strong class="me-auto">Bootstrap mode On</strong>
         <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
       </div>
       <div class="toast-body">
@@ -864,9 +867,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
   <div class="toast-container position-fixed bottom-0 end-0 p-3">
-    <div id="toast--bootstrapCSS-no" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div id="toast--Bootstrapcss-no" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="toast-header">
-        <strong class="me-auto">Bootstrap Mode Off</strong>
+        <strong class="me-auto">Bootstrap mode Off</strong>
         <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
       </div>
       <div class="toast-body">
@@ -928,67 +931,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   });
   $("#customSwitchCopyright").click(function(){
     if ($('#customSwitchCopyright').is(':checked')){ 
-      $(".toggle-HTML5--footer").toggleClass("d-none").removeClass("d-block");
+      $(".toggle-html5--footer").toggleClass("d-none").removeClass("d-block");
     } else if ($('#customSwitchHTML5').is(':checked')){
-      $(".toggle-HTML5--footer").addClass("d-block").removeClass("d-none");
+      $(".toggle-html5--footer").addClass("d-block").removeClass("d-none");
     }
   });
   (function($){
+    $("[id^='customSwitch']").click(function() {
+      var targetClass = ".toggle-" + $(this).attr("id").split("customSwitch")[1].toLowerCase();
+      $(targetClass).toggleClass("d-block");
+    });
     $("#customSwitchFavicon").click(function(){
-      $(".toggle-favicon").toggleClass("d-block");
       $(".no-basic-favicon").toggleClass("d-none");
     });
     $("#customSwitchLang").click(function(){
-      $(".toggle-lang").toggleClass("d-block");
       $(".toggle-lang-no-lang").toggleClass("d-block");
     });
-    $("#customSwitchCSS").click(function(){
-      $(".toggle-css").toggleClass("d-block");
-    });
-    $("#customSwitchJS").click(function(){
-      $(".toggle-js").toggleClass("d-block");
-    });
-    $("#customSwitchJQuery").click(function(){
-      $(".toggle-jquery").toggleClass("d-block");
-    });
-    $("#customSwitchBootstrapJS").click(function(){
-      $(".toggle-bootstrapJS").toggleClass("d-block");
-    });
     $("#customSwitchBootstrapCSS").click(function(){
-      $(".toggle-bootstrapCSS").toggleClass("d-block");
       $(".html-boilerplates").toggleClass("bs-enabled").toggleClass("no-bs");
-      $(".toggle-bootstrapCSS-star").toggleClass("d-inline");
+      $(".toggle-bootstrapcss-star").toggleClass("d-inline");
     });
-    $("#customSwitchTailwind").click(function(){
-      $(".toggle-tailwind").toggleClass("d-block");
-    });
-    $("#customSwitchNormalize").click(function(){
-      $(".toggle-normalize").toggleClass("d-block");
-    });
-    $("#customSwitchIE").click(function(){
-      $(".toggle-ie").toggleClass("d-block");
-      $(".no-ie").toggleClass("d-none");
-    });
-    $("#customSwitchSocial").click(function(){
-      $(".toggle-social").toggleClass("d-block");
-    });
-    $("#customSwitchManifest").click(function(){
-      $(".toggle-manifest").toggleClass("d-block");
-    });
-    $("#customSwitchTheme").click(function(){
-      $(".toggle-theme").toggleClass("d-block");
-    });
+    // $("#customSwitchIE").click(function(){
+    //   $(".no-ie").toggleClass("d-none");
+    // });
     $("#customSwitchCol").click(function(){
       $(".toggle-col-wrapper").toggleClass(function(){
         return $(this).is('.d-block .d-none') ? 'd-block d-none' : 'd-block';
       })
     });
     $("#customSwitchCookie").click(function(){
-      $(".toggle-cookie").toggleClass("d-block");
       $(".toggle-cookie-star").toggleClass("d-inline");
-    });
-    $("#customSwitchBrowser").click(function(){
-      $(".toggle-browser").toggleClass("d-block");
     });
     $("#customSwitchBrowser").click(function(){
       if ($('#customSwitchBrowser').is(':checked')){ 
@@ -999,22 +971,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
        toastList.forEach(toast => toast.show());
       }
     });
-    $("#customSwitchFadein").click(function(){
-      $(".toggle-fadein").toggleClass("d-block");
-    });
-    $("#customSwitchNav").click(function(){
-      $(".toggle-nav").toggleClass("d-block");
-    });
     $("#customSwitchLorem").click(function(){
-      $(".toggle-lorem").toggleClass("d-block");
       $(".word-count").toggleClass("d-none");
     });
     $("#customSwitchImg").click(function(){
-      $(".toggle-img").toggleClass("d-block");
       $(".img-dimension").toggleClass("d-none");
-    });
-    $("#customSwitchHTML5").click(function(){
-      $(".toggle-HTML5").toggleClass("d-block");
     });
     $("#customSwitchForm").click(function(){
       $(".toggle-form-essential").toggleClass("d-block");
@@ -1025,11 +986,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         $(".dropdown-multi__dropdown-label").text("Select fields");
       }
     });
-    $("#customSwitchAccordion").click(function(){
-      $(".toggle-accordion").toggleClass("d-block");
-    });
     $("#customSwitchAccordionBs").click(function(){
-      $(".toggle-accordion-bs").toggleClass("d-block");
       if (!$('#customSwitchBootstrapJS').is(':checked')){ 
         $("#customSwitchBootstrapJS").prop('checked', true);
       }
@@ -1043,24 +1000,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }
     });
     $("#customSwitchTableBs").click(function(){
-      $(".toggle-table-bs").toggleClass("d-block d-none");
       if (!$('#customSwitchTableBs').is(':checked')){ 
         $(".table-dimension-bs").addClass("d-none").removeClass("d-block");
       } else {
         $(".table-dimension-bs").addClass("d-block").removeClass("d-none");
       }
-    });
-    $("#customSwitchCarousel").click(function(){
-      $(".toggle-carousel").toggleClass("d-block");
-    });
-    $("#customSwitchCopyright").click(function(){
-      $(".toggle-copyright").toggleClass("d-block");
-    });
-    $("#customSwitchLoader").click(function(){
-      $(".toggle-loader").toggleClass("d-block");
-    });
-    $("#customSwitchArt").click(function(){
-      $(".toggle-art").toggleClass("d-block");
     });
     $("select#cols").change(function(){
       $(this).find("option:selected").each(function(){
@@ -1115,12 +1059,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   $("#customSwitchAccordion").click(function(){
     if ($('#customSwitchAccordion').is(':checked')){ 
       $('#customSwitchAccordionBs').prop('checked', true);
-      $(".toggle-accordion-bs").addClass("d-none d-none--bs-block");
+      $(".toggle-accordionbs").addClass("d-none d-none--bs-block");
       $(".toggle-accordion").removeClass("d-none");
     } 
     else {
       $('#customSwitchAccordionBs').prop('checked', false);
-      $(".toggle-accordion-bs").addClass("d-none").removeClass("d-none--bs-block d-block");
+      $(".toggle-accordionbs").addClass("d-none").removeClass("d-none--bs-block d-block");
       $(".toggle-accordion").addClass("d-none").removeClass("d-none--no-bs-block d-block");
     }
   });
@@ -1128,12 +1072,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     if ($('#customSwitchAccordionBs').is(':checked')){ 
       $('#customSwitchAccordion').prop('checked', true);
       $(".toggle-accordion").addClass("d-none d-none--no-bs-block");
-      $(".toggle-accordion-bs").removeClass("d-none");
+      $(".toggle-accordionbs").removeClass("d-none");
     } 
     else {
       $('#customSwitchAccordion').prop('checked', false);
       $(".toggle-accordion").addClass("d-none").removeClass("d-none--no-bs-block d-block");
-      $(".toggle-accordion-bs").addClass("d-none").removeClass("d-none--bs-block d-block");
+      $(".toggle-accordionbs").addClass("d-none").removeClass("d-none--bs-block d-block");
     }
   });
   $("#customSwitchTable").click(function(){
@@ -1162,14 +1106,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   });
   $("#customSwitchBootstrapCSS").click(function(){
     if ($('#customSwitchBootstrapCSS').is(':checked')){ 
-      var toastElList = [].slice.call(document.querySelectorAll('#toast--bootstrapCSS'))
+      var toastElList = [].slice.call(document.querySelectorAll('#toast--Bootstrapcss'))
       var toastList = toastElList.map(function(toastEl) {
         return new bootstrap.Toast(toastEl) 
       });
      toastList.forEach(toast => toast.show());
     } 
     else {
-      var toastElList = [].slice.call(document.querySelectorAll('#toast--bootstrapCSS-no'))
+      var toastElList = [].slice.call(document.querySelectorAll('#toast--Bootstrapcss-no'))
       var toastList = toastElList.map(function(toastEl) {
         return new bootstrap.Toast(toastEl) 
       });
