@@ -14,7 +14,7 @@
   <meta name="twitter:title" content="HTML Boilerplates">
   <meta name="twitter:description" content="Build and download your HTML boilerplate for free.">
   <meta name="twitter:image" content="https://htmlboilerplates.com/html-boilerplates.png">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" crossorigin="anonymous">
   <style>
   :root {
@@ -23,21 +23,21 @@
   </style>
   <link href="style.css" rel="stylesheet" type="text/css">
   <link rel="icon" type="image/png" href="favicon_html-boilerpates.png">
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-GM8JZWLKKW"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	
-	  gtag('config', 'G-GM8JZWLKKW');
-	</script>
-	<!-- Google Tag Manager -->
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-M8QXB3P');</script>
-	<!-- End Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GM8JZWLKKW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-GM8JZWLKKW');
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-M8QXB3P');</script>
+  <!-- End Google Tag Manager -->
 </head>
 <body class="global">
 <!-- Google Tag Manager (noscript) -->
@@ -47,7 +47,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="loader"></div>
 <div class="switching"></div>
 <main class="container position-relative">
-	<div id="lang" class="position-absolute"><p class="small text-grey text-end"><a class="px-2 px-md-1" href="#"><i>EN</i></a> | <a class="px-2 px-md-1" href="../HTMLのテンプレート">JP</a> | <a class="px-2 px-md-1" href="/modele-html">FR</a> | <a class="px-2 px-md-1" href="/html網站樣板">TW</a> | <a class="px-2 px-md-1" href="../html网站模板">CN</a> | <a class="px-2 px-md-1" href="../alien-html">ALIEN</a> | <a class="px-2 px-md-1 d-none d-md-inline-block" href="mailto:allen@gasolinehorses.com" target="_blank">Request Features</a></p></div>
+  <div id="lang" class="position-absolute"><p class="small text-grey text-end"><a class="px-2 px-md-1" href="#"><i>EN</i></a> | <a class="px-2 px-md-1" href="../HTMLのテンプレート">JP</a> | <a class="px-2 px-md-1" href="/modele-html">FR</a> | <a class="px-2 px-md-1" href="/html網站樣板">TW</a> | <a class="px-2 px-md-1" href="../html网站模板">CN</a> | <a class="px-2 px-md-1" href="../alien-html">ALIEN</a> | <a class="px-2 px-md-1 d-none d-md-inline-block" href="mailto:allen@gasolinehorses.com" target="_blank">Request Features</a></p></div>
   <div class="row">
     <div class="col ml-sm-auto px-4">
       <div class="py-5">
@@ -285,12 +285,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <input type="checkbox" class="form-check-input" id="customSwitchHTML5">
                         <label class="form-check-label" for="customSwitchHTML5"><b>Basic HTML 5 tags</b></label>
                       </div>
-                      <div id="ui-toggle-table" class="form-check form-switch">
+                      <div id="ui-toggle-table" class="form-check form-switch bs-repel">
                         <input type="checkbox" class="form-check-input" id="customSwitchTable">
                         <label class="form-check-label" for="customSwitchTable"><b>Table</b>
-                          <div class="table-dimension d-none"><input type="number" id="rowsInput" value="2" min="1" max="100"> rows & <input type="number" id="columnsInput" value="3" min="1" max="100"> columns</div>
+                          <div class="table-dimension toggle-bs-repel d-none"><input type="number" id="rowsInput" value="2" min="1" max="100"> rows & <input type="number" id="columnsInput" value="3" min="1" max="100"> columns</div>
                         </label>
                       </div>
+                      <div id="ui-toggle-table-bs" class="form-check form-switch bs-only">
+                        <input type="checkbox" class="form-check-input" id="customSwitchTableBs">
+                        <label class="form-check-label" for="customSwitchTableBs"><b>Table</b>
+                          <div class="table-dimension-bs d-none"><input type="number" id="rowsInput-bs" value="2" min="1" max="100"> rows & <input type="number" id="columnsInput-bs" value="3" min="1" max="100"> columns</div>
+                        </label>
+                      </div>
+
                       <div id="ui-toggle-carousel" class="form-check form-switch bs-only">
                         <input type="checkbox" class="form-check-input" id="customSwitchCarousel">
                         <label class="form-check-label" for="customSwitchCarousel"><b>Carousel</b> (Bootstrap required)</label>
@@ -408,33 +415,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-fadein"><xmp>      animation-delay: 0.3s; }</xmp></span>
                 <span class="toggle-fadein"><xmp>  </style></xmp></span>
                 <span class="toggle-loader"><xmp>  <div id="loader-wrapper"></xmp></span>
-	              <span class="toggle-loader"><xmp>    <div class="loader"></div></xmp></span>
-	              <span class="toggle-loader"><xmp>  </div></xmp></span>
+                <span class="toggle-loader"><xmp>    <div class="loader"></div></xmp></span>
+                <span class="toggle-loader"><xmp>  </div></xmp></span>
                 <span class="toggle-loader"><xmp>  <style></xmp></span>
                 <span class="toggle-loader"><xmp>    /* For best practice, move CSS below to an external CSS file. */</xmp></span>
-								<span class="toggle-loader"><xmp>    @keyframes rotation {</xmp></span>
-								<span class="toggle-loader"><xmp>      0% {</xmp></span>
-								<span class="toggle-loader"><xmp>        transform: rotate(0deg); }</xmp></span>
-								<span class="toggle-loader"><xmp>      100% {</xmp></span>
-								<span class="toggle-loader"><xmp>        transform: rotate(360deg); } }</xmp></span>
-								<span class="toggle-loader"><xmp>    #loader-wrapper {</xmp></span>
-								<span class="toggle-loader"><xmp>      background-color: #FFFFFF;</xmp></span>
-								<span class="toggle-loader"><xmp>      position: fixed;</xmp></span>
-								<span class="toggle-loader"><xmp>      z-index: 999;</xmp></span>
-								<span class="toggle-loader"><xmp>      width: 100%;</xmp></span>
-								<span class="toggle-loader"><xmp>      height: 100%;</xmp></span>
-								<span class="toggle-loader"><xmp>      text-align: center; }</xmp></span>
-								<span class="toggle-loader"><xmp>    .loader {</xmp></span>
-								<span class="toggle-loader"><xmp>      width: 40px;</xmp></span>
-								<span class="toggle-loader"><xmp>      height: 40px;</xmp></span>
-								<span class="toggle-loader"><xmp>      border: 5px solid #000000;</xmp></span>
-								<span class="toggle-loader"><xmp>      border-bottom-color: transparent;</xmp></span>
-								<span class="toggle-loader"><xmp>      border-radius: 50%;</xmp></span>
-								<span class="toggle-loader"><xmp>      margin-top:calc(50vh - 20px);</xmp></span>
-								<span class="toggle-loader"><xmp>      display: inline-block;</xmp></span>
-								<span class="toggle-loader"><xmp>      box-sizing: border-box;</xmp></span>
-								<span class="toggle-loader"><xmp>      -webkit-animation: rotation 1s linear infinite;</xmp></span>
-								<span class="toggle-loader"><xmp>      animation: rotation 1s linear infinite; }</xmp></span>
+                <span class="toggle-loader"><xmp>    @keyframes rotation {</xmp></span>
+                <span class="toggle-loader"><xmp>      0% {</xmp></span>
+                <span class="toggle-loader"><xmp>        transform: rotate(0deg); }</xmp></span>
+                <span class="toggle-loader"><xmp>      100% {</xmp></span>
+                <span class="toggle-loader"><xmp>        transform: rotate(360deg); } }</xmp></span>
+                <span class="toggle-loader"><xmp>    #loader-wrapper {</xmp></span>
+                <span class="toggle-loader"><xmp>      background-color: #FFFFFF;</xmp></span>
+                <span class="toggle-loader"><xmp>      position: fixed;</xmp></span>
+                <span class="toggle-loader"><xmp>      z-index: 999;</xmp></span>
+                <span class="toggle-loader"><xmp>      width: 100%;</xmp></span>
+                <span class="toggle-loader"><xmp>      height: 100%;</xmp></span>
+                <span class="toggle-loader"><xmp>      text-align: center; }</xmp></span>
+                <span class="toggle-loader"><xmp>    .loader {</xmp></span>
+                <span class="toggle-loader"><xmp>      width: 40px;</xmp></span>
+                <span class="toggle-loader"><xmp>      height: 40px;</xmp></span>
+                <span class="toggle-loader"><xmp>      border: 5px solid #000000;</xmp></span>
+                <span class="toggle-loader"><xmp>      border-bottom-color: transparent;</xmp></span>
+                <span class="toggle-loader"><xmp>      border-radius: 50%;</xmp></span>
+                <span class="toggle-loader"><xmp>      margin-top:calc(50vh - 20px);</xmp></span>
+                <span class="toggle-loader"><xmp>      display: inline-block;</xmp></span>
+                <span class="toggle-loader"><xmp>      box-sizing: border-box;</xmp></span>
+                <span class="toggle-loader"><xmp>      -webkit-animation: rotation 1s linear infinite;</xmp></span>
+                <span class="toggle-loader"><xmp>      animation: rotation 1s linear infinite; }</xmp></span>
                 <span class="toggle-loader"><xmp>  </style></xmp></span>
                 <span class="toggle-HTML5"><xmp>  <header></header></xmp></span>
                 <span class="toggle-HTML5"><xmp>  <nav></nav></xmp></span>
@@ -509,31 +516,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-HTML5"><xmp>    <section></section></xmp></span>
                 <span class="toggle-HTML5"><xmp>  </main></xmp></span>
                 <div class="toggle-col-wrapper">
-	                <span class="toggle-col toggle-col--1"><xmp>  <div class="container"></xmp></span>
+                  <span class="toggle-col toggle-col--1"><xmp>  <div class="container"></xmp></span>
                   <span class="toggle-col toggle-col--1"><xmp>    <div class="row"></xmp></span>
-	                <span class="toggle-col toggle-col--1"><xmp>      <div class="col">Column 1</div></xmp></span>
-	                <span class="toggle-col toggle-col--1"><xmp>    </div></xmp></span>
+                  <span class="toggle-col toggle-col--1"><xmp>      <div class="col">Column 1</div></xmp></span>
+                  <span class="toggle-col toggle-col--1"><xmp>    </div></xmp></span>
                   <span class="toggle-col toggle-col--1"><xmp>  </div></xmp></span>
                   <span class="toggle-col toggle-col--2"><xmp>  <div class="container"></xmp></span>
-	                <span class="toggle-col toggle-col--2"><xmp>    <div class="row"></xmp></span>
-	                <span class="toggle-col toggle-col--2"><xmp>      <div class="col-sm-6">Column 1</div></xmp></span>
-	                <span class="toggle-col toggle-col--2"><xmp>      <div class="col-sm-6">Column 2</div></xmp></span>
-	                <span class="toggle-col toggle-col--2"><xmp>    </div></xmp></span>
+                  <span class="toggle-col toggle-col--2"><xmp>    <div class="row"></xmp></span>
+                  <span class="toggle-col toggle-col--2"><xmp>      <div class="col-sm-6">Column 1</div></xmp></span>
+                  <span class="toggle-col toggle-col--2"><xmp>      <div class="col-sm-6">Column 2</div></xmp></span>
+                  <span class="toggle-col toggle-col--2"><xmp>    </div></xmp></span>
                   <span class="toggle-col toggle-col--2"><xmp>  </div></xmp></span>
                   <span class="toggle-col toggle-col--3"><xmp>  <div class="container"></xmp></span>
-	                <span class="toggle-col toggle-col--3"><xmp>    <div class="row"></xmp></span>
-	                <span class="toggle-col toggle-col--3"><xmp>      <div class="col-sm-4">Column 1</div></xmp></span>
-	                <span class="toggle-col toggle-col--3"><xmp>      <div class="col-sm-4">Column 2</div></xmp></span>
-	                <span class="toggle-col toggle-col--3"><xmp>      <div class="col-sm-4">Column 3</div></xmp></span>
-	                <span class="toggle-col toggle-col--3"><xmp>    </div></xmp></span>
+                  <span class="toggle-col toggle-col--3"><xmp>    <div class="row"></xmp></span>
+                  <span class="toggle-col toggle-col--3"><xmp>      <div class="col-sm-4">Column 1</div></xmp></span>
+                  <span class="toggle-col toggle-col--3"><xmp>      <div class="col-sm-4">Column 2</div></xmp></span>
+                  <span class="toggle-col toggle-col--3"><xmp>      <div class="col-sm-4">Column 3</div></xmp></span>
+                  <span class="toggle-col toggle-col--3"><xmp>    </div></xmp></span>
                   <span class="toggle-col toggle-col--3"><xmp>  </div></xmp></span>
                   <span class="toggle-col toggle-col--4"><xmp>  <div class="container"></xmp></span>
-	                <span class="toggle-col toggle-col--4"><xmp>    <div class="row"></xmp></span>
-	                <span class="toggle-col toggle-col--4"><xmp>      <div class="col-sm-3">Column 1</div></xmp></span>
-	                <span class="toggle-col toggle-col--4"><xmp>      <div class="col-sm-3">Column 2</div></xmp></span>
-	                <span class="toggle-col toggle-col--4"><xmp>      <div class="col-sm-3">Column 3</div></xmp></span>
-	                <span class="toggle-col toggle-col--4"><xmp>      <div class="col-sm-3">Column 4</div></xmp></span>
-	                <span class="toggle-col toggle-col--4"><xmp>    </div></xmp></span>
+                  <span class="toggle-col toggle-col--4"><xmp>    <div class="row"></xmp></span>
+                  <span class="toggle-col toggle-col--4"><xmp>      <div class="col-sm-3">Column 1</div></xmp></span>
+                  <span class="toggle-col toggle-col--4"><xmp>      <div class="col-sm-3">Column 2</div></xmp></span>
+                  <span class="toggle-col toggle-col--4"><xmp>      <div class="col-sm-3">Column 3</div></xmp></span>
+                  <span class="toggle-col toggle-col--4"><xmp>      <div class="col-sm-3">Column 4</div></xmp></span>
+                  <span class="toggle-col toggle-col--4"><xmp>    </div></xmp></span>
                   <span class="toggle-col toggle-col--4"><xmp>  </div></xmp></span>
                   <span class="toggle-col toggle-col--5"><xmp>  <div class="container"></xmp></span>
                   <span class="toggle-col toggle-col--5"><xmp>    <div class="row"></xmp></span>
@@ -554,7 +561,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <span class="toggle-col toggle-col--6"><xmp>      <div class="col-sm-2">Column 6</div></xmp></span>
                   <span class="toggle-col toggle-col--6"><xmp>    </div></xmp></span>
                   <span class="toggle-col toggle-col--6"><xmp>  </div></xmp></span>
-	              </div>
+                </div>
                 <span class="toggle-cookie"><xmp>  <div id="cookie-notice" style="width: 100%; position: fixed; z-index: 1000; bottom: 0; left: 0; background-color: #61BA00;"></xmp></span>
                 <span class="toggle-cookie"><xmp>    <p>This website uses cookies so that we can provide you with the best website experience. By clicking “I Accept” you acknowledge the use of cookies and to our <a href="#"><u>Privacy Policy</u></a>.</p></xmp></span>
                 <span class="toggle-cookie"><xmp>    <a id="i-accept">I Accept</a></xmp></span>
@@ -718,7 +725,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-carousel"><xmp>      <span class="visually-hidden">Next</span></xmp></span>
                 <span class="toggle-carousel"><xmp>    </button></xmp></span>
                 <span class="toggle-carousel"><xmp>  </div></xmp></span>
-                <div id="t" class="toggle-table d-none">aa</div>
+                <div id="t" class="toggle-table toggle-bs-repel d-none"></div>
+                <div id="t-bs" class="toggle-table-bs d-none"></div>
                 <span class="toggle-HTML5 toggle-HTML5--footer"><xmp>  <footer></footer></xmp></span>
                 <span class="toggle-copyright"><xmp>  <footer></xmp></span>
                 <span class="toggle-copyright"><xmp>    <small>© <script>document.write(new Date().getFullYear())</script> Your company name. All Rights Reserved.</small></footer></xmp></span>
@@ -771,7 +779,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </pre>
               <div class="text-center"><button type="button" id="copy-btn" class="mb-5" onclick="copyEvent('output')">Copy Code</button></div>
               <div class="text-left text-sm-end venmo">
-	              <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+                <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
                 <script type="text/javascript">
                   var r = document.querySelector(':root');
                   var rs = getComputedStyle(r);
@@ -878,9 +886,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
   <footer class="row">
-  	<div class="col">
-  		<p class="small text-grey text-end">Created by <a class="fw-bold" href="https://gasolinehorses.com/">Allen</a> • <a class="fw-bold" href="https://medium.com/@gasolinehorse" target="_blank">UX design blog</a></p>
-  	</div>
+    <div class="col">
+      <p class="small text-grey text-end">Created by <a class="fw-bold" href="https://gasolinehorses.com/">Allen</a> • <a class="fw-bold" href="https://medium.com/@gasolinehorse" target="_blank">UX design blog</a></p>
+    </div>
   </footer>
 </main>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
@@ -971,9 +979,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       $(".toggle-theme").toggleClass("d-block");
     });
     $("#customSwitchCol").click(function(){
-    	$(".toggle-col-wrapper").toggleClass(function(){
-		    return $(this).is('.d-block, .d-none') ? 'd-block d-none' : 'd-block';
-		  })
+      $(".toggle-col-wrapper").toggleClass(function(){
+        return $(this).is('.d-block .d-none') ? 'd-block d-none' : 'd-block';
+      })
     });
     $("#customSwitchCookie").click(function(){
       $(".toggle-cookie").toggleClass("d-block");
@@ -1027,8 +1035,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }
     });
     $("#customSwitchTable").click(function(){
-      $(".toggle-table").toggleClass("d-block, d-none");
-      $(".table-dimension").toggleClass("d-none");
+      $(".toggle-table").toggleClass("d-block d-none");
+      if (!$('#customSwitchTable').is(':checked')){ 
+        $(".table-dimension").addClass("d-none").removeClass("d-block");
+      } else {
+        $(".table-dimension").addClass("d-block").removeClass("d-none");
+      }
+    });
+    $("#customSwitchTableBs").click(function(){
+      $(".toggle-table-bs").toggleClass("d-block d-none");
+      if (!$('#customSwitchTableBs').is(':checked')){ 
+        $(".table-dimension-bs").addClass("d-none").removeClass("d-block");
+      } else {
+        $(".table-dimension-bs").addClass("d-block").removeClass("d-none");
+      }
     });
     $("#customSwitchCarousel").click(function(){
       $(".toggle-carousel").toggleClass("d-block");
@@ -1043,7 +1063,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       $(".toggle-art").toggleClass("d-block");
     });
     $("select#cols").change(function(){
-	    $(this).find("option:selected").each(function(){
+      $(this).find("option:selected").each(function(){
         var optionValue = $(this).attr("value");
         if(optionValue){
           $(".toggle-col").not(".toggle-col--" + optionValue).removeClass("d-block");
@@ -1051,7 +1071,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         } else{
           $(".toggle-col").removeClass("d-block");
         }
-	    });
+      });
     }).change();
     $("select#langs").change(function(){
       $(this).find("option:selected").each(function(){
@@ -1061,9 +1081,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
       });
     }).change();
-	  $(function () {
-		  $('[data-bs-toggle="tooltip"]').tooltip()
-		})
+    $(function () {
+      $('[data-bs-toggle="tooltip"]').tooltip()
+    })
     $("div[id^='ui-toggle-']").click(function(){
       if ($('#output').height() > 700 && $(window).width() > 576) {
         $("#copy-btn").addClass("position-fixed bottom-0").css("margin-left", "-54px");
@@ -1073,21 +1093,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
   })(jQuery);
   if (+window.localStorage.getItem("preferDark")) {
-	  $("body").toggleClass("dark");
-	}
-	$("#switch-wrapper").click(function () {
-	  if (+window.localStorage.getItem("preferDark")) {
-	    window.localStorage.setItem("preferDark", 0);
-	  } else {
-	    window.localStorage.setItem("preferDark", 1);
-	  }
-	  $("body").toggleClass("dark");
+    $("body").toggleClass("dark");
+  }
+  $("#switch-wrapper").click(function () {
+    if (+window.localStorage.getItem("preferDark")) {
+      window.localStorage.setItem("preferDark", 0);
+    } else {
+      window.localStorage.setItem("preferDark", 1);
+    }
+    $("body").toggleClass("dark");
     $(".switching").addClass('switching--on');
       setTimeout(function() {
         $(".switching").removeClass('switching--on');
     }, 2000);
-	});
-	function copyEvent(id){
+  });
+  function copyEvent(id){
     var str = document.getElementById(id);
     window.getSelection().selectAllChildren(str);
     document.execCommand("copy")
@@ -1114,6 +1134,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       $('#customSwitchAccordion').prop('checked', false);
       $(".toggle-accordion").addClass("d-none").removeClass("d-none--no-bs-block d-block");
       $(".toggle-accordion-bs").addClass("d-none").removeClass("d-none--bs-block d-block");
+    }
+  });
+  $("#customSwitchTable").click(function(){
+    if ($('#customSwitchTable').is(':checked')){ 
+      $('#customSwitchTableBs').prop('checked', true);
+      $("#t-bs, .table-dimension-bs").addClass("d-none d-none--bs-block");
+      $("#t, .table-dimension").removeClass("d-none");
+    } 
+    else {
+      $('#customSwitchTableBs').prop('checked', false);
+      $("#t-bs, .table-dimension-bs").addClass("d-none").removeClass("d-none--bs-block d-block");
+      $("#t, .table-dimension").addClass("d-none").removeClass("d-none--no-bs-block d-block");
+    }
+  });
+  $("#customSwitchTableBs").click(function(){
+    if ($('#customSwitchTableBs').is(':checked')){ 
+      $('#customSwitchTable').prop('checked', true);
+      $("#t, .table-dimension").addClass("d-none d-none--no-bs-block");
+      $("#t-bs, .table-dimension-bs").removeClass("d-none");
+    } 
+    else {
+      $('#customSwitchTable').prop('checked', false);
+      $("#t, .table-dimension").addClass("d-none").removeClass("d-none--no-bs-block d-block");
+      $("#t-bs, .table-dimension-bs").addClass("d-none").removeClass("d-none--bs-block d-block");
     }
   });
   $("#customSwitchBootstrapCSS").click(function(){
@@ -1207,6 +1251,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     return table;
   }
   updateTable();
+  var rowsInputBs = document.getElementById("rowsInput-bs");
+  var columnsInputBs = document.getElementById("columnsInput-bs");
+  rowsInputBs.addEventListener("input", updateTableBs);
+  columnsInputBs.addEventListener("input", updateTableBs);
+  function updateTableBs() {
+    var rowsBs = document.getElementById("rowsInput-bs").value;
+    var columnsBs = document.getElementById("columnsInput-bs").value;
+    document.getElementById("t-bs").innerHTML = generateTableBs(rowsBs, columnsBs);
+  }
+  function generateTableBs(rowsBs, columnsBs) {
+    var tableBs = '<span><xmp>  <table class="table"></xmp></span>';
+    for (var i = 0; i < rowsBs; i++) {
+      tableBs += '<span><xmp>    <tr></xmp></span>';
+      for (var j = 0; j < columnsBs; j++) {
+        tableBs += '<span><xmp>      <td>Row ' + (i+1) + ', Column ' + (j+1) + '</td></xmp></span>';
+      }
+      tableBs += '<span><xmp>    </tr></xmp></span>';
+    }
+    tableBs += '<span><xmp>  </table></xmp></span>' 
+    return tableBs;
+  }
+  updateTableBs();
   (function($) {
     var CheckboxDropdown = function(el) {
       var _this = this;
