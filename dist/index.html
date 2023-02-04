@@ -316,17 +316,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   </h3>
                   <div id="collapseThree" class="collapse show" aria-labelledby="headingThree">
                     <div class="accordion-body pt-2">
-                      <div id="ui-toggle-fadein" class="form-check form-switch">
+                      <div id="ui-toggle-fadein" class="form-check form-switch bs-repel">
                         <input type="checkbox" class="form-check-input" id="customSwitchFadein">
                         <label class="form-check-label" for="customSwitchFadein"><b>Page fade-in</b></label>
                       </div>
-                      <div id="ui-toggle-loader" class="form-check form-switch">
+                      <div id="ui-toggle-fadeinbs" class="form-check form-switch bs-only">
+                        <input type="checkbox" class="form-check-input" id="customSwitchFadeinBs">
+                        <label class="form-check-label" for="customSwitchFadeinBs"><b>Page fade-in</b></label>
+                      </div>
+                      <div id="ui-toggle-loader" class="form-check form-switch bs-repel">
                         <input type="checkbox" class="form-check-input" id="customSwitchLoader">
                         <label class="form-check-label" for="customSwitchLoader"><b>Page fade-in after fully loaded</b> (jQuery required)</label>
                       </div>
-                      <div id="ui-toggle-cookie" class="form-check form-switch">
+                      <div id="ui-toggle-loaderbs" class="form-check form-switch bs-only">
+                        <input type="checkbox" class="form-check-input" id="customSwitchLoaderBs">
+                        <label class="form-check-label" for="customSwitchLoaderBs"><b>Page fade-in after fully loaded</b> (jQuery required)</label>
+                      </div>
+                      <div id="ui-toggle-cookie" class="form-check form-switch bs-repel">
                         <input type="checkbox" class="form-check-input" id="customSwitchCookie">
                         <label class="form-check-label" for="customSwitchCookie"><b>Cookie notice<span class="toggle-cookie-star">*</span></b> (jQuery required)</label>
+                      </div>
+                      <div id="ui-toggle-cookiebs" class="form-check form-switch bs-only">
+                        <input type="checkbox" class="form-check-input" id="customSwitchCookieBs">
+                        <label class="form-check-label" for="customSwitchCookieBs"><b>Cookie notice<span class="toggle-cookie-star">*</span></b> (jQuery required)</label>
                       </div>
                       <div id="ui-toggle-announcement" class="form-check form-switch bs-repel">
                         <input type="checkbox" class="form-check-input" id="customSwitchAnnouncement">
@@ -349,7 +361,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <input type="checkbox" class="form-check-input" id="customSwitchArt">
                         <label class="form-check-label" for="customSwitchArt"><b>Hidden Trollface</b></label>
                       </div>
-                      <span class="toggle-cookie mt-2 ps-2"><small>* Consult your legal team first.</small></span>
+                      <span class="toggle-cookie mt-2 ps-2"><small>* Consult legal advice first."</small></span>
                     </div>
                   </div>
                 </div>
@@ -389,7 +401,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-manifest"><xmp>  <link rel="manifest" href="manifest.webmanifest"></xmp></span>
                 <span><xmp></head></xmp></span>
                 <span><xmp><body></xmp></span>
-                <span class="toggle-fadein"><xmp>  <div id="fadein"></div></xmp></span>
+                <span class="toggle-fadein toggle-bs-repel"><xmp>  <div id="fadein"></div></xmp></span>
+                <span class="toggle-fadeinbs toggle-bs-only"><xmp>  <div id="fadein" class="position-fixed w-100 h-100 bg-white" style="animation: fadeinall 1s normal 0.3s both;"></div></xmp></span>
                 <span class="toggle-fadein"><xmp>  <style></xmp></span>
                 <span class="toggle-fadein"><xmp>    /* For best practice, move CSS below to an external CSS file. */</xmp></span>
                 <span class="toggle-fadein"><xmp>    @keyframes fadeinall {</xmp></span>
@@ -401,61 +414,66 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-fadein"><xmp>      opacity: 0;</xmp></span>
                 <span class="toggle-fadein"><xmp>      -webkit-transform: translateY(0);</xmp></span>
                 <span class="toggle-fadein"><xmp>      transform: translateY(0); }</xmp></span>
-                <span class="toggle-fadein"><xmp>    99% {</xmp></span>
-                <span class="toggle-fadein"><xmp>      opacity: 0;</xmp></span>
-                <span class="toggle-fadein"><xmp>      -webkit-transform: translateY(-100%);</xmp></span>
-                <span class="toggle-fadein"><xmp>      transform: translateY(-100%); }</xmp></span>
                 <span class="toggle-fadein"><xmp>    100% {</xmp></span>
                 <span class="toggle-fadein"><xmp>      opacity: 0;</xmp></span>
+                <span class="toggle-fadein"><xmp>      -webkit-transform: translateY(-100%);</xmp></span>
+                <span class="toggle-fadein"><xmp>      transform: translateY(-100%);</xmp></span>
                 <span class="toggle-fadein"><xmp>      z-index: -1; } }</xmp></span>
-                <span class="toggle-fadein"><xmp>    #fadein {</xmp></span>
-                <span class="toggle-fadein"><xmp>      opacity: 1;</xmp></span>
-                <span class="toggle-fadein"><xmp>      position: fixed;</xmp></span>
-                <span class="toggle-fadein"><xmp>      width: 100%;</xmp></span>
-                <span class="toggle-fadein"><xmp>      height: 100%;</xmp></span>
-                <span class="toggle-fadein"><xmp>      -webkit-transform: translateY(0);</xmp></span>
-                <span class="toggle-fadein"><xmp>      -ms-transform: translateY(0);</xmp></span>
-                <span class="toggle-fadein"><xmp>      transform: translateY(0);</xmp></span>
-                <span class="toggle-fadein"><xmp>      background-color: #fff;</xmp></span>
-                <span class="toggle-fadein"><xmp>      z-index: 999;</xmp></span>
-                <span class="toggle-fadein"><xmp>      -webkit-animation-fill-mode: forwards;</xmp></span>
-                <span class="toggle-fadein"><xmp>      animation-fill-mode: forwards;</xmp></span>
-                <span class="toggle-fadein"><xmp>      -webkit-animation: fadeinall 1s normal both;</xmp></span>
-                <span class="toggle-fadein"><xmp>      animation: fadeinall 1s normal both;</xmp></span>
-                <span class="toggle-fadein"><xmp>      -webkit-animation-delay: 0.3s;</xmp></span>
-                <span class="toggle-fadein"><xmp>      animation-delay: 0.3s; }</xmp></span>
+                <span class="toggle-fadein toggle-bs-repel"><xmp>    #fadein {</xmp></span>
+                <span class="toggle-fadein toggle-bs-repel"><xmp>      opacity: 1;</xmp></span>
+                <span class="toggle-fadein toggle-bs-repel"><xmp>      position: fixed;</xmp></span>
+                <span class="toggle-fadein toggle-bs-repel"><xmp>      width: 100%;</xmp></span>
+                <span class="toggle-fadein toggle-bs-repel"><xmp>      height: 100%;</xmp></span>
+                <span class="toggle-fadein toggle-bs-repel"><xmp>      -webkit-transform: translateY(0);</xmp></span>
+                <span class="toggle-fadein toggle-bs-repel"><xmp>      -ms-transform: translateY(0);</xmp></span>
+                <span class="toggle-fadein toggle-bs-repel"><xmp>      transform: translateY(0);</xmp></span>
+                <span class="toggle-fadein toggle-bs-repel"><xmp>      background-color: #fff;</xmp></span>
+                <span class="toggle-fadein toggle-bs-repel"><xmp>      z-index: 999;</xmp></span>
+                <span class="toggle-fadein toggle-bs-repel"><xmp>      -webkit-animation-fill-mode: forwards;</xmp></span>
+                <span class="toggle-fadein toggle-bs-repel"><xmp>      animation-fill-mode: forwards;</xmp></span>
+                <span class="toggle-fadein toggle-bs-repel"><xmp>      -webkit-animation: fadeinall 1s normal both;</xmp></span>
+                <span class="toggle-fadein toggle-bs-repel"><xmp>      animation: fadeinall 1s normal both;</xmp></span>
+                <span class="toggle-fadein toggle-bs-repel"><xmp>      -webkit-animation-delay: 0.3s;</xmp></span>
+                <span class="toggle-fadein toggle-bs-repel"><xmp>      animation-delay: 0.3s; }</xmp></span>
                 <span class="toggle-fadein"><xmp>  </style></xmp></span>
-                <span class="toggle-loader"><xmp>  <div id="loader-wrapper"></xmp></span>
-                <span class="toggle-loader"><xmp>    <div class="loader"></div></xmp></span>
-                <span class="toggle-loader"><xmp>  </div></xmp></span>
-                <span class="toggle-loader"><xmp>  <style></xmp></span>
-                <span class="toggle-loader"><xmp>    /* For best practice, move CSS below to an external CSS file. */</xmp></span>
-                <span class="toggle-loader"><xmp>    @keyframes rotation {</xmp></span>
-                <span class="toggle-loader"><xmp>      0% {</xmp></span>
-                <span class="toggle-loader"><xmp>        transform: rotate(0deg); }</xmp></span>
-                <span class="toggle-loader"><xmp>      100% {</xmp></span>
-                <span class="toggle-loader"><xmp>        transform: rotate(360deg); } }</xmp></span>
-                <span class="toggle-loader"><xmp>    #loader-wrapper {</xmp></span>
-                <span class="toggle-loader"><xmp>      background-color: #FFFFFF;</xmp></span>
-                <span class="toggle-loader"><xmp>      position: fixed;</xmp></span>
-                <span class="toggle-loader"><xmp>      z-index: 999;</xmp></span>
-                <span class="toggle-loader"><xmp>      width: 100%;</xmp></span>
-                <span class="toggle-loader"><xmp>      height: 100%;</xmp></span>
-                <span class="toggle-loader"><xmp>      text-align: center; }</xmp></span>
-                <span class="toggle-loader"><xmp>    .loader {</xmp></span>
-                <span class="toggle-loader"><xmp>      width: 40px;</xmp></span>
-                <span class="toggle-loader"><xmp>      height: 40px;</xmp></span>
-                <span class="toggle-loader"><xmp>      border: 5px solid #000000;</xmp></span>
-                <span class="toggle-loader"><xmp>      border-bottom-color: transparent;</xmp></span>
-                <span class="toggle-loader"><xmp>      border-radius: 50%;</xmp></span>
-                <span class="toggle-loader"><xmp>      margin-top:calc(50vh - 20px);</xmp></span>
-                <span class="toggle-loader"><xmp>      display: inline-block;</xmp></span>
-                <span class="toggle-loader"><xmp>      box-sizing: border-box;</xmp></span>
-                <span class="toggle-loader"><xmp>      -webkit-animation: rotation 1s linear infinite;</xmp></span>
-                <span class="toggle-loader"><xmp>      animation: rotation 1s linear infinite; }</xmp></span>
-                <span class="toggle-loader"><xmp>  </style></xmp></span>
-                <span class="toggle-html5"><xmp>  <header></header></xmp></span>
-                <span class="toggle-html5"><xmp>  <nav></nav></xmp></span>
+                <span class="toggle-loader toggle-bs-repel"><xmp>  <div id="loader-wrapper"></xmp></span>
+                <span class="toggle-loader toggle-bs-repel"><xmp>    <div class="loader"></div></xmp></span>
+                <span class="toggle-loader toggle-bs-repel"><xmp>  </div></xmp></span>
+                <span class="toggle-loader toggle-bs-repel"><xmp>  <style></xmp></span>
+                <span class="toggle-loader toggle-bs-repel"><xmp>    /* For best practice, move CSS below to an external CSS file. */</xmp></span>
+                <span class="toggle-loader toggle-bs-repel"><xmp>    @keyframes rotation {</xmp></span>
+                <span class="toggle-loader toggle-bs-repel"><xmp>      0% {</xmp></span>
+                <span class="toggle-loader toggle-bs-repel"><xmp>        transform: rotate(0deg); }</xmp></span>
+                <span class="toggle-loader toggle-bs-repel"><xmp>      100% {</xmp></span>
+                <span class="toggle-loader toggle-bs-repel"><xmp>        transform: rotate(360deg); } }</xmp></span>
+                <span class="toggle-loader toggle-bs-repel"><xmp>    #loader-wrapper {</xmp></span>
+                <span class="toggle-loader toggle-bs-repel"><xmp>      background-color: #FFFFFF;</xmp></span>
+                <span class="toggle-loader toggle-bs-repel"><xmp>      position: fixed;</xmp></span>
+                <span class="toggle-loader toggle-bs-repel"><xmp>      z-index: 999;</xmp></span>
+                <span class="toggle-loader toggle-bs-repel"><xmp>      width: 100%;</xmp></span>
+                <span class="toggle-loader toggle-bs-repel"><xmp>      height: 100%;</xmp></span>
+                <span class="toggle-loader toggle-bs-repel"><xmp>      text-align: center; }</xmp></span>
+                <span class="toggle-loader toggle-bs-repel"><xmp>    .loader {</xmp></span>
+                <span class="toggle-loader toggle-bs-repel"><xmp>      width: 40px;</xmp></span>
+                <span class="toggle-loader toggle-bs-repel"><xmp>      height: 40px;</xmp></span>
+                <span class="toggle-loader toggle-bs-repel"><xmp>      border: 5px solid #000000;</xmp></span>
+                <span class="toggle-loader toggle-bs-repel"><xmp>      border-bottom-color: transparent;</xmp></span>
+                <span class="toggle-loader toggle-bs-repel"><xmp>      border-radius: 50%;</xmp></span>
+                <span class="toggle-loader toggle-bs-repel"><xmp>      margin-top:calc(50vh - 20px);</xmp></span>
+                <span class="toggle-loader toggle-bs-repel"><xmp>      display: inline-block;</xmp></span>
+                <span class="toggle-loader toggle-bs-repel"><xmp>      box-sizing: border-box;</xmp></span>
+                <span class="toggle-loader toggle-bs-repel"><xmp>      -webkit-animation: rotation 1s linear infinite;</xmp></span>
+                <span class="toggle-loader toggle-bs-repel"><xmp>      animation: rotation 1s linear infinite; }</xmp></span>
+                <span class="toggle-loader toggle-bs-repel"><xmp>  </style></xmp></span>
+                <span class="toggle-loaderbs toggle-bs-only"><xmp>  <div id="loader-wrapper" class="bg-white position-fixed z-3 w-100 h-100 text-center"></xmp></span>
+                <span class="toggle-loaderbs toggle-bs-only"><xmp>    <div class="spinner-border mt-5" role="status"></xmp></span>
+                <span class="toggle-loaderbs toggle-bs-only"><xmp>      <span class="visually-hidden">Loading...</span></xmp></span>
+                <span class="toggle-loaderbs toggle-bs-only"><xmp>    </div></xmp></span>
+                <span class="toggle-loaderbs toggle-bs-only"><xmp>  </div></xmp></span>
+                <span class="toggle-html5"><xmp>  <header></xmp></span>
+                <span class="toggle-html5"><xmp>    <h1>Hello, world!</h1></xmp></span>
+                <span class="toggle-html5"><xmp>  </header></xmp></span>
+                <span class="toggle-html5 toggle-html5--nav"><xmp>  <nav></nav></xmp></span>
                 <span class="toggle-nav"><xmp>  <nav class="nav" id="nav"></xmp></span>
                 <span class="toggle-nav"><xmp>    <a href="#home">Logo</a></xmp></span>
                 <span class="toggle-nav"><xmp>    <a href="#menu-item-1">Menu Item 1</a></xmp></span>
@@ -598,7 +616,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-accordion toggle-bs-repel"><xmp>  <style></xmp></span>
                 <span class="toggle-accordion toggle-bs-repel"><xmp>  /* For best practice, move CSS below to an external CSS file. */</xmp></span>
                 <span class="toggle-accordion toggle-bs-repel"><xmp>  .accordion {</xmp></span>
-                <span class="toggle-accordion toggle-bs-repel"><xmp>    background-color: #61BA00;</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>    background-color: lightgray;</xmp></span>
                 <span class="toggle-accordion toggle-bs-repel"><xmp>    color: #000000;</xmp></span>
                 <span class="toggle-accordion toggle-bs-repel"><xmp>    cursor: pointer;</xmp></span>
                 <span class="toggle-accordion toggle-bs-repel"><xmp>    padding: 18px;</xmp></span>
@@ -640,21 +658,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-accordion toggle-bs-repel"><xmp>  <div class="accordion-panel"></xmp></span>
                 <span class="toggle-accordion toggle-bs-repel"><xmp>    <p>Accordion Section Content 3</p></xmp></span>
                 <span class="toggle-accordion toggle-bs-repel"><xmp>  </div></xmp></span>
-                <span class="toggle-accordion toggle-bs-repel"><xmp>  <script></xmp></span>
-                <span class="toggle-accordion toggle-bs-repel"><xmp>  var acc = document.getElementsByClassName("accordion");</xmp></span>
-                <span class="toggle-accordion toggle-bs-repel"><xmp>  var i;</xmp></span>
-                <span class="toggle-accordion toggle-bs-repel"><xmp>  for (i = 0; i < acc.length; i++) {</xmp></span>
-                <span class="toggle-accordion toggle-bs-repel"><xmp>    acc[i].addEventListener("click", function() {</xmp></span>
-                <span class="toggle-accordion toggle-bs-repel"><xmp>      this.classList.toggle("accordion--open");</xmp></span>
-                <span class="toggle-accordion toggle-bs-repel"><xmp>      var panel = this.nextElementSibling;</xmp></span>
-                <span class="toggle-accordion toggle-bs-repel"><xmp>      if (panel.style.display === "block") {</xmp></span>
-                <span class="toggle-accordion toggle-bs-repel"><xmp>        panel.style.display = "none";</xmp></span>
-                <span class="toggle-accordion toggle-bs-repel"><xmp>      } else {</xmp></span>
-                <span class="toggle-accordion toggle-bs-repel"><xmp>        panel.style.display = "block";</xmp></span>
-                <span class="toggle-accordion toggle-bs-repel"><xmp>      }</xmp></span>
-                <span class="toggle-accordion toggle-bs-repel"><xmp>    });</xmp></span>
-                <span class="toggle-accordion toggle-bs-repel"><xmp>  }</xmp></span>
-                <span class="toggle-accordion toggle-bs-repel"><xmp>  </script></xmp></span>
                 <span class="toggle-accordionbs toggle-bs-only"><xmp>  <div class="accordion" id="accordionExample"></xmp></span>
                 <span class="toggle-accordionbs toggle-bs-only"><xmp>    <div class="accordion-item"></xmp></span>
                 <span class="toggle-accordionbs toggle-bs-only"><xmp>      <h2 class="accordion-header" id="headingOne"></xmp></span>
@@ -734,13 +737,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div id="t" class="toggle-table toggle-bs-repel d-none"></div>
                 <div id="t-bs" class="toggle-tablebs d-none"></div>
                 <span class="toggle-html5 toggle-html5--footer"><xmp>  <footer></footer></xmp></span>
-                <span class="toggle-cookie"><xmp>  <div id="cookie-notice" style="width: 100%; position: fixed; z-index: 1000; bottom: 0; left: 0; background-color: #61BA00;"></xmp></span>
-                <span class="toggle-cookie"><xmp>    <p>This website uses cookies so that we can provide you with the best website experience. By clicking “I Accept” you acknowledge the use of cookies and to our <a href="#"><u>Privacy Policy</u></a>.</p></xmp></span>
-                <span class="toggle-cookie"><xmp>    <a id="i-accept">I Accept</a></xmp></span>
-                <span class="toggle-cookie"><xmp>  </div></xmp></span>
-                <span class="toggle-announcement toggle-bs-repel"><xmp>  FPO!!!!!!</xmp></span>
-                <span class="toggle-announcement toggle-bs-only"><xmp>  FPO BS!!!!!!</xmp></span>
-                <span class="toggle-browser toggle-bs-repel"><xmp>  <!--[if IE]><div style="width: 100%; position: fixed; z-index: 1000; bottom: 0; left: 0; background: #61BA00;"><p>Outdated browser dectected. Please use a modern browser for a better browsing experience.</p><div onClick="parentNode.remove()">Close [X]</div></div><![endif]--></xmp></span>
+                <span class="toggle-cookie toggle-bs-repel"><xmp>  <div id="cookie-notice" style="width: 100%; position: fixed; z-index: 1000; bottom: 0; left: 0; background-color: lightgray;"></xmp></span>
+                <span class="toggle-cookie toggle-bs-repel"><xmp>    <p>This website uses cookies so that we can provide you with the best website experience. By clicking “I Accept” you acknowledge the use of cookies and to our <a href="#"><u>Privacy Policy</u></a>.</p></xmp></span>
+                <span class="toggle-cookie toggle-bs-repel"><xmp>    <a id="i-accept">I Accept</a></xmp></span>
+                <span class="toggle-cookie toggle-bs-repel"><xmp>  </div></xmp></span>
+                <span class="toggle-cookiebs toggle-bs-only"><xmp>  <div id="cookie-notice" class="position-fixed bottom-0 w-100 p-2 text-bg-dark"></xmp></span>
+                <span class="toggle-cookiebs toggle-bs-only"><xmp>    <p>This website uses cookies so that we can provide you with the best website experience. By clicking “I Accept” you acknowledge the use of cookies and to our <a href="#"><u>Privacy Policy</u></a>.</p></xmp></span>
+                <span class="toggle-cookiebs toggle-bs-only"><xmp>    <button type="button" id="i-accept" class="btn btn-primary">I Accept</button></xmp></span>
+                <span class="toggle-cookiebs toggle-bs-only"><xmp>  </div></xmp></span>
+                <span class="toggle-announcement toggle-bs-repel"><xmp>  <div style="width: 100%; position: fixed; z-index: 1000; top: 0; left: 0; background: lightgray;"><p>This is an announcemet.</p><div onClick="parentNode.remove()">Close [X]</div></div></xmp></span>
+                <span class="toggle-announcement toggle-bs-only"><xmp><div class="position-fixed top-0 w-100 p-2 text-bg-dark d-flex justify-content-between"><p>This is an announcemet.</p><button type="button" class="btn-close btn-close-white" onClick="parentNode.remove()" aria-label="Close"></button></div></xmp></span>
+                <span class="toggle-browser toggle-bs-repel"><xmp>  <!--[if IE]><div style="width: 100%; position: fixed; z-index: 1000; bottom: 0; left: 0; background: lightgray;"><p>Outdated browser dectected. Please use a modern browser for a better browsing experience.</p><div onClick="parentNode.remove()">Close [X]</div></div><![endif]--></xmp></span>
                 <span class="toggle-browserbs toggle-bs-only"><xmp>  <!--[if IE]><div class="position-fixed bottom-0 w-100 p-2 text-bg-dark d-flex justify-content-between"><p>Outdated browser dectected. Please use a modern browser for a better browsing experience.</p><button type="button" class="btn-close btn-close-white" onClick="parentNode.remove()" aria-label="Close"></button></div><![endif]--></xmp></span>
                 <span class="toggle-copyright"><xmp>  <footer></xmp></span>
                 <span class="toggle-copyright"><xmp>    <small>© <script>document.write(new Date().getFullYear())</script> Your company name. All Rights Reserved.</small></footer></xmp></span>
@@ -765,12 +772,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-cookie"><xmp>  <script type="text/javascript"></xmp></span>
                 <span class="toggle-cookie"><xmp>    (function($){</xmp></span>
                 <span class="toggle-cookie"><xmp>      $('#i-accept').on('click', function() {   </xmp></span>
-                <span class="toggle-cookie"><xmp>        if(localStorage.noshow !== '1') {</xmp></span>
+                <span class="toggle-cookie"><xmp>        if(localStorage.hidecookiebar !== '1') {</xmp></span>
                 <span class="toggle-cookie"><xmp>          $('#cookie-notice').hide();</xmp></span>
-                <span class="toggle-cookie"><xmp>           localStorage.noshow='1';</xmp></span>
+                <span class="toggle-cookie"><xmp>           localStorage.hidecookiebar='1';</xmp></span>
                 <span class="toggle-cookie"><xmp>        }  </xmp></span>
                 <span class="toggle-cookie"><xmp>      });</xmp></span>
-                <span class="toggle-cookie"><xmp>      if(localStorage.noshow == '1') {</xmp></span>
+                <span class="toggle-cookie"><xmp>      if(localStorage.hidecookiebar == '1') {</xmp></span>
                 <span class="toggle-cookie"><xmp>        $('#cookie-notice').hide();</xmp></span>
                 <span class="toggle-cookie"><xmp>      };</xmp></span>
                 <span class="toggle-cookie"><xmp>    })(jQuery);</xmp></span>
@@ -787,6 +794,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-loader"><xmp>      $("#loader-wrapper").fadeOut(700);</xmp></span>
                 <span class="toggle-loader"><xmp>    });</xmp></span>
                 <span class="toggle-loader"><xmp>  </script></xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  <script></xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  var acc = document.getElementsByClassName("accordion");</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  var i;</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  for (i = 0; i < acc.length; i++) {</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>    acc[i].addEventListener("click", function() {</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>      this.classList.toggle("accordion--open");</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>      var panel = this.nextElementSibling;</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>      if (panel.style.display === "block") {</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>        panel.style.display = "none";</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>      } else {</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>        panel.style.display = "block";</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>      }</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>    });</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  }</xmp></span>
+                <span class="toggle-accordion toggle-bs-repel"><xmp>  </script></xmp></span>
                 <span class="toggle-js"><xmp>  <script src="app.js"></script></xmp></span>
                 <span><xmp></body></xmp></span>
                 <span><xmp></html></xmp></span>
@@ -889,9 +911,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
   <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="toast--cookie" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Quick tip</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        User preference will be stored via cookies. After a user pressed "I Accept," the cookie bar will not show again until the cookies are cleared. Please seek legal advice to ensure compliance in the implementation.
+      </div>
+    </div>
+  </div>
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
     <div id="toast--browser" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="toast-header">
-        <strong class="me-auto">Reminder</strong>
+        <strong class="me-auto">Quick tip</strong>
         <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
       </div>
       <div class="toast-body">
@@ -922,23 +955,51 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       $(".toggle-jquery").toggleClass("d-block");
     }
   });
+  $("#customSwitchCookieBs").click(function(){
+    if ($('#customSwitchCookieBs').is(':checked')){
+      $('#customSwitchJQuery').prop('checked', true);
+      $(".toggle-jquery").toggleClass("d-block");
+    }
+  });
   $("#customSwitchLoader").click(function(){
     if ($('#customSwitchLoader').is(':checked')){
       $('#customSwitchJQuery').prop('checked', true);
       $(".toggle-jquery").toggleClass("d-block");
     }
   });
-  $("#customSwitchFadein").click(function(){
-    if ($('#customSwitchFadein').is(':checked')){ 
-      $('#customSwitchLoader').prop('checked', false);
-      $(".toggle-loader").toggleClass("d-none");
-    } 
+  $("#customSwitchLoaderBs").click(function(){
+    if ($('#customSwitchLoaderBs').is(':checked')){
+      $('#customSwitchJQuery').prop('checked', true);
+      $(".toggle-jquery").toggleClass("d-block");
+    }
   });
-  $("#customSwitchLoader").click(function(){
-    if ($('#customSwitchLoader').is(':checked')){ 
-      $('#customSwitchFadein').prop('checked', false);
-      $(".toggle-fadein").toggleClass("d-none");
-    } 
+  $("#customSwitchNav").click(function(){
+    if ($('#customSwitchNav').is(':checked')){ 
+      $(".toggle-html5--nav").toggleClass("d-none").removeClass("d-block");
+    } else if ($('#customSwitchHTML5').is(':checked')){
+      $(".toggle-html5--nav").addClass("d-block").removeClass("d-none");
+    }
+  });
+  $("#customSwitchHTML5").click(function(){
+    if ($('#customSwitchHTML5').is(':checked')){ 
+      $(".toggle-html5--nav").addClass("d-block").removeClass("d-none");
+    } else if ($('#customSwitchNav').is(':checked')){
+      $(".toggle-html5--nav").toggleClass("d-none").removeClass("d-block");
+    }
+  });
+  $("#customSwitchNavBs").click(function(){
+    if ($('#customSwitchNavBs').is(':checked')){ 
+      $(".toggle-html5--nav").toggleClass("d-none").removeClass("d-block");
+    } else if ($('#customSwitchHTML5').is(':checked')){
+      $(".toggle-html5--nav").addClass("d-block").removeClass("d-none");
+    }
+  });
+  $("#customSwitchHTML5").click(function(){
+    if ($('#customSwitchHTML5').is(':checked')){ 
+      $(".toggle-html5--nav").addClass("d-block").removeClass("d-none");
+    } else if ($('#customSwitchNavBs').is(':checked')){
+      $(".toggle-html5--nav").toggleClass("d-none").removeClass("d-block");
+    }
   });
   $("#customSwitchCopyright").click(function(){
     if ($('#customSwitchCopyright').is(':checked')){ 
@@ -962,6 +1023,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       $(".html-boilerplates").toggleClass("bs-enabled").toggleClass("no-bs");
       $(".toggle-bootstrapcss-star").toggleClass("d-inline");
     });
+    $("#customSwitchHTML5").click(function(){
+      $(".hw").toggleClass("d-none");
+    });
     // $("#customSwitchIE").click(function(){
     //   $(".no-ie").toggleClass("d-none");
     // });
@@ -976,6 +1040,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     $("#customSwitchBrowser").click(function(){
       if ($('#customSwitchBrowser').is(':checked')){ 
         var toastElList = [].slice.call(document.querySelectorAll('#toast--browser'))
+        var toastList = toastElList.map(function(toastEl) {
+          return new bootstrap.Toast(toastEl) 
+        });
+       toastList.forEach(toast => toast.show());
+      }
+    });
+    $("#customSwitchCookie").click(function(){
+      if ($('#customSwitchCookie').is(':checked')){ 
+        var toastElList = [].slice.call(document.querySelectorAll('#toast--cookie'))
+        var toastList = toastElList.map(function(toastEl) {
+          return new bootstrap.Toast(toastEl) 
+        });
+       toastList.forEach(toast => toast.show());
+      }
+    });
+    $("#customSwitchCookieBs").click(function(){
+      if ($('#customSwitchCookieBs').is(':checked')){ 
+        var toastElList = [].slice.call(document.querySelectorAll('#toast--cookie'))
         var toastList = toastElList.map(function(toastEl) {
           return new bootstrap.Toast(toastEl) 
         });
@@ -1094,6 +1176,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   });
   $("#customSwitchBrowserBs").click(function(){
     toggleClassesWithBs("customSwitchBrowser", "browser", "browserbs");
+  });
+  $("#customSwitchFadein").click(function() {
+    toggleClasses($(this).is(':checked'), "customSwitchFadein", "fadein", "fadeinbs");
+  });
+  $("#customSwitchFadeinBs").click(function(){
+    toggleClassesWithBs("customSwitchFadein", "fadein", "fadeinbs");
+  });
+  $("#customSwitchLoader").click(function() {
+    toggleClasses($(this).is(':checked'), "customSwitchLoader", "loader", "loaderbs");
+  });
+  $("#customSwitchLoaderBs").click(function(){
+    toggleClassesWithBs("customSwitchLoader", "loader", "loaderbs");
+  });
+  $("#customSwitchCookie").click(function() {
+    toggleClasses($(this).is(':checked'), "customSwitchCookie", "cookie", "cookiebs");
+  });
+  $("#customSwitchCookieBs").click(function(){
+    toggleClassesWithBs("customSwitchCookie", "cookie", "cookiebs");
   });
   $("#customSwitchAnnouncement").click(function() {
     toggleClasses($(this).is(':checked'), "customSwitchAnnouncement", "announcement", "announcementbs");
