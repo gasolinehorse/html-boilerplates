@@ -586,7 +586,7 @@ input[type="color"] {
   transform: translate(220%, 890%) rotate(10deg);
   transform-origin: center;
   z-index: 1;
-  opacity: 0.5;
+  opacity: 0.6;
   animation: shine 1.5s ease infinite;
 }
 #step2:hover ~ #follower {

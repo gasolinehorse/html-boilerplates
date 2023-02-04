@@ -266,7 +266,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <label class="form-check-label" for="customSwitchAccordion"><b>Accordion</b></label>
                       </div>
                       <div id="ui-toggle-accordionbs" class="form-check form-switch bs-only">
-                        <input type="checkbox" class="form-check-input" id="customSwitchAccordionBs">
+                        <input type="checkbox" class="form-check-input bjs-needed" id="customSwitchAccordionBs">
                         <label class="form-check-label" for="customSwitchAccordionBs"><b>Accordion</b> (Bootstrap JS Required)</label>
                       </div>
                       <div id="ui-toggle-col" class="form-check form-switch bs-only">
@@ -328,13 +328,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <input type="checkbox" class="form-check-input" id="customSwitchCookie">
                         <label class="form-check-label" for="customSwitchCookie"><b>Cookie notice<span class="toggle-cookie-star">*</span></b> (jQuery required)</label>
                       </div>
-                      <div id="ui-toggle-announcement" class="form-check form-switch">
+                      <div id="ui-toggle-announcement" class="form-check form-switch bs-repel">
                         <input type="checkbox" class="form-check-input" id="customSwitchAnnouncement">
                         <label class="form-check-label" for="customSwitchAnnouncement"><b>Announcement bar</b></label>
                       </div>
-                      <div id="ui-toggle-browser" class="form-check form-switch">
+                      <div id="ui-toggle-announcementbs" class="form-check form-switch bs-only">
+                        <input type="checkbox" class="form-check-input" id="customSwitchAnnouncementBs">
+                        <label class="form-check-label" for="customSwitchAnnouncementBs"><b>Announcement bar</b></label>
+                      </div>
+                      <div id="ui-toggle-browser" class="form-check form-switch bs-repel">
                         <input type="checkbox" class="form-check-input" id="customSwitchBrowser">
                         <label class="form-check-label" for="customSwitchBrowser"><b>Old browser upgrade message</b></label>
+                      </div>
+                      <div id="ui-toggle-browserbs" class="form-check form-switch bs-only">
+                        <input type="checkbox" class="form-check-input" id="customSwitchBrowserBs">
+                        <label class="form-check-label" for="customSwitchBrowserBs"><b>Old browser upgrade message</b></label>
                       </div>
                       <!-- <p class="small"><a href="https://changetocase.com" target="_blank"><span class="text-decoration-underline">Letter case changer</span>&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" fill="none"><path stroke="#000" stroke-linecap="round" d="m.976 7.518 6.5-6.5"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M3.478 1.018h3.998v3.999"/></svg></a></p> -->
                       <div id="ui-toggle-art" class="form-check form-switch">
@@ -565,11 +573,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <span class="toggle-col toggle-col--6"><xmp>    </div></xmp></span>
                   <span class="toggle-col toggle-col--6"><xmp>  </div></xmp></span>
                 </div>
-                <span class="toggle-cookie"><xmp>  <div id="cookie-notice" style="width: 100%; position: fixed; z-index: 1000; bottom: 0; left: 0; background-color: #61BA00;"></xmp></span>
-                <span class="toggle-cookie"><xmp>    <p>This website uses cookies so that we can provide you with the best website experience. By clicking “I Accept” you acknowledge the use of cookies and to our <a href="#"><u>Privacy Policy</u></a>.</p></xmp></span>
-                <span class="toggle-cookie"><xmp>    <a id="i-accept">I Accept</a></xmp></span>
-                <span class="toggle-cookie"><xmp>  </div></xmp></span>
-                <span class="toggle-browser"><xmp>  <!--[if IE]><div style="width: 100%; position: fixed; z-index: 1000; bottom: 0; left: 0; background: #61BA00;"><p>Outdated browser dectected. Please use a modern browser for a better browsing experience.</p><div onClick="parentNode.remove()">Close [X]</div></div><![endif]--></xmp></span>
                 <span class="toggle-form-essential"><xmp>  <form action="#"></xmp></span>
                 <span class="toggle-form--first-name"><xmp>    <label for="firstName">First name:</label><br></xmp></span>
                 <span class="toggle-form--first-name"><xmp>    <input type="text" name="firstName" value="John"><br></xmp></span>
@@ -689,7 +692,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-accordionbs toggle-bs-only"><xmp>        </div></xmp></span>
                 <span class="toggle-accordionbs toggle-bs-only"><xmp>      </div></xmp></span>
                 <span class="toggle-accordionbs toggle-bs-only"><xmp>    </div></xmp></span>
-                <span class="toggle-accordionbs toggle-bs-only"><xmp>  </div>                </xmp></span>
+                <span class="toggle-accordionbs toggle-bs-only"><xmp>  </div></xmp></span>
                 <span class="toggle-carousel"><xmp>  <div id="carouselExampleCaptions" class="carousel slide"></xmp></span>
                 <span class="toggle-carousel"><xmp>    <div class="carousel-indicators"></xmp></span>
                 <span class="toggle-carousel"><xmp>      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button></xmp></span>
@@ -731,6 +734,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div id="t" class="toggle-table toggle-bs-repel d-none"></div>
                 <div id="t-bs" class="toggle-tablebs d-none"></div>
                 <span class="toggle-html5 toggle-html5--footer"><xmp>  <footer></footer></xmp></span>
+                <span class="toggle-cookie"><xmp>  <div id="cookie-notice" style="width: 100%; position: fixed; z-index: 1000; bottom: 0; left: 0; background-color: #61BA00;"></xmp></span>
+                <span class="toggle-cookie"><xmp>    <p>This website uses cookies so that we can provide you with the best website experience. By clicking “I Accept” you acknowledge the use of cookies and to our <a href="#"><u>Privacy Policy</u></a>.</p></xmp></span>
+                <span class="toggle-cookie"><xmp>    <a id="i-accept">I Accept</a></xmp></span>
+                <span class="toggle-cookie"><xmp>  </div></xmp></span>
+                <span class="toggle-announcement toggle-bs-repel"><xmp>  FPO!!!!!!</xmp></span>
+                <span class="toggle-announcement toggle-bs-only"><xmp>  FPO BS!!!!!!</xmp></span>
+                <span class="toggle-browser toggle-bs-repel"><xmp>  <!--[if IE]><div style="width: 100%; position: fixed; z-index: 1000; bottom: 0; left: 0; background: #61BA00;"><p>Outdated browser dectected. Please use a modern browser for a better browsing experience.</p><div onClick="parentNode.remove()">Close [X]</div></div><![endif]--></xmp></span>
+                <span class="toggle-browserbs toggle-bs-only"><xmp>  <!--[if IE]><div class="position-fixed bottom-0 w-100 p-2 text-bg-dark d-flex justify-content-between"><p>Outdated browser dectected. Please use a modern browser for a better browsing experience.</p><button type="button" class="btn-close btn-close-white" onClick="parentNode.remove()" aria-label="Close"></button></div><![endif]--></xmp></span>
                 <span class="toggle-copyright"><xmp>  <footer></xmp></span>
                 <span class="toggle-copyright"><xmp>    <small>© <script>document.write(new Date().getFullYear())</script> Your company name. All Rights Reserved.</small></footer></xmp></span>
                 <span class="toggle-copyright"><xmp>  </footer></xmp></span>
@@ -986,8 +997,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         $(".dropdown-multi__dropdown-label").text("Select fields");
       }
     });
-    $("#customSwitchAccordionBs").click(function(){
-      if (!$('#customSwitchBootstrapJS').is(':checked')){ 
+    $(".bjs-needed").click(function(){
+      $("#customSwitchBootstrapJS").prop('checked', true);
+    });
+    $("#customSwitchBootstrapCSS").click(function(){
+      if ($('.bjs-needed').is(':checked')){ 
         $("#customSwitchBootstrapJS").prop('checked', true);
       }
     });
@@ -1056,29 +1070,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     window.getSelection().selectAllChildren(str);
     document.execCommand("copy")
   }
-  $("#customSwitchAccordion").click(function(){
-    if ($('#customSwitchAccordion').is(':checked')){ 
-      $('#customSwitchAccordionBs').prop('checked', true);
-      $(".toggle-accordionbs").addClass("d-none d-none--bs-block");
-      $(".toggle-accordion").removeClass("d-none");
-    } 
-    else {
-      $('#customSwitchAccordionBs').prop('checked', false);
-      $(".toggle-accordionbs").addClass("d-none").removeClass("d-none--bs-block d-block");
-      $(".toggle-accordion").addClass("d-none").removeClass("d-none--no-bs-block d-block");
-    }
+  const toggleClasses = (isChecked, switchId, toggleClass, toggleClassBs) => {
+    $(`#${switchId}Bs`).prop('checked', isChecked);
+    $(`.toggle-${toggleClassBs}`).toggleClass(`d-none d-none--bs-block`, isChecked);
+    $(`.toggle-${toggleClass}`).toggleClass("d-none", !isChecked);
+  }
+  const toggleClassesWithBs = (switchId, toggleClass, toggleClassBs) => {
+    const isChecked = $(`#${switchId}Bs`).is(':checked');
+    $(`#${switchId}`).prop('checked', isChecked);
+    $(`.toggle-${toggleClass}, .toggle-${toggleClassBs}`)
+      .toggleClass("d-none", !isChecked)
+      .toggleClass(`d-none--no-bs-block d-block`, isChecked && $(`.toggle-${toggleClass}`).length)
+      .toggleClass(`d-none--bs-block d-block`, isChecked && $(`.toggle-${toggleClassBs}`).length);
+  }
+  $("#customSwitchAccordion").click(function() {
+    toggleClasses($(this).is(':checked'), "customSwitchAccordion", "accordion", "accordionbs");
   });
   $("#customSwitchAccordionBs").click(function(){
-    if ($('#customSwitchAccordionBs').is(':checked')){ 
-      $('#customSwitchAccordion').prop('checked', true);
-      $(".toggle-accordion").addClass("d-none d-none--no-bs-block");
-      $(".toggle-accordionbs").removeClass("d-none");
-    } 
-    else {
-      $('#customSwitchAccordion').prop('checked', false);
-      $(".toggle-accordion").addClass("d-none").removeClass("d-none--no-bs-block d-block");
-      $(".toggle-accordionbs").addClass("d-none").removeClass("d-none--bs-block d-block");
-    }
+    toggleClassesWithBs("customSwitchAccordion", "accordion", "accordionbs");
+  });
+  $("#customSwitchBrowser").click(function() {
+    toggleClasses($(this).is(':checked'), "customSwitchBrowser", "browser", "browserbs");
+  });
+  $("#customSwitchBrowserBs").click(function(){
+    toggleClassesWithBs("customSwitchBrowser", "browser", "browserbs");
+  });
+  $("#customSwitchAnnouncement").click(function() {
+    toggleClasses($(this).is(':checked'), "customSwitchAnnouncement", "announcement", "announcementbs");
+  });
+  $("#customSwitchAnnouncementBs").click(function(){
+    toggleClassesWithBs("customSwitchAnnouncement", "announcement", "announcementbs");
   });
   $("#customSwitchTable").click(function(){
     if ($('#customSwitchTable').is(':checked')){ 
