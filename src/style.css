@@ -267,7 +267,8 @@ input:focus {
 #copy-btn:hover,
 #copy-btn:focus {
   opacity: 1;
-  filter: contrast(0.9);
+  background-color: rgba(var(--green), 1);
+  border-bottom: 5px solid #000000;
 }
 hr {
   opacity: 0.1;
@@ -713,6 +714,12 @@ body.dark {
   box-shadow: none;
   background-color: transparent;
   text-shadow: 0 0 20px rgba(var(--green), 0.8);
+}
+.dark #copy-btn:hover,
+.dark #copy-btn:focus {
+  opacity: 1;
+  background-color: rgba(var(--green), 1);
+  border-bottom: 5px solid #FFFFFF;
 }
 .dark .toast-header,
 .dark .toast {

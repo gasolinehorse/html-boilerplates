@@ -261,6 +261,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                           </div>
                         </label>
                       </div>
+                      <div id="ui-toggle-carousel" class="form-check form-switch bs-only">
+                        <input type="checkbox" class="form-check-input" id="customSwitchCarousel">
+                        <label class="form-check-label" for="customSwitchCarousel"><b>Carousel</b> (Bootstrap JS required)</label>
+                      </div>
                       <div id="ui-toggle-accordion" class="form-check form-switch bs-repel">
                         <input type="checkbox" class="form-check-input" id="customSwitchAccordion">
                         <label class="form-check-label" for="customSwitchAccordion"><b>Accordion</b></label>
@@ -279,7 +283,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <option value="5">5</option>
                             <option value="6">6</option>
                             <option value="1">1</option>
-                          </select> column(s)</b> (Bootstrap required)</label>
+                          </select> column(s)</b></label>
                       </div>
                       <div id="ui-toggle-html5" class="form-check form-switch">
                         <input type="checkbox" class="form-check-input" id="customSwitchHTML5">
@@ -296,10 +300,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <label class="form-check-label" for="customSwitchTableBs"><b>Table</b>
                           <div class="table-dimension-bs d-none"><input type="number" id="rowsInput-bs" value="2" min="1" max="100"> rows & <input type="number" id="columnsInput-bs" value="3" min="1" max="100"> columns</div>
                         </label>
-                      </div>
-                      <div id="ui-toggle-carousel" class="form-check form-switch bs-only">
-                        <input type="checkbox" class="form-check-input" id="customSwitchCarousel">
-                        <label class="form-check-label" for="customSwitchCarousel"><b>Carousel</b> (Bootstrap required)</label>
                       </div>
                       <div id="ui-toggle-copyright" class="form-check form-switch">
                         <input type="checkbox" class="form-check-input" id="customSwitchCopyright">
@@ -1132,6 +1132,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }
     });
   })(jQuery);
+  window.addEventListener("scroll", function() {
+    var elementTarget = document.getElementById("output");
+    if (window.scrollY > (elementTarget.offsetTop + elementTarget.offsetHeight) - 600) {
+      $("#copy-btn").removeClass("position-fixed bottom-0").css("margin-left", "auto");
+    } else {
+      $("#copy-btn").addClass("position-fixed bottom-0").css("margin-left", "-54px");
+    }
+  });
   if (+window.localStorage.getItem("preferDark")) {
     $("body").toggleClass("dark");
   }
