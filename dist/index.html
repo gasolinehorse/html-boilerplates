@@ -191,6 +191,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <input type="checkbox" class="form-check-input" id="customSwitchNormalize">
                         <label class="form-check-label" for="customSwitchNormalize"><b>Modern Normalize CSS</b></label>
                       </div>
+                      <div id="ui-toggle-ga" class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="customSwitchGA">
+                        <label class="form-check-label" for="customSwitchGA"><b>Google Analytics</b>
+                          <div class="measurement-id-wrapper d-none">Your measurement ID: <input type="text" id="measurement-id" value="G-XXXXXXXXXX" class="ms-1"></div>
+                        </label>
+                      </div>
                       <div id="ui-toggle-jquery" class="form-check form-switch">
                         <input type="checkbox" class="form-check-input" id="customSwitchJQuery">
                         <label class="form-check-label" for="customSwitchJQuery"><b>jQuery</b> (v<span class="jv"></span>)</label>
@@ -399,6 +405,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-social"><xmp>  <meta name="twitter:description" content=""></xmp></span>
                 <span class="toggle-social"><xmp>  <meta name="twitter:image" content=""></xmp></span>
                 <span class="toggle-manifest"><xmp>  <link rel="manifest" href="manifest.webmanifest"></xmp></span>
+                <span class="toggle-ga"><xmp>  <script async src='https://www.googletagmanager.com/gtag/js?id=</xmp><div id="gid1" class="d-inline">G-XXXXXXXXXX</div><xmp>'></script></xmp></span>
+                <span class="toggle-ga"><xmp>  <script></xmp></span>
+                <span class="toggle-ga"><xmp>    window.dataLayer = window.dataLayer || [];</xmp></span>
+                <span class="toggle-ga"><xmp>    function gtag(){dataLayer.push(arguments);}</xmp></span>
+                <span class="toggle-ga"><xmp>    gtag('js', new Date());</xmp></span>
+                <span class="toggle-ga"><xmp>  </xmp></span>
+                <span class="toggle-ga"><xmp>    gtag('config', '</xmp><div id="gid2" class="d-inline">G-XXXXXXXXXX</div><xmp>');</xmp></span>
+                <span class="toggle-ga"><xmp>  </script></xmp></span>
                 <span><xmp></head></xmp></span>
                 <span><xmp><body></xmp></span>
                 <span class="toggle-fadein toggle-bs-repel"><xmp>  <div id="fadein"></div></xmp></span>
@@ -932,6 +946,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
   </div>
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="toast--copy" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Code copied</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Paste it into your code editor and whip up something spectacular.
+      </div>
+    </div>
+  </div>
   <footer class="row">
     <div class="col">
       <p class="small text-grey text-end">Created by <a class="fw-bold" href="https://gasolinehorses.com/">Allen</a> • <a class="fw-bold" href="https://medium.com/@gasolinehorse" target="_blank">UX design blog</a></p>
@@ -952,25 +977,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   $("#customSwitchCookie").click(function(){
     if ($('#customSwitchCookie').is(':checked')){
       $('#customSwitchJQuery').prop('checked', true);
-      $(".toggle-jquery").toggleClass("d-block");
+      $(".toggle-jquery").addClass("d-block");
     }
   });
   $("#customSwitchCookieBs").click(function(){
     if ($('#customSwitchCookieBs').is(':checked')){
       $('#customSwitchJQuery').prop('checked', true);
-      $(".toggle-jquery").toggleClass("d-block");
+      $(".toggle-jquery").addClass("d-block");
     }
   });
   $("#customSwitchLoader").click(function(){
     if ($('#customSwitchLoader').is(':checked')){
       $('#customSwitchJQuery').prop('checked', true);
-      $(".toggle-jquery").toggleClass("d-block");
+      $(".toggle-jquery").addClass("d-block");
     }
   });
   $("#customSwitchLoaderBs").click(function(){
     if ($('#customSwitchLoaderBs').is(':checked')){
       $('#customSwitchJQuery').prop('checked', true);
-      $(".toggle-jquery").toggleClass("d-block");
+      $(".toggle-jquery").addClass("d-block");
     }
   });
   $("#customSwitchNav").click(function(){
@@ -1064,11 +1089,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
        toastList.forEach(toast => toast.show());
       }
     });
+    $("#copy-btn").click(function(){
+      var toastElList = [].slice.call(document.querySelectorAll('#toast--copy'))
+      var toastList = toastElList.map(function(toastEl) {
+        return new bootstrap.Toast(toastEl) 
+      });
+     toastList.forEach(toast => toast.show());
+    });
     $("#customSwitchLorem").click(function(){
       $(".word-count").toggleClass("d-none");
     });
     $("#customSwitchImg").click(function(){
       $(".img-dimension").toggleClass("d-none");
+    });
+    $("#customSwitchGA").click(function(){
+      $(".measurement-id-wrapper").toggleClass("d-none");
     });
     $("#customSwitchForm").click(function(){
       $(".toggle-form-essential").toggleClass("d-block");
@@ -1301,6 +1336,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   imgH.addEventListener('change', function(){
     var ih = document.getElementById("img-h").value;
     document.getElementById("ih").innerHTML = ih;
+  });
+  const mid = document.getElementById("measurement-id");
+  const g1 = document.getElementById("gid1");
+  const g2 = document.getElementById("gid2");
+  mid.addEventListener("input", function() {
+    g1.innerHTML = mid.value;
+    g2.innerHTML = mid.value;
   });
   var rowsInput = document.getElementById("rowsInput");
   var columnsInput = document.getElementById("columnsInput");
