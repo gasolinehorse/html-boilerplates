@@ -262,13 +262,25 @@ input:focus {
   opacity: 0.8;
 }
 #copy-btn {
-  background-color: rgba(255,255,255, 1);
+  font-size: 0.8rem;
+  font-family: Montserrat, helvetica, Arial, sans-serif;
+  background-color: #F9F9F9;
+  border-top: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
 }
 #copy-btn:hover,
 #copy-btn:focus {
   opacity: 1;
   background-color: rgba(var(--green), 1);
-  border-bottom: 5px solid #000000;
+  color: #FFFFFF;
+}
+#sm-copy-btn {
+  cursor: pointer;
+  margin-top: 7px;
+  margin-right: 7px;
+}
+#sm-copy-btn:hover {
+  opacity: 0.6;
 }
 hr {
   opacity: 0.1;
@@ -321,8 +333,8 @@ _:-moz-read-write, :root button {
 .dropdown-multi .dropdown-multi__dropdown-label {
   display: block;
   height: 30px;
-  background: #fff;
-  border: 1px solid #ccc;
+  background: #FFFFFF;
+  border: 1px solid #DDDDDD;
   padding: 6px 12px;
   line-height: 1;
   cursor: pointer;
@@ -719,7 +731,6 @@ body.dark {
 .dark #copy-btn:focus {
   opacity: 1;
   background-color: rgba(var(--green), 1);
-  border-bottom: 5px solid #FFFFFF;
 }
 .dark .toast-header,
 .dark .toast {
