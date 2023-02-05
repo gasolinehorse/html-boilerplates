@@ -47,7 +47,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="loader"></div>
 <div class="switching"></div>
 <main class="container position-relative">
-  <div id="lang" class="position-absolute"><p class="small text-grey text-end"><a class="px-2 px-md-1" href="#"><i>EN</i></a> | <a class="px-2 px-md-1" href="../HTMLのテンプレート">JP</a> | <a class="px-2 px-md-1" href="/modele-html">FR</a> | <a class="px-2 px-md-1" href="/html網站樣板">TW</a> | <a class="px-2 px-md-1" href="../html网站模板">CN</a> | <a class="px-2 px-md-1" href="../alien-html">ALIEN</a> | <a class="px-2 px-md-1 d-none d-md-inline-block" href="mailto:allen@gasolinehorses.com" target="_blank">Request Features</a></p></div>
+  <div id="lang" class="position-absolute"><p class="small text-grey text-end"><a class="px-2 px-md-1 d-none d-md-inline-block" href="https://ko-fi.com/C0C3GC2QV" target="_blank">Buy Me a Bubble Tea |</a> <a class="px-2 px-md-1" href="mailto:allen@gasolinehorses.com?subject=I would like to request a feature" target="_blank">Request Features</a> | <a class="px-2 px-md-1" href="mailto:allen@gasolinehorses.com?subject=I would like to report a bug">Bug Report</a></p></div>
   <div class="row">
     <div class="col ml-sm-auto px-4">
       <div class="py-5">
@@ -271,9 +271,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                           </div>
                         </label>
                       </div>
-                      <div id="ui-toggle-carousel" class="form-check form-switch bs-only">
-                        <input type="checkbox" class="form-check-input bjs-needed" id="customSwitchCarousel">
-                        <label class="form-check-label" for="customSwitchCarousel"><b>Carousel</b> (Bootstrap JS required)</label>
+                      <div id="ui-toggle-carousel" class="form-check form-switch bs-repel">
+                        <input type="checkbox" class="form-check-input" id="customSwitchCarousel">
+                        <label class="form-check-label" for="customSwitchCarousel"><b>Carousel</b> (via Splide v<span class="sv"></span>)</label>
+                      </div>
+                      <div id="ui-toggle-carouselbs" class="form-check form-switch bs-only">
+                        <input type="checkbox" class="form-check-input bjs-needed" id="customSwitchCarouselBs">
+                        <label class="form-check-label" for="customSwitchCarouselBs"><b>Carousel</b> (Bootstrap JS required)</label>
                       </div>
                       <div id="ui-toggle-accordion" class="form-check form-switch bs-repel">
                         <input type="checkbox" class="form-check-input" id="customSwitchAccordion">
@@ -734,44 +738,75 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-accordionbs toggle-bs-only"><xmp>      </div></xmp></span>
                 <span class="toggle-accordionbs toggle-bs-only"><xmp>    </div></xmp></span>
                 <span class="toggle-accordionbs toggle-bs-only"><xmp>  </div></xmp></span>
-                <span class="toggle-carousel"><xmp>  <div id="carouselExampleCaptions" class="carousel slide"></xmp></span>
-                <span class="toggle-carousel"><xmp>    <div class="carousel-indicators"></xmp></span>
-                <span class="toggle-carousel"><xmp>      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button></xmp></span>
-                <span class="toggle-carousel"><xmp>      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button></xmp></span>
-                <span class="toggle-carousel"><xmp>      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button></xmp></span>
-                <span class="toggle-carousel"><xmp>    </div></xmp></span>
-                <span class="toggle-carousel"><xmp>    <div class="carousel-inner"></xmp></span>
-                <span class="toggle-carousel"><xmp>      <div class="carousel-item active"></xmp></span>
-                <span class="toggle-carousel"><xmp>        <img src="https://via.placeholder.com/1200x600/" class="d-block w-100" alt=""></xmp></span>
-                <span class="toggle-carousel"><xmp>        <div class="carousel-caption d-none d-md-block"></xmp></span>
-                <span class="toggle-carousel"><xmp>          <h5>First slide label</h5></xmp></span>
-                <span class="toggle-carousel"><xmp>          <p>Some representative placeholder content for the first slide.</p></xmp></span>
-                <span class="toggle-carousel"><xmp>        </div></xmp></span>
-                <span class="toggle-carousel"><xmp>      </div></xmp></span>
-                <span class="toggle-carousel"><xmp>      <div class="carousel-item"></xmp></span>
-                <span class="toggle-carousel"><xmp>        <img src="https://via.placeholder.com/1200x600/" class="d-block w-100" alt=""></xmp></span>
-                <span class="toggle-carousel"><xmp>        <div class="carousel-caption d-none d-md-block"></xmp></span>
-                <span class="toggle-carousel"><xmp>          <h5>Second slide label</h5></xmp></span>
-                <span class="toggle-carousel"><xmp>          <p>Some representative placeholder content for the second slide.</p></xmp></span>
-                <span class="toggle-carousel"><xmp>        </div></xmp></span>
-                <span class="toggle-carousel"><xmp>      </div></xmp></span>
-                <span class="toggle-carousel"><xmp>      <div class="carousel-item"></xmp></span>
-                <span class="toggle-carousel"><xmp>        <img src="https://via.placeholder.com/1200x600/" class="d-block w-100" alt=""></xmp></span>
-                <span class="toggle-carousel"><xmp>        <div class="carousel-caption d-none d-md-block"></xmp></span>
-                <span class="toggle-carousel"><xmp>          <h5>Third slide label</h5></xmp></span>
-                <span class="toggle-carousel"><xmp>          <p>Some representative placeholder content for the third slide.</p></xmp></span>
-                <span class="toggle-carousel"><xmp>        </div></xmp></span>
-                <span class="toggle-carousel"><xmp>      </div></xmp></span>
-                <span class="toggle-carousel"><xmp>    </div></xmp></span>
-                <span class="toggle-carousel"><xmp>    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev"></xmp></span>
-                <span class="toggle-carousel"><xmp>      <span class="carousel-control-prev-icon" aria-hidden="true"></span></xmp></span>
-                <span class="toggle-carousel"><xmp>      <span class="visually-hidden">Previous</span></xmp></span>
-                <span class="toggle-carousel"><xmp>    </button></xmp></span>
-                <span class="toggle-carousel"><xmp>    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next"></xmp></span>
-                <span class="toggle-carousel"><xmp>      <span class="carousel-control-next-icon" aria-hidden="true"></span></xmp></span>
-                <span class="toggle-carousel"><xmp>      <span class="visually-hidden">Next</span></xmp></span>
-                <span class="toggle-carousel"><xmp>    </button></xmp></span>
-                <span class="toggle-carousel"><xmp>  </div></xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>  <style></xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>    .splide__slide img {</xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>      width: 100%;</xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>      height: auto;</xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>    }</xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>  </style></xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@</xmp><div class="sv d-inline"></div><xmp>/dist/css/splide.min.css"></xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>  <section id="image-carousel" class="splide" aria-label="Images"></xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>    <div class="splide__track"></xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>      <ul class="splide__list"></xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>        <li class="splide__slide"></xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>          <img src="https://via.placeholder.com/800x600/000000" alt=""></xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>          <div></xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>            Description 01</xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>          </div></xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>        </li></xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>        <li class="splide__slide"></xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>          <img src="https://via.placeholder.com/800x600/333333" alt=""></xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>          <div></xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>            Description 02</xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>          </div></xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>        </li></xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>        <li class="splide__slide"></xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>          <img src="https://via.placeholder.com/800x600/666666" alt=""></xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>          <div></xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>            Description 03</xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>          </div></xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>        </li></xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>      </ul></xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>    </div></xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>  </div></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>  <div id="carouselExampleCaptions" class="carousel slide"></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>    <div class="carousel-indicators"></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>    </div></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>    <div class="carousel-inner"></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>      <div class="carousel-item active"></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>        <img src="https://via.placeholder.com/1200x600/" class="d-block w-100" alt=""></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>        <div class="carousel-caption d-none d-md-block"></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>          <h5>First slide label</h5></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>          <p>Some representative placeholder content for the first slide.</p></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>        </div></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>      </div></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>      <div class="carousel-item"></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>        <img src="https://via.placeholder.com/1200x600/" class="d-block w-100" alt=""></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>        <div class="carousel-caption d-none d-md-block"></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>          <h5>Second slide label</h5></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>          <p>Some representative placeholder content for the second slide.</p></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>        </div></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>      </div></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>      <div class="carousel-item"></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>        <img src="https://via.placeholder.com/1200x600/" class="d-block w-100" alt=""></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>        <div class="carousel-caption d-none d-md-block"></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>          <h5>Third slide label</h5></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>          <p>Some representative placeholder content for the third slide.</p></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>        </div></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>      </div></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>    </div></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev"></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>      <span class="carousel-control-prev-icon" aria-hidden="true"></span></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>      <span class="visually-hidden">Previous</span></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>    </button></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next"></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>      <span class="carousel-control-next-icon" aria-hidden="true"></span></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>      <span class="visually-hidden">Next</span></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>    </button></xmp></span>
+                <span class="toggle-carouselbs toggle-bs-only"><xmp>  </div></xmp></span>
                 <div id="t" class="toggle-table toggle-bs-repel d-none"></div>
                 <div id="t-bs" class="toggle-tablebs d-none"></div>
                 <span class="toggle-html5 toggle-html5--footer"><xmp>  <footer></footer></xmp></span>
@@ -807,6 +842,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-art"><xmp>  <!-- ░░░░░░░░░░░░░░▀▄▄▄▄▄░░░░░░░▄█░░ --></xmp></span>
                 <span class="toggle-jquery"><xmp>  <script src="https://code.jquery.com/jquery-</xmp><div class="jv d-inline"></div><xmp>.min.js" crossorigin="anonymous"></script></xmp></span>
                 <span class="toggle-bootstrapjs"><xmp>  <script src="https://cdn.jsdelivr.net/npm/bootstrap@</xmp><div class="bv d-inline"></div><xmp>/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script></xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@</xmp><div class="sv d-inline"></div><xmp>/dist/js/splide.min.js"></script></xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>  <script></xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>    new Splide( '.splide' ).mount();</xmp></span>
+                <span class="toggle-carousel toggle-bs-repel"><xmp>  </script></xmp></span>
                 <span class="toggle-nav toggle-bs-repel"><xmp>  <script></xmp></span>
                 <span class="toggle-nav toggle-bs-repel"><xmp>  function togglemenu() {</xmp></span>
                 <span class="toggle-nav toggle-bs-repel"><xmp>    var x = document.getElementById("nav");</xmp></span>
@@ -1263,6 +1302,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   });
   $("#customSwitchNavBs").click(function(){
     toggleClassesWithBs("customSwitchNav", "nav", "navbs");
+  });
+  $("#customSwitchCarousel").click(function() {
+    toggleClasses($(this).is(':checked'), "customSwitchCarousel", "carousel", "carouselbs");
+  });
+  $("#customSwitchCarouselBs").click(function(){
+    toggleClassesWithBs("customSwitchCarousel", "carousel", "carouselbs");
   });
   $("#customSwitchBrowser").click(function() {
     toggleClasses($(this).is(':checked'), "customSwitchBrowser", "browser", "browserbs");

@@ -464,7 +464,7 @@ input[type="color"] {
   }
 }
 #lang p {
-  font-size: 11.5px;
+  font-size: 0.71875rem;
 }
 #lang p a {
   font-family: helvetica, arial, sans-serif;
@@ -597,7 +597,7 @@ input[type="color"] {
   transform-origin: center;
   z-index: 1;
   opacity: 0.6;
-  animation: shine 1.5s ease infinite;
+  animation: shine 1.4s ease infinite;
 }
 #step2:hover ~ #follower {
   transform: translate(-100%, 50%) scaleX(-1);

@@ -39,3 +39,11 @@ $.ajax ({
 		$(".bdu-src").attr("href", bduSrc);
 	}
 })
+
+const urlEntries6 = "https://api.github.com/repos/Splidejs/splide/releases/latest"
+$.ajax ({
+	url: urlEntries6,
+	success: function (result) {
+		$(".sv").text(result.name.slice(1));
+	}
+})
