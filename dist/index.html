@@ -68,7 +68,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </button>
                   </h3>
                   <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
-                    <div class="accordion-body pt-2">
+                    <div class="accordion-body">
                       <div id="ui-toggle-lang" class="form-check form-switch">
                         <input type="checkbox" class="form-check-input" id="customSwitchLang">
                         <label class="form-check-label" for="customSwitchLang"><b>Language:
@@ -212,20 +212,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </button>
                   </h3>
                   <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo">
-                    <div class="accordion-body pt-2">
-                      <div id="ui-toggle-nav" class="form-check form-switch">
+                    <div class="accordion-body">
+                      <div id="ui-toggle-nav" class="form-check form-switch bs-repel">
                         <input type="checkbox" class="form-check-input" id="customSwitchNav">
                         <label class="form-check-label" for="customSwitchNav"><b>Top menu</b></label>
                       </div>
+                      <div id="ui-toggle-navbs" class="form-check form-switch bs-only">
+                        <input type="checkbox" class="form-check-input bjs-needed" id="customSwitchNavBs">
+                        <label class="form-check-label" for="customSwitchNavBs"><b>Top menu</b> (Bootstrap JS required)</label>
+                      </div>
                       <div id="ui-toggle-lorem" class="form-check form-switch">
                         <input type="checkbox" class="form-check-input" id="customSwitchLorem">
-                        <label class="form-check-label" for="customSwitchLorem"><b>Text (placeholder)</b> 
+                        <label class="form-check-label" for="customSwitchLorem"><b>Text</b> (placeholder) 
                           <div class="word-count d-inline-block d-none"><input type="number" id="greek" min="1" max="999" value="10" class="ms-1" onkeyup=enforceMinMax(this)> words</div>
                         </label>
                       </div>
                       <div id="ui-toggle-img" class="form-check form-switch">
                         <input type="checkbox" class="form-check-input" id="customSwitchImg">
-                        <label class="form-check-label" for="customSwitchImg"><b>Image (placeholder)</b>
+                        <label class="form-check-label" for="customSwitchImg"><b>Image</b> (placeholder)
                           <div class="img-dimension d-none"><input type="number" id="img-w" min="1" max="9999" value="800" class="ms-1" onkeyup=enforceMinMax(this)> px X <input type="number" id="img-h" min="1" max="9999" value="600" class="ms-1" onkeyup=enforceMinMax(this)> px</div>
                         </label>
                       </div>
@@ -268,7 +272,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </label>
                       </div>
                       <div id="ui-toggle-carousel" class="form-check form-switch bs-only">
-                        <input type="checkbox" class="form-check-input" id="customSwitchCarousel">
+                        <input type="checkbox" class="form-check-input bjs-needed" id="customSwitchCarousel">
                         <label class="form-check-label" for="customSwitchCarousel"><b>Carousel</b> (Bootstrap JS required)</label>
                       </div>
                       <div id="ui-toggle-accordion" class="form-check form-switch bs-repel">
@@ -279,9 +283,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <input type="checkbox" class="form-check-input bjs-needed" id="customSwitchAccordionBs">
                         <label class="form-check-label" for="customSwitchAccordionBs"><b>Accordion</b> (Bootstrap JS Required)</label>
                       </div>
-                      <div id="ui-toggle-col" class="form-check form-switch bs-only">
+<!--                       <div id="ui-toggle-col" class="form-check form-switch bs-only">
                         <input type="checkbox" class="form-check-input" id="customSwitchCol">
-                        <label class="form-check-label" for="customSwitchCol"><b>Contain
+                        <label class="form-check-label" for="customSwitchCol"><b>
                           <select name="cols" id="cols">
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -291,7 +295,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <option value="1">1</option>
                           </select> column(s)</b></label>
                       </div>
-                      <div id="ui-toggle-html5" class="form-check form-switch">
+ -->                      <div id="ui-toggle-html5" class="form-check form-switch">
                         <input type="checkbox" class="form-check-input" id="customSwitchHTML5">
                         <label class="form-check-label" for="customSwitchHTML5"><b>Basic HTML 5 tags</b></label>
                       </div>
@@ -317,11 +321,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="accordion-item position-relative z-1">
                   <h3 class="accordion-header" id="headingThree">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      Fancy Shit
+                      Extras
                     </button>
                   </h3>
                   <div id="collapseThree" class="collapse show" aria-labelledby="headingThree">
-                    <div class="accordion-body pt-2">
+                    <div class="accordion-body">
                       <div id="ui-toggle-fadein" class="form-check form-switch bs-repel">
                         <input type="checkbox" class="form-check-input" id="customSwitchFadein">
                         <label class="form-check-label" for="customSwitchFadein"><b>Page fade-in</b></label>
@@ -382,8 +386,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-lang-no-lang d-block no-ie"><xmp><html lang=""></xmp></span>
                 <span id="select-lang" class="toggle-lang no-ie"><xmp><html lang=""></xmp></span>
                 <span><xmp><head></xmp></span>
-                <span><xmp>  <title>Hello, world!</title></xmp></span>
                 <span><xmp>  <meta charset="UTF-8" /></xmp></span>
+                <span><xmp>  <title>Hello, world!</title></xmp></span>
                 <span><xmp>  <meta name="viewport" content="width=device-width,initial-scale=1" /></xmp></span>
                 <span><xmp>  <meta name="description" content="" /></xmp></span>
                 <span class="toggle-normalize"><xmp>  <link href="https://cdn.jsdelivr.net/npm/modern-normalize@</xmp><div class="nv d-inline"></div><xmp>/modern-normalize.min.css" rel="stylesheet"></xmp></span>
@@ -488,68 +492,88 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-html5"><xmp>    <h1>Hello, world!</h1></xmp></span>
                 <span class="toggle-html5"><xmp>  </header></xmp></span>
                 <span class="toggle-html5 toggle-html5--nav"><xmp>  <nav></nav></xmp></span>
-                <span class="toggle-nav"><xmp>  <nav class="nav" id="nav"></xmp></span>
-                <span class="toggle-nav"><xmp>    <a href="#home">Logo</a></xmp></span>
-                <span class="toggle-nav"><xmp>    <a href="#menu-item-1">Menu Item 1</a></xmp></span>
-                <span class="toggle-nav"><xmp>    <a href="#menu-item-2">Menu Item 2</a></xmp></span>
-                <span class="toggle-nav"><xmp>    <a href="#menu-item-3">Menu Item 3</a></xmp></span>
-                <span class="toggle-nav"><xmp>    <a href="javascript:void(0);" id="menu-toggle" onclick="togglemenu()"></xmp></span>
-                <span class="toggle-nav"><xmp>      <div class="menu-toggle__bar1"></div></xmp></span>
-                <span class="toggle-nav"><xmp>      <div class="menu-toggle__bar2"></div></xmp></span>
-                <span class="toggle-nav"><xmp>      <div class="menu-toggle__bar3"></div></xmp></span>
-                <span class="toggle-nav"><xmp>    </a></xmp></span>
-                <span class="toggle-nav"><xmp>  </nav></xmp></span>
-                <span class="toggle-nav"><xmp>  <style></xmp></span>
-                <span class="toggle-nav"><xmp>  /* For best practice, move CSS below to an external CSS file. */</xmp></span>
-                <span class="toggle-nav"><xmp>  .nav {</xmp></span>
-                <span class="toggle-nav"><xmp>    overflow: hidden; }</xmp></span>
-                <span class="toggle-nav"><xmp>  .nav a {</xmp></span>
-                <span class="toggle-nav"><xmp>    float: left;</xmp></span>
-                <span class="toggle-nav"><xmp>    display: block; }</xmp></span>
-                <span class="toggle-nav"><xmp>  .nav #menu-toggle {</xmp></span>
-                <span class="toggle-nav"><xmp>    display: none; }</xmp></span>
-                <span class="toggle-nav"><xmp>  @media screen and (max-width: 600px) {</xmp></span>
-                <span class="toggle-nav"><xmp>    .nav a:not(:first-child) {</xmp></span>
-                <span class="toggle-nav"><xmp>      display: none; }</xmp></span>
-                <span class="toggle-nav"><xmp>    .nav a#menu-toggle {</xmp></span>
-                <span class="toggle-nav"><xmp>      float: right;</xmp></span>
-                <span class="toggle-nav"><xmp>      display: block; } }</xmp></span>
-                <span class="toggle-nav"><xmp>  @media screen and (max-width: 600px) {</xmp></span>
-                <span class="toggle-nav"><xmp>    .nav.nav--open {</xmp></span>
-                <span class="toggle-nav"><xmp>      position: relative; }</xmp></span>
-                <span class="toggle-nav"><xmp>    .nav.nav--open #menu-toggle {</xmp></span>
-                <span class="toggle-nav"><xmp>      position: absolute;</xmp></span>
-                <span class="toggle-nav"><xmp>      right: 0;</xmp></span>
-                <span class="toggle-nav"><xmp>      top: 0; }</xmp></span>
-                <span class="toggle-nav"><xmp>    .nav.nav--open a {</xmp></span>
-                <span class="toggle-nav"><xmp>      float: none;</xmp></span>
-                <span class="toggle-nav"><xmp>      display: block;</xmp></span>
-                <span class="toggle-nav"><xmp>      text-align: left; } }</xmp></span>
-                <span class="toggle-nav"><xmp>  .menu-toggle__bar1, .menu-toggle__bar2, .menu-toggle__bar3 {</xmp></span>
-                <span class="toggle-nav"><xmp>    width: 21px;</xmp></span>
-                <span class="toggle-nav"><xmp>    height: 3px;</xmp></span>
-                <span class="toggle-nav"><xmp>    background-color: #000000;</xmp></span>
-                <span class="toggle-nav"><xmp>    margin: 4px 0;</xmp></span>
-                <span class="toggle-nav"><xmp>    transition: 0.3s; }</xmp></span>
-                <span class="toggle-nav"><xmp>  .menu-toggle--open .menu-toggle__bar1 {</xmp></span>
-                <span class="toggle-nav"><xmp>    transform: translate(0, 7px) rotate(-45deg); }</xmp></span>
-                <span class="toggle-nav"><xmp>  .menu-toggle--open .menu-toggle__bar2 {</xmp></span>
-                <span class="toggle-nav"><xmp>    opacity: 0; }</xmp></span>
-                <span class="toggle-nav"><xmp>  .menu-toggle--open .menu-toggle__bar3 {</xmp></span>
-                <span class="toggle-nav"><xmp>    transform: translate(0, -7px) rotate(45deg); }</xmp></span>
-                <span class="toggle-nav"><xmp>  </style></xmp></span>
-                <span class="toggle-nav"><xmp>  <script></xmp></span>
-                <span class="toggle-nav"><xmp>  function togglemenu() {</xmp></span>
-                <span class="toggle-nav"><xmp>    var x = document.getElementById("nav");</xmp></span>
-                <span class="toggle-nav"><xmp>    if (x.className === "nav") {</xmp></span>
-                <span class="toggle-nav"><xmp>      x.className += " nav--open";</xmp></span>
-                <span class="toggle-nav"><xmp>    } else {</xmp></span>
-                <span class="toggle-nav"><xmp>      x.className = "nav";</xmp></span>
-                <span class="toggle-nav"><xmp>    }</xmp></span>
-                <span class="toggle-nav"><xmp>    var element = document.getElementById("menu-toggle");</xmp></span>
-                <span class="toggle-nav"><xmp>    element.classList.toggle("menu-toggle--open");</xmp></span>
-                <span class="toggle-nav"><xmp>  }</xmp></span>
-                <span class="toggle-nav"><xmp>  </script></xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>  <nav class="nav" id="nav"></xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>    <a href="#home">Logo</a></xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>    <a href="#menu-item-1">Menu Item 1</a></xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>    <a href="#menu-item-2">Menu Item 2</a></xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>    <a href="#menu-item-3">Menu Item 3</a></xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>    <a href="javascript:void(0);" id="menu-toggle" onclick="togglemenu()"></xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>      <div class="menu-toggle__bar1"></div></xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>      <div class="menu-toggle__bar2"></div></xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>      <div class="menu-toggle__bar3"></div></xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>    </a></xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>  </nav></xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>  <style></xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>  /* For best practice, move CSS below to an external CSS file. */</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>  .nav {</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>    overflow: hidden; }</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>  .nav a {</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>    float: left;</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>    margin: 10px;</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>    display: block; }</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>  .nav #menu-toggle {</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>    display: none; }</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>  @media screen and (max-width: 600px) {</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>    .nav a:not(:first-child) {</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>      display: none; }</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>    .nav a#menu-toggle {</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>      float: right;</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>      display: block; } }</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>  @media screen and (max-width: 600px) {</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>    .nav.nav--open {</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>      position: relative; }</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>    .nav.nav--open #menu-toggle {</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>      position: absolute;</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>      right: 0;</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>      top: 0; }</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>    .nav.nav--open a {</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>      float: none;</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>      display: block;</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>      text-align: left; } }</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>  .menu-toggle__bar1, .menu-toggle__bar2, .menu-toggle__bar3 {</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>    width: 21px;</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>    height: 3px;</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>    background-color: #000000;</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>    margin: 4px 0;</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>    transition: 0.3s; }</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>  .menu-toggle--open .menu-toggle__bar1 {</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>    transform: translate(0, 7px) rotate(-45deg); }</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>  .menu-toggle--open .menu-toggle__bar2 {</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>    opacity: 0; }</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>  .menu-toggle--open .menu-toggle__bar3 {</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>    transform: translate(0, -7px) rotate(45deg); }</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>  </style></xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>  <nav class="navbar navbar-expand-lg bg-body-tertiary"></xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>    <div class="container-fluid"></xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>      <a class="navbar-brand" href="#">Navbar</a></xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"></xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>        <span class="navbar-toggler-icon"></span></xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>      </button></xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>      <div class="collapse navbar-collapse" id="navbarNavDropdown"></xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>        <ul class="navbar-nav"></xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>          <li class="nav-item"></xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>            <a class="nav-link active" aria-current="page" href="#">Home</a></xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>          </li></xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>          <li class="nav-item"></xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>            <a class="nav-link" href="#">Features</a></xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>          </li></xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>          <li class="nav-item"></xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>            <a class="nav-link" href="#">Pricing</a></xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>          </li></xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>          <li class="nav-item dropdown"></xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>              Dropdown link</xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>            </a></xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>            <ul class="dropdown-menu"></xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>              <li><a class="dropdown-item" href="#">Action</a></li></xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>              <li><a class="dropdown-item" href="#">Another action</a></li></xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>              <li><a class="dropdown-item" href="#">Something else here</a></li></xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>            </ul></xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>          </li></xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>        </ul></xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>      </div></xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>    </div></xmp></span>
+                <span class="toggle-navbs toggle-bs-only"><xmp>  </nav></xmp></span>
                 <span class="hw"><xmp>  <h1>Hello, world!</h1></xmp></span>
                 <span class="toggle-lorem"><xmp>  </xmp><div id="li" class="d-inline"><xmp><p></xmp>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. <xmp></p></xmp></div><xmp></xmp></span>
                 <span class="toggle-img"><xmp>  <img src="https://via.placeholder.com/</xmp><div id="iw" class="d-inline">800</div><xmp>x</xmp><div id="ih" class="d-inline">600</div><xmp>/" alt=""></xmp></span>
@@ -558,7 +582,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-html5"><xmp>    <section></section></xmp></span>
                 <span class="toggle-html5"><xmp>    <section></section></xmp></span>
                 <span class="toggle-html5"><xmp>  </main></xmp></span>
-                <div class="toggle-col-wrapper">
+<!--                 <div class="toggle-col-wrapper">
                   <span class="toggle-col toggle-col--1"><xmp>  <div class="container"></xmp></span>
                   <span class="toggle-col toggle-col--1"><xmp>    <div class="row"></xmp></span>
                   <span class="toggle-col toggle-col--1"><xmp>      <div class="col">Column 1</div></xmp></span>
@@ -604,7 +628,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <span class="toggle-col toggle-col--6"><xmp>      <div class="col-sm-2">Column 6</div></xmp></span>
                   <span class="toggle-col toggle-col--6"><xmp>    </div></xmp></span>
                   <span class="toggle-col toggle-col--6"><xmp>  </div></xmp></span>
-                </div>
+                </div> -->
                 <span class="toggle-form-essential"><xmp>  <form action="#"></xmp></span>
                 <span class="toggle-form--first-name"><xmp>    <label for="firstName"</xmp><div class='form-bs-class d-inline d-none'> class="form-label"</div><xmp>>First name:</label><br></xmp></span>
                 <span class="toggle-form--first-name"><xmp>    <input type="text"</xmp><div class='form-bs-class d-inline d-none'> class="form-control"</div><xmp> name="firstName" value="John"><br></xmp></span>
@@ -718,21 +742,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-carousel"><xmp>    </div></xmp></span>
                 <span class="toggle-carousel"><xmp>    <div class="carousel-inner"></xmp></span>
                 <span class="toggle-carousel"><xmp>      <div class="carousel-item active"></xmp></span>
-                <span class="toggle-carousel"><xmp>        <img src="..." class="d-block w-100" alt="..."></xmp></span>
+                <span class="toggle-carousel"><xmp>        <img src="https://via.placeholder.com/1200x600/" class="d-block w-100" alt=""></xmp></span>
                 <span class="toggle-carousel"><xmp>        <div class="carousel-caption d-none d-md-block"></xmp></span>
                 <span class="toggle-carousel"><xmp>          <h5>First slide label</h5></xmp></span>
                 <span class="toggle-carousel"><xmp>          <p>Some representative placeholder content for the first slide.</p></xmp></span>
                 <span class="toggle-carousel"><xmp>        </div></xmp></span>
                 <span class="toggle-carousel"><xmp>      </div></xmp></span>
                 <span class="toggle-carousel"><xmp>      <div class="carousel-item"></xmp></span>
-                <span class="toggle-carousel"><xmp>        <img src="..." class="d-block w-100" alt="..."></xmp></span>
+                <span class="toggle-carousel"><xmp>        <img src="https://via.placeholder.com/1200x600/" class="d-block w-100" alt=""></xmp></span>
                 <span class="toggle-carousel"><xmp>        <div class="carousel-caption d-none d-md-block"></xmp></span>
                 <span class="toggle-carousel"><xmp>          <h5>Second slide label</h5></xmp></span>
                 <span class="toggle-carousel"><xmp>          <p>Some representative placeholder content for the second slide.</p></xmp></span>
                 <span class="toggle-carousel"><xmp>        </div></xmp></span>
                 <span class="toggle-carousel"><xmp>      </div></xmp></span>
                 <span class="toggle-carousel"><xmp>      <div class="carousel-item"></xmp></span>
-                <span class="toggle-carousel"><xmp>        <img src="..." class="d-block w-100" alt="..."></xmp></span>
+                <span class="toggle-carousel"><xmp>        <img src="https://via.placeholder.com/1200x600/" class="d-block w-100" alt=""></xmp></span>
                 <span class="toggle-carousel"><xmp>        <div class="carousel-caption d-none d-md-block"></xmp></span>
                 <span class="toggle-carousel"><xmp>          <h5>Third slide label</h5></xmp></span>
                 <span class="toggle-carousel"><xmp>          <p>Some representative placeholder content for the third slide.</p></xmp></span>
@@ -783,6 +807,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-art"><xmp>  <!-- ░░░░░░░░░░░░░░▀▄▄▄▄▄░░░░░░░▄█░░ --></xmp></span>
                 <span class="toggle-jquery"><xmp>  <script src="https://code.jquery.com/jquery-</xmp><div class="jv d-inline"></div><xmp>.min.js" crossorigin="anonymous"></script></xmp></span>
                 <span class="toggle-bootstrapjs"><xmp>  <script src="https://cdn.jsdelivr.net/npm/bootstrap@</xmp><div class="bv d-inline"></div><xmp>/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script></xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>  <script></xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>  function togglemenu() {</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>    var x = document.getElementById("nav");</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>    if (x.className === "nav") {</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>      x.className += " nav--open";</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>    } else {</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>      x.className = "nav";</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>    }</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>    var element = document.getElementById("menu-toggle");</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>    element.classList.toggle("menu-toggle--open");</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>  }</xmp></span>
+                <span class="toggle-nav toggle-bs-repel"><xmp>  </script></xmp></span>
                 <span class="toggle-cookie"><xmp>  <script type="text/javascript"></xmp></span>
                 <span class="toggle-cookie"><xmp>    (function($){</xmp></span>
                 <span class="toggle-cookie"><xmp>      $('#i-accept').on('click', function() {   </xmp></span>
@@ -1001,35 +1037,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   });
   $("#customSwitchNav").click(function(){
     if ($('#customSwitchNav').is(':checked')){ 
-      $(".toggle-html5--nav").toggleClass("d-none").removeClass("d-block");
+      $(".toggle-html5--nav").addClass("d-none").removeClass("d-block");
     } else if ($('#customSwitchHTML5').is(':checked')){
       $(".toggle-html5--nav").addClass("d-block").removeClass("d-none");
     }
   });
   $("#customSwitchHTML5").click(function(){
-    if ($('#customSwitchHTML5').is(':checked')){ 
-      $(".toggle-html5--nav").addClass("d-block").removeClass("d-none");
-    } else if ($('#customSwitchNav').is(':checked')){
-      $(".toggle-html5--nav").toggleClass("d-none").removeClass("d-block");
+    if ($('#customSwitchNav').is(':checked')){
+      $(".toggle-html5--nav").addClass("d-none").removeClass("d-block");
     }
   });
   $("#customSwitchNavBs").click(function(){
     if ($('#customSwitchNavBs').is(':checked')){ 
-      $(".toggle-html5--nav").toggleClass("d-none").removeClass("d-block");
+      $(".toggle-html5--nav").addClass("d-none").removeClass("d-block");
     } else if ($('#customSwitchHTML5').is(':checked')){
       $(".toggle-html5--nav").addClass("d-block").removeClass("d-none");
     }
   });
   $("#customSwitchHTML5").click(function(){
-    if ($('#customSwitchHTML5').is(':checked')){ 
-      $(".toggle-html5--nav").addClass("d-block").removeClass("d-none");
-    } else if ($('#customSwitchNavBs').is(':checked')){
-      $(".toggle-html5--nav").toggleClass("d-none").removeClass("d-block");
+    if ($('#customSwitchNavBs').is(':checked')){
+      $(".toggle-html5--nav").addClass("d-none").removeClass("d-block");
+    }
+  });
+  $("#customSwitchHTML5").click(function(){
+    if (!$('#customSwitchHTML5').is(':checked')){ 
+      $(".toggle-html5--nav").addClass("d-none").removeClass("d-block");
     }
   });
   $("#customSwitchCopyright").click(function(){
     if ($('#customSwitchCopyright').is(':checked')){ 
-      $(".toggle-html5--footer").toggleClass("d-none").removeClass("d-block");
+      $(".toggle-html5--footer").addClass("d-none").removeClass("d-block");
     } else if ($('#customSwitchHTML5').is(':checked')){
       $(".toggle-html5--footer").addClass("d-block").removeClass("d-none");
     }
@@ -1055,13 +1092,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     // $("#customSwitchIE").click(function(){
     //   $(".no-ie").toggleClass("d-none");
     // });
-    $("#customSwitchCol").click(function(){
-      $(".toggle-col-wrapper").toggleClass(function(){
-        return $(this).is('.d-block .d-none') ? 'd-block d-none' : 'd-block';
-      })
-    });
+    // $("#customSwitchCol").click(function(){
+    //   $(".toggle-col-wrapper").toggleClass("d-block");
+    // });
     $("#customSwitchCookie").click(function(){
-      $(".toggle-cookie-star").toggleClass("d-inline");
+      if ($('#customSwitchCookie').is(':checked')){ 
+        $(".toggle-cookie-star").addClass("d-inline").removeClass("d-none");
+      } else {
+        $(".toggle-cookie-star").addClass("d-none").removeClass("d-inline");
+      }
     });
     $("#customSwitchBrowser").click(function(){
       if ($('#customSwitchBrowser').is(':checked')){ 
@@ -1124,10 +1163,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
     $(".bjs-needed").click(function(){
       $("#customSwitchBootstrapJS").prop('checked', true);
+      $(".toggle-bootstrapjs").addClass("d-block");
     });
     $("#customSwitchBootstrapCSS").click(function(){
       if ($('.bjs-needed').is(':checked')){ 
         $("#customSwitchBootstrapJS").prop('checked', true);
+        $(".toggle-bootstrapjs").addClass("d-block");
       }
     });
     $("#customSwitchTable").click(function(){
@@ -1145,17 +1186,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         $(".table-dimension-bs").addClass("d-block").removeClass("d-none");
       }
     });
-    $("select#cols").change(function(){
-      $(this).find("option:selected").each(function(){
-        var optionValue = $(this).attr("value");
-        if(optionValue){
-          $(".toggle-col").not(".toggle-col--" + optionValue).removeClass("d-block");
-          $(".toggle-col--" + optionValue).addClass("d-block");
-        } else{
-          $(".toggle-col").removeClass("d-block");
-        }
-      });
-    }).change();
+    // $("select#cols").change(function(){
+    //   $(this).find("option:selected").each(function(){
+    //     var optionValue = $(this).attr("value");
+    //     if(optionValue){
+    //       $(".toggle-col").not(".toggle-col--" + optionValue).removeClass("d-block");
+    //       $(".toggle-col--" + optionValue).addClass("d-block");
+    //     } else{
+    //       $(".toggle-col").removeClass("d-block");
+    //     }
+    //   });
+    // }).change();
     $("select#langs").change(function(){
       $(this).find("option:selected").each(function(){
         var optionValue = $(this).attr("value");
@@ -1169,13 +1210,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     })
     $( window ).scroll(function() {
       var height = $(window).scrollTop();
-      if ((height >= 225) && $('#output').height() < 700  && $(window).width() > 576) {
-        $('#output').addClass('position-sticky').css("top", "10px");
+      if ((height >= 225) && $(window).width() > 576) {
+        $('#output').addClass('position-sticky').removeClass('position-relative').css("top", "10px");
         $('.venmo').hide();
-      } else if ($('#output').height() >= 700) {
-        $('#sm-copy-btn').addClass('').css("top", "10px");
       } else {
-        $('#output').removeClass('position-sticky').css("top", "0");
+        $('#output').removeClass('position-sticky').addClass('position-relative').css("top", "0");
         $('.venmo').show();
       }
     });
@@ -1218,6 +1257,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   });
   $("#customSwitchAccordionBs").click(function(){
     toggleClassesWithBs("customSwitchAccordion", "accordion", "accordionbs");
+  });
+  $("#customSwitchNav").click(function() {
+    toggleClasses($(this).is(':checked'), "customSwitchNav", "nav", "navbs");
+  });
+  $("#customSwitchNavBs").click(function(){
+    toggleClassesWithBs("customSwitchNav", "nav", "navbs");
   });
   $("#customSwitchBrowser").click(function() {
     toggleClasses($(this).is(':checked'), "customSwitchBrowser", "browser", "browserbs");

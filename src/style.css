@@ -523,9 +523,6 @@ input[type="color"] {
 .accordion-body {
   transition: all 0.2s ease-in;
 }
-.accordion-item:hover .accordion-body {
-  padding-top: 1rem !important;
-}
 .accordion-header {
   padding: 0;
 }
@@ -616,6 +613,9 @@ input[type="color"] {
 }
 #step1:hover ~ #light-on-follower {
   display: none;
+}
+#output {
+  max-height: 98vh;
 }
 article h1 {
   font-size: 2.1rem;
@@ -713,9 +713,6 @@ body.dark {
 .dark .accordion-item:hover .accordion-button {
   background-color: #3E3E3E;
   box-shadow: none;
-}
-.dark .accordion-item .accordion-body {
-  padding-top: 1rem !important;
 }
 .dark .accordion-item {
   backdrop-filter: blur(8px); 
