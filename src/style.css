@@ -72,7 +72,7 @@ h1 {
     letter-spacing: 0;
   }}
 h1 .outlined {
-  font-family: Arial Black, 'Montserrat', Helvetica Neue, helvetica, Arial, sans-serif;
+  font-family: Arial Black, Helvetica Neue, 'Montserrat', helvetica, Arial, sans-serif;
 }
 @keyframes ls {
   0% {
@@ -285,7 +285,7 @@ input:focus {
 hr {
   opacity: 0.1;
 }
-_:-moz-read-write, :root button { 
+_:-moz-read-write, :root #copy-btn, :root #sm-copy-btn { 
 	display: none;
 }
 .form-check-input:checked {
