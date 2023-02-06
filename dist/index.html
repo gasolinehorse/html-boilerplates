@@ -21,7 +21,7 @@
     --green: 97, 186, 0;
   }
   </style>
-  <link href="style.css" rel="stylesheet" type="text/css">
+  <link href="style.css?version=2" rel="stylesheet" type="text/css">
   <link rel="icon" type="image/png" href="favicon_html-boilerpates.png">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GM8JZWLKKW"></script>
   <script>
@@ -383,7 +383,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div id="step2" class="col-sm-6 col-md-7 col-lg-8 position-relative z-2">
               <p class="small text-grey">2. Copy and paste the following code into your code editor to&#160;use:</p>
-              <pre id="output" class="border position-relative">
+              <pre id="output" class="border position-sticky">
                 <span><xmp><!DOCTYPE html></xmp></span>
                 <span class="toggle-ie"><xmp><!--[if lte 8]><html class="pre-ie9" lang="en"><![endif]--></xmp></span>
                 <span class="toggle-ie"><xmp><!--[if gte IE 9]><!--><html lang="en"><!--<![endif]--></xmp></span>
@@ -901,7 +901,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="toggle-js"><xmp>  <script src="app.js"></script></xmp></span>
                 <span><xmp></body></xmp></span>
                 <span><xmp></html></xmp></span>
-                <button type="button" id="copy-btn" class="w-100 py-2 lh-1" onclick="copyEvent('output')">Copy Code</button>
+                <button type="button" id="copy-btn" class="position-sticky start-0 w-100 py-2 lh-1" onclick="copyEvent('output')">Copy Code</button>
                 <div id="sm-copy-btn" class="position-absolute top-0 end-0" class="py-2 lh-1" onclick="copyEvent('output')" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Copy Code"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none"><path fill="#666666" d="M3.29 10.392H1.467a.607.607 0 0 1-.606-.607V1.288c0-.292.23-.607.606-.607h8.497c.377 0 .607.317.607.607V3.11h1.821c.377 0 .607.317.607.607v8.497a.608.608 0 0 1-.607.607H3.896a.607.607 0 0 1-.607-.607v-1.82ZM4.2 4.02v7.89h7.89V4.02H4.2Zm5.462-.91V1.592h-7.89v7.89h1.517V3.716c0-.292.23-.607.607-.607h5.766Z"/></svg></div>
               </pre>
               <div class="text-end text-sm-end venmo">
@@ -1250,10 +1250,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     $( window ).scroll(function() {
       var height = $(window).scrollTop();
       if ((height >= 225) && $(window).width() > 576) {
-        $('#output').addClass('position-sticky').removeClass('position-relative').css("top", "10px");
+        $('#output').css("top", "10px");
         $('.venmo').hide();
       } else {
-        $('#output').removeClass('position-sticky').addClass('position-relative').css("top", "0");
+        $('#output').css("top", "0");
         $('.venmo').show();
       }
     });

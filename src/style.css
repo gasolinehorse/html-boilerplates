@@ -367,9 +367,10 @@ input[type="color"] {
   background-color: #FFFFFF;
   opacity: 0;
 }
-@media (min-height: 800px) and (min-width: 576px) {
+@media (min-height: 610px) and (min-width: 576px) {
 	footer {
 		position: fixed;
+    z-index: 3;
     bottom: 0;
     right: 30px;
 	}
