@@ -438,9 +438,9 @@ input[type="color"] {
   animation: fadein 1s normal both;
   animation-delay: 4s; 
 }
-@media (max-width: 767px) {
-	iframe.venmo {
-		width: 100%;
+@media (max-width: 575px) {
+	.venmo {
+		transform: translateY(40px);
 	}
 }
 #switch-wrapper {
