@@ -48,8 +48,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <div class="loader"></div>
 <div class="switching"></div>
+<aside id="share" style="display: none;">
+  <div class="container">
+    <div class="h1 py-3"><span class="text-black">Share on</span><a class="text-white" href="https://twitter.com/intent/tweet?text=https%3A//htmlboilerplates.com" target="_blank"> Twitter</a><span class="text-black">.</span><br><span class="text-black">Or maybe on </span><a class="text-white" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//htmlboilerplates.com" target="_blank">Facebook</a><span class="text-black">?</span><br><span class="text-black">Don't forget about </span><a class="text-white" href="http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhtmlboilerplates.com" target="_blank">LinkedIn</a><span class="text-black">.</span></div>
+  </div>
+</aside>
 <main class="container position-relative">
-  <div id="lang" class="position-absolute"><p class="small text-grey text-end"><a class="px-2 px-md-1" href="https://ko-fi.com/C0C3GC2QV" target="_blank">Support Me</a> | <a class="px-2 px-md-1" href="mailto:allen@gasolinehorses.com?subject=I would like to request a feature" target="_blank">Request Features</a> | <a class="px-2 px-md-1" href="mailto:allen@gasolinehorses.com?subject=I would like to report a bug">Report Bugs</a></p></div>
+  <div id="invite" class="position-absolute"><p class="small text-grey text-end d-none d-sm-block">Invite a Friend and Earn <span class="fst-italic">Absolutely $0</span></p><p class="small text-grey d-block d-sm-none">Share</div>
+  <div id="feedback" class="position-absolute"><p class="small text-grey text-end"><a class="px-2 px-md-1" href="https://ko-fi.com/C0C3GC2QV" target="_blank">Support Me</a> | <a class="px-2 px-md-1" href="mailto:allen@gasolinehorses.com?subject=Feedback to make HTML Boilerplates better" target="_blank">Feedback</a></p></div>
   <div class="row">
     <div class="col ml-sm-auto px-4">
       <div class="py-5">
@@ -980,6 +986,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       $('.collapse').removeClass('show');
       $('.accordion-button').addClass('collapsed');
     }
+  });
+  $("#invite").click(function(){
+    $("#share").slideToggle();
   });
   setTimeout(function(){
     $('#customSwitchLang').trigger('click');

@@ -8,13 +8,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
 }
-body#tw,
-body#cn {
-	font-family: "Microsoft JhengHei", 微軟正黑體, Arial,Tahoma,Century gothic, sans-serif;
-}
-body#jp {
-	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "ＭＳ ゴシック" , "MS Gothic", "Noto Sans CJK JP", TakaoPGothic, sans-serif;
-}
 ::selection {
   background: rgba(var(--green), 1);
   color: #ffffff;
@@ -54,11 +47,14 @@ body#jp {
 	}
 }
 h1,
+.h1,
 h2,
+.h2,
 h3 {
   font-family: 'Montserrat', helvetica, Arial, sans-serif;
 }
-h1 {
+h1,
+.h1 {
   font-size: 4rem;
   font-weight: bold;
   line-height: 1.12;
@@ -66,7 +62,8 @@ h1 {
   text-shadow: 0 0 30px rgba(var(--green), 0.15);
 }
 @media (max-width: 991px) {
-  h1 {
+  h1,
+  .h1 {
     font-size: 2.15rem;
     line-height: 1;
     letter-spacing: 0;
@@ -83,12 +80,14 @@ h1 .outlined {
     letter-spacing: -1px;
   }
 }
-h2 {
+h2,
+.h2 {
   font-size: 1.3rem;
   line-height: 1.275;
 }
 @media (max-width: 991px) {
-  h2 {
+  h2,
+  .h2 {
     font-size: 1.2rem;
     letter-spacing: 0;
   }
@@ -102,19 +101,6 @@ h3 {
     font-size: 0.6rem;
     letter-spacing: 0;
   }
-}
-#tw h1,
-#tw h2,
-#tw h3,
-#cn h1,
-#cn h2,
-#cn h3 {
-  font-family: "Microsoft JhengHei", 微軟正黑體, Arial,Tahoma,Century gothic, sans-serif;
-}
-#jp h1,
-#jp h2,
-#jp h3 {
-  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "ＭＳ ゴシック" , "MS Gothic", "Noto Sans CJK JP", TakaoPGothic, sans-serif;
 }
 p {
   font-family: helvetica, arial, sans-serif;
@@ -141,23 +127,6 @@ p.small {
 	right: -10px;
 	bottom: 8px;
 }
-#fr .html-bar-wrapper {
-	width: 186px;
-	height: 11px;
-}
-#tw .html-bar-wrapper,
-#cn .html-bar-wrapper {
-	width: 245px;
-	height: 7px;
-}
-#jp .html-bar-wrapper {
-	width: 365px;
-	height: 7px;
-}
-#al .html-bar-wrapper {
-	width: 485px;
-	height: 7px;
-}
 @media (min-width: 992px) {
 	.html-bar {
 		width: 0;
@@ -176,6 +145,9 @@ p.small {
 	  width: 100%;
     opacity: 1;
   }
+}
+#share {
+  background-color: rgba(var(--green), 1);
 }
 code {
   color: #ffffff !important;
@@ -454,20 +426,33 @@ input[type="color"] {
   no-repeat
   center center;
 }
-#lang {
+#feedback {
   right: 15px;
   top: 12px;
   z-index: 1;
 }
 @media (max-width: 575px) {
-  #lang {
+  #feedback {
     right: 30px;
   }
 }
-#lang p {
+#invite {
+  left: 25px;
+  top: 12px;
+  z-index: 1;
+  cursor: pointer;
+}
+@media (max-width: 575px) {
+  #invite {
+    left: 30px;
+  }
+}
+#feedback p,
+#invite p {
   font-size: 0.71875rem;
 }
-#lang p a {
+#feedback p a,
+#invite p {
   font-family: helvetica, arial, sans-serif;
   font-weight: bold;
 }
