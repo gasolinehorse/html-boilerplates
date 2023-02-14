@@ -605,7 +605,7 @@ input[type="color"] {
     transform: scale(4.9) rotate(90deg);
     filter: blur(8px);
     opacity: 0.3 }
-  95% {
+  97% {
     filter: blur(2px);
   }  
   100% {
