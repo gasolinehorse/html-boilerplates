@@ -561,6 +561,7 @@ input[type="color"] {
   transform-origin: center;
   opacity: 0.4;
   pointer-events: none;
+  z-index: -1;
 }
 @keyframes shine {
   0% {
@@ -584,6 +585,36 @@ input[type="color"] {
   z-index: 1;
   opacity: 0.6;
   animation: shine 1.4s ease infinite;
+}
+@keyframes explode {
+  0% {
+    transform: scale(1); }
+  8% {
+    transform: scale(5) rotate(45deg);
+    filter: blur(6px);
+    opacity: 0.4 }
+  37% {
+    transform: scale(4.9) rotate(60deg);
+    filter: blur(8px);
+    opacity: 0.3 }
+  64% {
+    transform: scale(5) rotate(75deg);
+    filter: blur(6px);
+    opacity: 0.4 }
+  90% {
+    transform: scale(4.9) rotate(90deg);
+    filter: blur(8px);
+    opacity: 0.3 }
+  95% {
+    filter: blur(2px);
+  }  
+  100% {
+    transform: scale(0) rotate(500deg);
+    opacity: 0 }
+}
+.explode {
+  animation: explode 2s ease-in forwards;
+  transform-origin: center;
 }
 #step2:hover ~ #follower {
   transform: translate(-100%, 50%) scaleX(-1);

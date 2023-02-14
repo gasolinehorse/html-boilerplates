@@ -55,7 +55,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </aside>
 <main class="container position-relative">
   <div id="invite" class="position-absolute"><p id="invite__desktop" class="small text-grey text-end d-none d-sm-block">Invite a Friend and Get $5 I Mean $0</p><p id="invite__mobile" class="small text-grey d-block d-sm-none">Share</div>
-  <div id="feedback" class="position-absolute"><p class="small text-grey text-end"><a class="px-2 px-md-1" style="cursor: pointer;" data-tf-slider="jPJe9S8X" data-tf-position="right" data-tf-opacity="100" data-tf-hide-headers data-tf-iframe-props="title=HTML Boilerplates - Feedback" data-tf-chat data-tf-transitive-search-params data-tf-medium="snippet">Feedback</a> | <a class="px-2 px-md-1"data-tf-slider="Ukvkhk3X" data-tf-position="right" data-tf-opacity="100" data-tf-iframe-props="title=HTML Boilerplates - Contact" data-tf-transitive-search-params data-tf-medium="snippet" style="cursor:pointer;">Contact</a></p></div>
+  <div id="feedback" class="position-absolute"><p class="small text-grey text-end"><a id="close-as" class="px-2 px-md-1" style="cursor: pointer;">Close Astronaut</a> | <a class="px-2 px-md-1" style="cursor: pointer;" data-tf-slider="jPJe9S8X" data-tf-position="right" data-tf-opacity="100" data-tf-hide-headers data-tf-iframe-props="title=HTML Boilerplates - Feedback" data-tf-chat data-tf-transitive-search-params data-tf-medium="snippet">Feedback</a> | <a class="px-2 px-md-1"data-tf-slider="Ukvkhk3X" data-tf-position="right" data-tf-opacity="100" data-tf-iframe-props="title=HTML Boilerplates - Contact" data-tf-transitive-search-params data-tf-medium="snippet" style="cursor:pointer;">Contact</a></p></div>
   <div class="row">
     <div class="col ml-sm-auto px-4">
       <div class="py-5">
@@ -1201,6 +1201,13 @@ For a faster option, utilize the HTML Boilerplate generator above to easily cust
       setTimeout(function() {
         $(".switching").removeClass('switching--on');
     }, 2000);
+  });
+  $("#close-as").click(function () {
+    $('#follower').addClass('explode');
+    $('#light-on-follower, #light').fadeOut();
+      setTimeout(function() {
+        $('#follower, #light, #light-on-follower').remove();
+    }, 3000);
   });
   function copyEvent(id){
     var str = document.getElementById(id);
