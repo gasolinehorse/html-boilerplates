@@ -1202,11 +1202,12 @@ For a faster option, utilize the HTML Boilerplate generator above to easily cust
         $(".switching").removeClass('switching--on');
     }, 2000);
   });
-  $("#close-as").click(function () {
+  $("#close-as").click(function() {
+    $('#light, #light-on-follower').remove();
     $('#light-on-follower, #light').fadeOut();
     $('#follower').addClass('explode');
-      setTimeout(function() {
-        $('#follower, #light, #light-on-follower').remove();
+    setTimeout(function() {
+      $('#follower, #light, #light-on-follower').remove();
     }, 3000);
   });
   function copyEvent(id){
