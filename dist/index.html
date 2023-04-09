@@ -1177,16 +1177,6 @@ For a faster option, utilize the HTML Boilerplate generator above to easily cust
     $(function () {
       $('[data-bs-toggle="tooltip"]').tooltip()
     })
-    $( window ).scroll(function() {
-      var height = $(window).scrollTop();
-      if ((height >= 225) && $(window).width() > 576) {
-        $('#output').css("top", "10px");
-        $('.venmo').hide();
-      } else {
-        $('#output').css("top", "0");
-        $('.venmo').show();
-      }
-    });
   })(jQuery);
   if (+window.localStorage.getItem("preferDark")) {
     $("body").toggleClass("dark");
