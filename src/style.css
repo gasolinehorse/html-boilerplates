@@ -339,6 +339,10 @@ input[type="color"] {
   background-color: #FFFFFF;
   opacity: 0;
 }
+footer {
+  backdrop-filter: blur(8px);
+  background-color: rgba(255,255,255, 0.2);
+}
 @media (min-height: 610px) and (min-width: 576px) {
 	footer {
 		position: fixed;
@@ -415,7 +419,11 @@ input[type="color"] {
 		transform: translateY(40px);
 	}
 }
-.venmo-msg {
+.venmo__img-wrapper {
+  box-shadow: 0 0 30px 3px rgba(var(--green), 0.3);
+}
+.venmo__msg {
+  font-family: 'Montserrat', helvetica, Arial, sans-serif;
   font-size: 0.9rem;
   line-height: 1.1;
 }
@@ -763,15 +771,9 @@ body.dark {
 .dark #follower {
   background-image: url("html-boilerplate-coder-dark.svg");
 }
-.dark a.kofi-button {
-  box-shadow: 0 0 30px 3px rgba(var(--green), 0.7) !important;
+.dark .venmo__img {
+  filter: invert(100%) grayscale(100%);
 }
-a.kofi-button {
-  box-shadow: none !important;
-  border-radius: 0 !important;
-  background: rgba(var(--green), 1) !important;
-  box-shadow: 0 0 30px 3px rgba(var(--green), 0.2) !important;
-}
-span.kofitext {
-  font-family: 'Montserrat', helvetica, Arial, sans-serif;
+.dark footer {
+  background-color: rgba(17,17,17, 0.2);
 }
