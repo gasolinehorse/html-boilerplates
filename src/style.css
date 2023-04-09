@@ -415,6 +415,10 @@ input[type="color"] {
 		transform: translateY(40px);
 	}
 }
+.venmo-msg {
+  font-size: 0.9rem;
+  line-height: 1.1;
+}
 #switch-wrapper {
 	position: fixed;
 	top: 12px;
