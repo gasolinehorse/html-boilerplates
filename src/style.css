@@ -419,9 +419,6 @@ footer {
 		transform: translateY(40px);
 	}
 }
-.venmo__img-wrapper {
-  box-shadow: 0 0 30px 3px rgba(var(--green), 0.3);
-}
 .venmo__msg {
   font-family: 'Montserrat', helvetica, Arial, sans-serif;
   font-size: 0.9rem;
@@ -770,6 +767,10 @@ body.dark {
 }
 .dark #follower {
   background-image: url("html-boilerplate-coder-dark.svg");
+}
+.dark .venmo__img-wrapper {
+  box-shadow: 0 0 30px 3px rgba(var(--green), 0.3);
+  margin-top: 0.8rem;
 }
 .dark .venmo__img {
   filter: invert(100%) grayscale(100%);
