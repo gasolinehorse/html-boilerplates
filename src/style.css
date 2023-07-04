@@ -416,8 +416,13 @@ footer {
 }
 @media (max-width: 575px) {
 	.venmo {
-		transform: translateY(40px);
+		transform: translateY(35px);
 	}
+}
+@media (min-width: 768px) {
+  .venmo div {
+    transform-origin: right;
+  }
 }
 .venmo__msg {
   font-family: 'Montserrat', helvetica, Arial, sans-serif;
@@ -774,6 +779,9 @@ body.dark {
 }
 .dark .venmo__img {
   filter: invert(100%) grayscale(100%);
+}
+.dark .venmo div {
+  filter: invert(0.93);
 }
 .dark footer {
   background-color: rgba(17,17,17, 0.2);
