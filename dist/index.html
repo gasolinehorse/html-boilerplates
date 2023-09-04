@@ -25,6 +25,9 @@
   <link rel="icon" href="favicon_html-boilerpates.ico" sizes="any">
   <link rel="icon" href="favicon_html-boilerpates.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicon_html-boilerpates.png">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.23/moment-timezone-with-data-2012-2022.min.js"></script>
+  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GM8JZWLKKW"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -850,14 +853,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </pre>
               <div class="d-sm-none d-md-block text-center text-md-end venmo container-fluid">
                 <div class="float-md-end" style="transform: scale(0.85);">
-                  <script async
-                    src="https://js.stripe.com/v3/buy-button.js">
-                  </script>
-                  <stripe-buy-button
-                    buy-button-id="buy_btn_1NQEkXAn2vB8nqjPjMBFk6Tn"
-                    publishable-key="pk_live_51NQEMtAn2vB8nqjPgV68fEKjlXCsOAfdeUW1qOqCmBkLCszIk51mQaMvveQE1Uf3PlEtwQMeHzv2zMQTwD8xSj8Q00u4V9FySr"
-                  >
-                  </stripe-buy-button>
+                  <div id="donate-to-html-boilerplates"></div>
+                  <script type="text/javascript">
+								    const userTimezone = moment.tz.guess();
+								    const euTimezones = [
+								      'Atlantic/Azores','Atlantic/Madeira','Africa/Ceuta','Atlantic/Canary','Europe/Amsterdam','Europe/Andorra','Europe/Astrakhan','Europe/Athens','Europe/Belgrade','Europe/Berlin','Europe/Bratislava','Europe/Brussels','Europe/Bucharest','Europe/Budapest','Europe/Busingen','Europe/Chisinau','Europe/Copenhagen','Europe/Dublin','Europe/Gibraltar','Europe/Guernsey','Europe/Helsinki','Europe/Isle_of_Man','Europe/Istanbul','Europe/Jersey','Europe/Kaliningrad','Europe/Kiev','Europe/Kirov','Europe/Lisbon','Europe/Ljubljana','Europe/London','Europe/Luxembourg','Europe/Madrid','Europe/Malta','Europe/Mariehamn','Europe/Minsk','Europe/Monaco','Europe/Moscow','Europe/Nicosia','Europe/Oslo','Europe/Paris','Europe/Podgorica','Europe/Prague','Europe/Riga','Europe/Rome','Europe/Samara','Europe/San_Marino','Europe/Sarajevo','Europe/Saratov','Europe/Simferopol','Europe/Skopje','Europe/Sofia','Europe/Stockholm','Europe/Tallinn','Europe/Tirane','Europe/Ulyanovsk','Europe/Uzhgorod','Europe/Vaduz','Europe/Vatican','Europe/Vienna','Europe/Vilnius','Europe/Volgograd','Europe/Warsaw','Europe/Zagreb','Europe/Zaporozhye','Europe/Zurich'
+								    ];
+								    const inTimezones = [
+								      'Asia/Kolkata'
+								    ];
+								    if (euTimezones.includes(userTimezone)) {
+								      const stripeBuyButton = document.createElement('stripe-buy-button');
+								      stripeBuyButton.setAttribute('buy-button-id', 'buy_btn_1NmTecAn2vB8nqjPVH5Q9xZr');
+								      stripeBuyButton.setAttribute('publishable-key', 'pk_live_51NQEMtAn2vB8nqjPgV68fEKjlXCsOAfdeUW1qOqCmBkLCszIk51mQaMvveQE1Uf3PlEtwQMeHzv2zMQTwD8xSj8Q00u4V9FySr');
+								      const euPayElement = document.getElementById('donate-to-html-boilerplates');
+								      euPayElement.appendChild(stripeBuyButton);
+								    } else if (inTimezones.includes(userTimezone)) {
+								      const stripeBuyButton = document.createElement('stripe-buy-button');
+								      stripeBuyButton.setAttribute('buy-button-id', 'buy_btn_1NmUs9An2vB8nqjPakfKe6wY');
+								      stripeBuyButton.setAttribute('publishable-key', 'pk_live_51NQEMtAn2vB8nqjPgV68fEKjlXCsOAfdeUW1qOqCmBkLCszIk51mQaMvveQE1Uf3PlEtwQMeHzv2zMQTwD8xSj8Q00u4V9FySr');
+								      const euPayElement = document.getElementById('donate-to-html-boilerplates');
+								      euPayElement.appendChild(stripeBuyButton);
+								    } else {
+								      const stripeBuyButton = document.createElement('stripe-buy-button');
+								      stripeBuyButton.setAttribute('buy-button-id', 'buy_btn_1NQEkXAn2vB8nqjPjMBFk6Tn');
+								      stripeBuyButton.setAttribute('publishable-key', 'pk_live_51NQEMtAn2vB8nqjPgV68fEKjlXCsOAfdeUW1qOqCmBkLCszIk51mQaMvveQE1Uf3PlEtwQMeHzv2zMQTwD8xSj8Q00u4V9FySr');
+								      const euPayElement = document.getElementById('donate-to-html-boilerplates');
+								      euPayElement.appendChild(stripeBuyButton);
+								    }
+								  </script>
                 </div>
               </div>
             </div>
