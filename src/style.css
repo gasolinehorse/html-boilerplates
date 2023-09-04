@@ -233,6 +233,7 @@ a:hover,
 input:focus {
   opacity: 0.8;
 }
+#copy-btn-og,
 #copy-btn {
   font-size: 0.8rem;
   font-family: Montserrat, helvetica, Arial, sans-serif;
@@ -240,6 +241,8 @@ input:focus {
   border-top: 1px solid #DDDDDD;
   border-bottom: 1px solid #DDDDDD;
 }
+#copy-btn-og:hover,
+#copy-btn-og:focus,
 #copy-btn:hover,
 #copy-btn:focus {
   opacity: 1;
@@ -259,6 +262,9 @@ hr {
 }
 _:-moz-read-write, :root #copy-btn, :root #sm-copy-btn { 
 	display: none;
+}
+_:-moz-read-write, :root #copy-btn-og, :root #sm-copy-btn-og { 
+  display: none;
 }
 .form-check-input:checked {
   border-color: rgba(var(--green), 1);
@@ -750,11 +756,14 @@ body.dark {
   background-color: rgba(100,100,100, 0.2);
   color: #FFFFFF;
 }
+.dark #copy-btn-og,
 .dark #copy-btn {
   box-shadow: none;
   background-color: transparent;
   text-shadow: 0 0 20px rgba(var(--green), 0.8);
 }
+.dark #copy-btn-og:hover,
+.dark #copy-btn-og:focus,
 .dark #copy-btn:hover,
 .dark #copy-btn:focus {
   opacity: 1;
